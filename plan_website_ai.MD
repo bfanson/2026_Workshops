@@ -35,33 +35,33 @@ The Home page (`index.qmd`) uses a Quarto `listing` (`type: default`, `fields: [
 description]`, `sort: false`) over the four module pages, which is why each module's `description:`
 front matter matters — it's what shows up as the blurb under the title on Home.
 
-## 3. Theme: matched to ari.vic.gov.au
+## 3. Theme: matched to `2025_Models_workshop`
 
-Colours and typography are defined once in `_brand.yml` (Quarto's brand file) and picked up
-automatically — no `theme:` override needed in `_quarto.yml`.
+An initial version of this theme was guessed from Victorian Government / `ari.vic.gov.au`
+branding, but was replaced after feedback to instead match the actual look of
+`2025_Models_workshop` — a prior distill-based workshop site — by reading its hand-authored
+`theme.css` directly rather than guessing.
 
-`ari.vic.gov.au` follows Victorian Government **Brand Victoria** / **Ripple** design tokens.
-The palette used here:
+Colours and base typography are defined in `_brand.yml` (Quarto's brand file, picked up
+automatically); a few rules distill supported that `_brand.yml` doesn't have an equivalent for
+(per-component fonts, link underline style, list marker colour) live in `custom.css`, loaded via
+`format.html.css` in `_quarto.yml`.
+
+**Palette (from `2025_Models_workshop/theme.css`):**
 
 | Role | Hex | Used for |
 |---|---|---|
-| Primary | `#0052C2` | Navbar, headings, links, buttons |
-| Primary (dark) | `#003174` | Hover/active states |
-| Accent | `#0095EC` | Secondary highlights |
-| Accent (light) | `#E6F5FD` | Subtle backgrounds |
-| Ink | `#1A1A1A` | Body text |
-| Neutral grey | `#F5F5F5` | Card/section backgrounds |
+| Indigo (primary) | `#201647` | Navbar background, links, list markers |
+| Teal (secondary) | `#0F2E3D` | Footer background |
+| Salmon | `rgba(249, 83, 85, 0.1)` | Inline code background highlight |
 
-**Typography:** Victorian Government's brand font ("VIC") is proprietary and not available for
-use here, so **Public Sans** (open-source, Google Fonts) is substituted as a similarly clean
-government-style sans-serif. Swap it in `_brand.yml` if a different font becomes available.
+**Typography (from the same file):** body/headings in **Lato**, navbar specifically in
+**Montserrat** (semi-bold), code in **Fira Mono** — all Google Fonts, matching the original
+exactly (no substitution needed this time, unlike the earlier Brand Victoria attempt which used a
+proprietary font).
 
-**Deliberately not done:** no Victorian Government, DEECA, or ARI logo/crest is reproduced
-anywhere on this site, and nothing implies official government affiliation. This is a colour and
-typography style match only, for an internal ARI-associated workshop.
-
-If the look needs adjusting after review, edit `_brand.yml`'s `color.palette` / `typography`
-keys and re-render — no other files need to change.
+If the look needs adjusting further, edit `_brand.yml` (colours/base fonts) or `custom.css`
+(component-specific rules) and re-render.
 
 ## 4. Project structure
 
@@ -69,7 +69,8 @@ keys and re-render — no other files need to change.
 2026_Workshops/
 ├── 2026_Workshops.Rproj
 ├── _quarto.yml          # project/navbar config, output-dir: docs
-├── _brand.yml            # ARI-inspired colour palette & typography
+├── _brand.yml            # colour palette & base typography, matched to 2025_Models_workshop
+├── custom.css             # supplementary component-level styling (§3)
 ├── index.qmd              # Home — listing of modules
 ├── agenda.qmd
 ├── posit-ai.qmd
@@ -129,5 +130,5 @@ needs real content before this goes live:
 - [ ] **Module 3 — Vibe-coding** — starting from scratch.
 - [ ] **Module 4 — e-DNA!!!** — starting from scratch.
 - [ ] Decide whether module entries should show a date/facilitator on the Home page listing (the
-  `ari.vic.gov.au`-style mockup this was modeled on included one) — currently omitted since
-  modules don't have that metadata yet.
+  `2025_Models_workshop` "Daily Sessions" layout this was modeled on included one) — currently
+  omitted since modules don't have that metadata yet.

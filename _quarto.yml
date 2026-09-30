@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
 
 website:
   title: "2026 Workshops"
@@ -23,7 +25,9 @@ website:
             text: Agenda
           - href: posit-ai.qmd
             text: Posit AI
+  page-footer: "2026 Workshops"
 
 format:
   html:
     toc: false
+    css: custom.css

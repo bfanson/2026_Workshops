@@ -1,0 +1,39 @@
+/* Supplementary styling to match 2025_Models_workshop's distill theme.css,
+   layered on top of _brand.yml (which handles the base palette/fonts). */
+
+/* Distill used a separate navbar-only font (Montserrat) and semi-bold title */
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* distill's d-article links: no underline, indigo border-bottom instead */
+.content a,
+#quarto-document-content a {
+  text-decoration: none;
+  border-bottom: 2px solid #201647;
+}
+
+/* distill's inline code: dark grey text on a subtle salmon highlight */
+code {
+  color: #383838;
+  background-color: rgba(249, 83, 85, 0.1);
+}
+
+/* distill's list marker colour */
+ul > li::marker {
+  color: #201647;
+}
+
+/* distill's footer bar was a darker teal than the navbar */
+.nav-footer,
+footer.footer {
+  background-color: #0F2E3D;
+  color: rgba(255, 255, 255, 0.8);
+}
+.nav-footer a,
+footer.footer a {
+  color: #FFFFFF;
+}
