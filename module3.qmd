@@ -1,0 +1,6 @@
+---
+title: "Module 3"
+description: "Vibe-coding"
+---
+
+*Placeholder — Module 3 content will be added here.*

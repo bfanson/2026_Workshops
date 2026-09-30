@@ -1,0 +1,26 @@
+meta:
+  name: "2026 Workshops (ARI-inspired)"
+
+color:
+  palette:
+    ari-blue: "#0052C2"
+    ari-blue-dark: "#003174"
+    ari-sky: "#0095EC"
+    ari-sky-light: "#E6F5FD"
+    ari-ink: "#1A1A1A"
+    ari-grey: "#F5F5F5"
+  foreground: ari-ink
+  background: "#FFFFFF"
+  primary: ari-blue
+  secondary: ari-sky
+  link: ari-blue
+
+typography:
+  fonts:
+    - family: Public Sans
+      source: google
+  base:
+    family: Public Sans
+  headings:
+    family: Public Sans
+    weight: 700

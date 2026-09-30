@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "2026 Workshops"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: module1.qmd
+        text: Module 1
+      - href: module2.qmd
+        text: Module 2
+      - href: module3.qmd
+        text: Module 3
+      - href: module4.qmd
+        text: Module 4
+    right:
+      - text: "Workshop Links"
+        menu:
+          - href: agenda.qmd
+            text: Agenda
+          - href: posit-ai.qmd
+            text: Posit AI
+
+format:
+  html:
+    toc: false

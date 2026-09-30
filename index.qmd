@@ -1,0 +1,16 @@
+---
+title: "2026 Workshops"
+subtitle: "Arthur Rylah Institute workshop series"
+page-layout: full
+listing:
+  contents:
+    - module1.qmd
+    - module2.qmd
+    - module3.qmd
+    - module4.qmd
+  type: default
+  fields: [title, description]
+  sort: false
+---
+
+Welcome to the 2026 Workshops site. Browse the four modules below, or use **Workshop Links** in the navbar above for the agenda and an overview of Posit AI.

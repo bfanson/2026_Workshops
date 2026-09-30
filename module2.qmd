@@ -1,0 +1,6 @@
+---
+title: "Module 2"
+description: "On to QGIS"
+---
+
+*Placeholder — Module 2 content will be added here.*

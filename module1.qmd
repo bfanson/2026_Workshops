@@ -1,0 +1,6 @@
+---
+title: "Module 1"
+description: "AI and data science"
+---
+
+*Placeholder — Module 1 content will be added here.*

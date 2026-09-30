@@ -1,0 +1,6 @@
+---
+title: "Agenda"
+description: "Workshop schedule"
+---
+
+*Placeholder — the real workshop schedule (dates, times, sessions, facilitators) will be added here.*
