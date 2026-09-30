@@ -3,6 +3,8 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+  resources:
+    - .nojekyll
 
 website:
   title: "2026 Workshops"
