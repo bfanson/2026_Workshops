@@ -1,6 +1,7 @@
 ---
 title: "Module 3"
 description: "Vibe-coding"
+image: images/mod3.png
 ---
 
 *Placeholder — Module 3 content will be added here.*

@@ -1,6 +1,7 @@
 ---
 title: "Module 2"
 description: "On to QGIS"
+image: images/mod2.png
 ---
 
 *Placeholder — Module 2 content will be added here.*

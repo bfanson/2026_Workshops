@@ -1,6 +1,7 @@
 ---
 title: "Module 1"
 description: "AI and data science"
+image: images/mod1.png
 ---
 
 *Placeholder — Module 1 content will be added here.*

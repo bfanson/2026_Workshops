@@ -1,6 +1,7 @@
 ---
 title: "Module 4"
 description: "e-DNA!!!"
+image: images/mod4.png
 ---
 
 *Placeholder — Module 4 content will be added here.*

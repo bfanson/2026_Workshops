@@ -9,7 +9,8 @@ listing:
     - module3.qmd
     - module4.qmd
   type: default
-  fields: [title, description]
+  fields: [image, title, description]
+  image-align: left
   sort: false
 ---
 
