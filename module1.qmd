@@ -41,7 +41,7 @@ slug: mod1
 
 # Confession upfront...
 
-![](images/module1/blind_lead_blind.jpg)
+![]()
 
 
 

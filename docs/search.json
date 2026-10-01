@@ -18,7 +18,7 @@
     "href": "module1.html",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "",
-    "text": "Placeholder — Module 1 content will be added here.\n\n\nHousekeeping\nWorkshop website\n\n\n\nDay’s objectives\n\nUnderstand what are statistical probability distributions\nLearn some common distributions in ecology and be able to describe their key parameters\nLearn what are observation vs state processes and how it fits into statistical models\n\n\n\n\nConfession upfront…\n\n\n\n\nAgents\n\n\n\nParadigm shift\nAdd in figure (Figure 1)\n\n\n\n\n\n\ngraph LR\n\n    H[\"👤 Human\"]\n\n    H &lt;--&gt; DB[\"Database Agent\"]\n    H &lt;--&gt; STATS[\"📊 Statistics Agent\"]\n    H &lt;--&gt; GIS[\"🗺 GIS Agent\"]\n    H &lt;--&gt; WRITER[\"📝 Writer Agent\"]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
+    "text": "Placeholder — Module 1 content will be added here.\n\n\nHousekeeping\nWorkshop website\n\n\n\nDay’s objectives\n\nobj1\nobj2\n\n\n\n\nConfession upfront…\n\n\n\n\nAgents\n\n\n\nParadigm shift\nAdd in figure (Figure 1)\n\n\n\n\n\n\ngraph LR\n\n    H[\"👤 Human\"]\n\n    H &lt;--&gt; DB[\"Database Agent\"]\n    H &lt;--&gt; STATS[\"📊 Statistics Agent\"]\n    H &lt;--&gt; GIS[\"🗺 GIS Agent\"]\n    H &lt;--&gt; WRITER[\"📝 Writer Agent\"]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
   },
   {
     "objectID": "agenda.html",
