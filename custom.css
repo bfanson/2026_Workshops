@@ -37,3 +37,9 @@ footer.footer {
 footer.footer a {
   color: #FFFFFF;
 }
+
+/* figure/table captions: dark blue and bold */
+figcaption.quarto-float-caption {
+  color: darkblue;
+  font-weight: bold;
+}

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ben Fanson">
+<meta name="dcterms.date" content="2026-10-01">
+<meta name="description" content="Gentle introduction to statistical distributions: what are they and why are they important">
 
-<title>2026 Workshops</title>
+<title>Module 1: AI in Data science: A paradigm shift? – 2026 Workshops</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,65 +77,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="custom.css">
 </head>
@@ -157,11 +103,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./module1.html"> 
+    <a class="nav-link active" href="./module1.html" aria-current="page"> 
 <span class="menu-text">Module 1</span></a>
   </li>  
   <li class="nav-item">
@@ -201,24 +147,56 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#housekeeping" id="toc-housekeeping" class="nav-link active" data-scroll-target="#housekeeping">Housekeeping</a></li>
+  <li><a href="#days-objectives" id="toc-days-objectives" class="nav-link" data-scroll-target="#days-objectives">Day’s objectives</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2026 Workshops</h1>
-<p class="subtitle lead">Arthur Rylah Institute workshop series</p>
+<h1 class="title">Module 1: AI in Data science: A paradigm shift?</h1>
 </div>
 
+<div>
+  <div class="description">
+    <p>Gentle introduction to statistical distributions: what are they and why are they important</p>
+  </div>
+</div>
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://bfanson.github.io/2026_Workshops/">Ben Fanson</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Arthur Rylah Institute
+          </p>
+      </div>
+  </div>
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 1, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -228,92 +206,61 @@ window.Quarto = {
 </header>
 
 
-<p>Welcome to the 2026 Workshops site. Browse the four modules below, or use <strong>Workshop Links</strong> in the navbar above for the agenda and an overview of Posit AI.</p>
+<p><em>Placeholder — Module 1 content will be added here.</em></p>
+<hr>
+<section id="housekeeping" class="level1">
+<h1>Housekeeping</h1>
+<p><a href="https://bfanson.github.io/2026_Workshops/">Workshop website</a></p>
+</section>
+<section id="days-objectives" class="level1 page-columns page-full">
+<h1>Day’s objectives</h1>
+<style>
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+</style>
+<p><span style="color: red; font-size: 20px;font-style: italic;animation: blinker 1s linear infinite;">A REMINDER TO START RECORDING</span></p>
+<ul>
+<li>Understand what are statistical probability distributions</li>
+<li>Learn some common distributions in ecology and be able to describe their key parameters</li>
+<li>Learn what are observation vs state processes and how it fits into statistical models</li>
+</ul>
+<hr>
+<p>Add in figure (<a href="#fig-test" class="quarto-xref">Figure&nbsp;1</a>)</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-test" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-test">graph LR
+
+    H["👤 Human"]
+
+    H &lt;--&gt; DB["Database Agent"]
+    H &lt;--&gt; STATS["📊 Statistics Agent"]
+    H &lt;--&gt; GIS["🗺 GIS Agent"]
+    H &lt;--&gt; WRITER["📝 Writer Agent"]
+
+ 
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Thinking about role in workflow
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside>
+Aside feature… adding as a holder for now
+</aside>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1790776800000" data-listing-file-modified-sort="1790820512906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
-<div class="thumbnail"><a href="./module1.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./module1.html" class="no-external">Module 1: AI in Data science: A paradigm shift?</a>
-</h3>
-<div class="delink listing-description"><a href="./module1.html" class="no-external">
-<p>Gentle introduction to statistical distributions: what are they and why are they important</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./module1.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="1" data-listing-file-modified-sort="1790811474020" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<div class="thumbnail"><a href="./module2.html" class="no-external">
-
-<img loading="lazy" src="./images/mod2.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./module2.html" class="no-external">Module 2</a>
-</h3>
-<div class="delink listing-description"><a href="./module2.html" class="no-external">
-<p>On to QGIS</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./module2.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="2" data-listing-file-modified-sort="1790811471870" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<div class="thumbnail"><a href="./module3.html" class="no-external">
-
-<img loading="lazy" src="./images/mod3.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./module3.html" class="no-external">Module 3</a>
-</h3>
-<div class="delink listing-description"><a href="./module3.html" class="no-external">
-<p>Vibe-coding</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./module3.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="3" data-listing-file-modified-sort="1790811471930" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<div class="thumbnail"><a href="./module4.html" class="no-external">
-
-<img loading="lazy" src="./images/mod4.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./module4.html" class="no-external">Module 4</a>
-</h3>
-<div class="delink listing-description"><a href="./module4.html" class="no-external">
-<p>e-DNA!!!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./module4.html" class="no-external">
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
