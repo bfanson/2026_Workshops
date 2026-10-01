@@ -3,7 +3,7 @@ title: "Module 1: AI in Data science: A paradigm shift?"
 description: |
   Gentle introduction to statistical distributions: what are they and why are they important 
 author:
-  - name: Ben Fanson
+  - name: Ben/Paul
     url: https://bfanson.github.io/2026_Workshops/
     affiliation: Arthur Rylah Institute
     affiliation_url: https://www.ari.vic.gov.au/
@@ -28,26 +28,33 @@ draft: false
 [Workshop website](https://bfanson.github.io/2026_Workshops/)
 
 
+----------
+
 
 # Day's objectives
-
-<style>
-@keyframes blinker {
-  50% { opacity: 0; }
-}
-</style>
-
-
-[A REMINDER TO START RECORDING]{style="color: red; font-size: 20px;font-style: italic;animation: blinker 1s linear infinite;"}
-
 
 -   Understand what are statistical probability distributions
 -   Learn some common distributions in ecology and be able to describe their key parameters
 -   Learn what are observation vs state processes and how it fits into statistical models
 
+----------
 
-------------------------------------------------------------------------
+# Confession upfront...
 
+
+
+
+
+
+----------
+
+# Agents
+
+
+
+----------
+
+# Paradigm shift
 
 Add in figure (@fig-test)
 

@@ -1,7 +1,21 @@
 ---
-title: "Module 2"
-description: "On to QGIS"
-image: images/mod2.png
+title: "Module 2: QGIS"
+description: |
+  Using QGIS for your GIS needs
+author:
+  - name: Adrian
+    url: https://bfanson.github.io/2026_Workshops/
+    affiliation: Arthur Rylah Institute
+    affiliation_url: https://www.ari.vic.gov.au/
+date: 2026-10-XX
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    self-contained: true
+draft: false
 ---
 
-*Placeholder — Module 2 content will be added here.*
+
+** may or may not be content here **

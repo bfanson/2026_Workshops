@@ -1,7 +1,24 @@
 ---
-title: "Module 3"
-description: "Vibe-coding"
-image: images/mod3.png
+title: "Module 3: Vibe-coding with spatial data"
+description: |
+  ?
+author:
+  - name: Ben/Paul
+    url: https://bfanson.github.io/2026_Workshops/
+    affiliation: Arthur Rylah Institute
+    affiliation_url: https://www.ari.vic.gov.au/
+date: 2026-10-XX
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    self-contained: true
+draft: false
 ---
+
+
+** may or may not be content here **
+
 
 *Placeholder — Module 3 content will be added here.*

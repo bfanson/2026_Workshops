@@ -1,7 +1,20 @@
 ---
-title: "Module 4"
-description: "e-DNA!!!"
-image: images/mod4.png
+title: "Module 4: eDNA"
+description: |
+  What to know?
+author:
+  - name: Lauren
+    url: https://bfanson.github.io/2026_Workshops/
+    affiliation: Arthur Rylah Institute
+    affiliation_url: https://www.ari.vic.gov.au/
+date: 2026-10-XX
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    self-contained: true
+draft: false
 ---
 
-*Placeholder — Module 4 content will be added here.*
+*may or may not be content here*
