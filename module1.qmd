@@ -2,7 +2,7 @@
 title: "Module 1: AI in Data science: A paradigm shift?"
 image: /images/mod1.png
 description: |
-  Gentle introduction to statistical distributions: what are they and why are they important 
+  Discussion on integrating AI into our workflow
 author:
   - name: Ben/Paul
     url: https://bfanson.github.io/2026_Workshops/
@@ -15,41 +15,47 @@ format:
     toc-depth: 3
     number-sections: false
     self-contained: true
+    mermaid: 
+      theme: neutral
 draft: false
 slug: mod1
 ---
-
-
-*Placeholder — Module 1 content will be added here.*
 
 
 ----------
 
 # Housekeeping
 
-[Workshop website](https://bfanson.github.io/2026_Workshops/)
+- [Workshop website](https://bfanson.github.io/2026_Workshops/)
 
 
-----------
-
-
-# Day's objectives
-
--   obj1
--   obj2
 
 ----------
 
 # Confession upfront...
 
-![]()
+
+
+![](images/module1/workshops.png) 
 
 
 
 
-----------
 
-# Agents
+
+![]() 
+
+
+
+
+image of academy chaos
+
+
+
+
+![openai](images/module1/openAI.png)
+Note that this was <span style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span>
+
 
 
 
@@ -59,10 +65,10 @@ slug: mod1
 
 # Paradigm shift
 
-Add in figure (@fig-test)
+Add in figure (@fig-paradigm)
 
 ```{mermaid}
-%%| label: fig-test
+%%| label: fig-paradigm
 %%| fig-cap: Thinking about role in workflow
 
 graph LR
@@ -77,10 +83,91 @@ graph LR
  
 ```
 
-
-
 <aside> Aside feature... adding as a holder for now </aside>
 
+
+
+----------
+
+# Agents
+
+```{mermaid}
+%%| label: fig-agent
+%%| fig-cap: Thinking about AI and LLMs []
+
+graph LR
+
+    AI["AI"]
+
+    AI --> ML["Machine learning<br> (NNs, CNNs, Boosted)"]
+    AI --> LLM["LLMs"]
+    LLM --> bot["Hyped-up search engine"]
+    LLM --> agent["Autonomous Agent"]
+
+```
+
+
+## Costs
+
+<span style="background:yellow;">Not trivial<span>
+
+
+
+
+----------
+
+# Workflow compare and contrast
+
+
+
+
+
+
+----------
+
+# Example with soil crust 
+
+
+
+
+----------
+
+# How are you using agents?
+
+1) workflow efficiency
+
+- image of my packages
+- documentation
+
+2) 
+
+```{mermaid}
+%%| label: fig-uses
+%%| fig-cap: Thinking about AI and LLMs []
+
+graph LR
+
+    AI["LLM"]
+
+    AI --> WF["Workflow"]
+    AI --> TH["Sounding board"]
+    AI --> TH["Soundingboard"]
+    
+    WF --> Pkg["R Packages"]
+    WF --> Db["Database"]
+    WF --> QC["QC tester"]
+
+```
+
+
+
+
+
+----------
+
+# Vibe-coding Module: what would be useful
+
+Here again, we are showing our confusion on how to proceed.
 
 
 

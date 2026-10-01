@@ -18,7 +18,7 @@
     "href": "module1.html",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "",
-    "text": "Placeholder — Module 1 content will be added here.\n\n\nHousekeeping\nWorkshop website\n\n\n\nDay’s objectives\n\nobj1\nobj2\n\n\n\n\nConfession upfront…\n\n\n\n\nAgents\n\n\n\nParadigm shift\nAdd in figure (Figure 1)\n\n\n\n\n\n\ngraph LR\n\n    H[\"👤 Human\"]\n\n    H &lt;--&gt; DB[\"Database Agent\"]\n    H &lt;--&gt; STATS[\"📊 Statistics Agent\"]\n    H &lt;--&gt; GIS[\"🗺 GIS Agent\"]\n    H &lt;--&gt; WRITER[\"📝 Writer Agent\"]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
+    "text": "Placeholder — Module 1 content will be added here.\n\n\nHousekeeping\nWorkshop website\n\n\n\nDay’s objectives\n\nobj1\nobj2\n\n\n\n\nConfession upfront…\n\n Note that this was January 29 2026\n\n\n\nAgents\n\n\n\n\n\n\ngraph LR\n\n    AI[\"AI\"]\n\n    AI --&gt; ML[\"Machine learning&lt;br&gt; (NNs, CNNs, Boosted)\"]\n    AI --&gt; LLM[\"LLMs\"]\n    LLM --&gt; bot[\"Hyped-up search engine\"]\n    LLM --&gt; agent[\"Autonomous Agent\"]\n\n\n\n\n\nFigure 1: Thinking about AI and LLMs []\n\n\n\n\n\n\n\n\nParadigm shift\nAdd in figure (Figure 2)\n\n\n\n\n\n\ngraph LR\n\n    H[\"👤 Human\"]\n\n    H &lt;--&gt; DB[\"Database Agent\"]\n    H &lt;--&gt; STATS[\"📊 Statistics Agent\"]\n    H &lt;--&gt; GIS[\"🗺 GIS Agent\"]\n    H &lt;--&gt; WRITER[\"📝 Writer Agent\"]\n\n \n\n\n\n\nFigure 2: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
   },
   {
     "objectID": "agenda.html",
@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "2026 Workshops",
     "section": "",
-    "text": "Welcome to the 2026 Workshops site. Browse the four modules below, or use Workshop Links in the navbar above for the agenda and an overview of Posit AI.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 1: AI in Data science: A paradigm shift?\n\n\nGentle introduction to statistical distributions: what are they and why are they important\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 2: QGIS\n\n\nUsing QGIS for your GIS needs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 3: Vibe-coding with spatial data\n\n\n?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 4: eDNA\n\n\nWhat to know?\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to the 2026 Workshops site. Browse the four modules below, or use Workshop Links in the navbar above for the agenda and an overview of Posit AI.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 1: AI in Data science: A paradigm shift?\n\n\nDiscussion on integrating AI into our workflow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 2: QGIS\n\n\nUsing QGIS for your GIS needs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 3: Vibe-coding with spatial data\n\n\n?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 4: eDNA\n\n\nWhat to know?\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "module2.html",
@@ -47,5 +47,12 @@
     "title": "Module 4: eDNA",
     "section": "",
     "text": "may or may not be content here"
+  },
+  {
+    "objectID": "module1.html#costs",
+    "href": "module1.html#costs",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Costs",
+    "text": "Costs\nNot trivial"
   }
 ]
