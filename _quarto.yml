@@ -5,6 +5,7 @@ project:
     - "*.qmd"
   resources:
     - .nojekyll
+    - "images/*.png"
 
 website:
   title: "2026 Workshops"

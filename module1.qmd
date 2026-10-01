@@ -1,5 +1,6 @@
 ---
 title: "Module 1: AI in Data science: A paradigm shift?"
+image: /images/mod1.png
 description: |
   Gentle introduction to statistical distributions: what are they and why are they important 
 author:

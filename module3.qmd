@@ -1,5 +1,6 @@
 ---
 title: "Module 3: Vibe-coding with spatial data"
+image: /images/mod3.png
 description: |
   ?
 author:

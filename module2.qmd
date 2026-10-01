@@ -1,5 +1,6 @@
 ---
 title: "Module 2: QGIS"
+image: /images/mod2.png
 description: |
   Using QGIS for your GIS needs
 author:

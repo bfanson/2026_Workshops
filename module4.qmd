@@ -1,5 +1,6 @@
 ---
 title: "Module 4: eDNA"
+image: /images/mod4.png
 description: |
   What to know?
 author:

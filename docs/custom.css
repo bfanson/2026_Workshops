@@ -43,3 +43,15 @@ figcaption.quarto-float-caption {
   color: darkblue;
   font-weight: bold;
 }
+
+/* listing cards are wrapped in links; don't give them the border */
+.content .quarto-listing a,
+#quarto-document-content .quarto-listing a {
+  border-bottom: none;
+}
+
+/* shrink listing thumbnails to half size */
+.content .quarto-listing .thumbnail img.thumbnail-image {
+  width: 50%;
+  height: auto;
+}
