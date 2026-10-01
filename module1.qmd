@@ -15,6 +15,7 @@ format:
     number-sections: false
     self-contained: true
 draft: false
+slug: mod1
 ---
 
 
@@ -33,15 +34,14 @@ draft: false
 
 # Day's objectives
 
--   Understand what are statistical probability distributions
--   Learn some common distributions in ecology and be able to describe their key parameters
--   Learn what are observation vs state processes and how it fits into statistical models
+-   obj1
+-   obj2
 
 ----------
 
 # Confession upfront...
 
-
+![](images/module1/blind_lead_blind.jpg)
 
 
 
@@ -49,6 +49,8 @@ draft: false
 ----------
 
 # Agents
+
+
 
 
 

@@ -9,16 +9,16 @@
   {
     "objectID": "module3.html",
     "href": "module3.html",
-    "title": "Module 3",
+    "title": "Module 3: Vibe-coding with spatial data",
     "section": "",
-    "text": "Placeholder — Module 3 content will be added here."
+    "text": "** may or may not be content here **\nPlaceholder — Module 3 content will be added here."
   },
   {
     "objectID": "module1.html",
     "href": "module1.html",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "",
-    "text": "Placeholder — Module 1 content will be added here.\n\n\nHousekeeping\nWorkshop website\n\n\nDay’s objectives\n\nA REMINDER TO START RECORDING\n\nUnderstand what are statistical probability distributions\nLearn some common distributions in ecology and be able to describe their key parameters\nLearn what are observation vs state processes and how it fits into statistical models\n\n\nAdd in figure (Figure 1)\n\n\n\n\n\n\ngraph LR\n\n    H[\"👤 Human\"]\n\n    H &lt;--&gt; DB[\"Database Agent\"]\n    H &lt;--&gt; STATS[\"📊 Statistics Agent\"]\n    H &lt;--&gt; GIS[\"🗺 GIS Agent\"]\n    H &lt;--&gt; WRITER[\"📝 Writer Agent\"]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
+    "text": "Placeholder — Module 1 content will be added here.\n\n\nHousekeeping\nWorkshop website\n\n\n\nDay’s objectives\n\nUnderstand what are statistical probability distributions\nLearn some common distributions in ecology and be able to describe their key parameters\nLearn what are observation vs state processes and how it fits into statistical models\n\n\n\n\nConfession upfront…\n\n\n\n\nAgents\n\n\n\nParadigm shift\nAdd in figure (Figure 1)\n\n\n\n\n\n\ngraph LR\n\n    H[\"👤 Human\"]\n\n    H &lt;--&gt; DB[\"Database Agent\"]\n    H &lt;--&gt; STATS[\"📊 Statistics Agent\"]\n    H &lt;--&gt; GIS[\"🗺 GIS Agent\"]\n    H &lt;--&gt; WRITER[\"📝 Writer Agent\"]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
   },
   {
     "objectID": "agenda.html",
@@ -32,20 +32,20 @@
     "href": "index.html",
     "title": "2026 Workshops",
     "section": "",
-    "text": "Welcome to the 2026 Workshops site. Browse the four modules below, or use Workshop Links in the navbar above for the agenda and an overview of Posit AI.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 1: AI in Data science: A paradigm shift?\n\n\nGentle introduction to statistical distributions: what are they and why are they important\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 2\n\n\nOn to QGIS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 3\n\n\nVibe-coding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 4\n\n\ne-DNA!!!\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to the 2026 Workshops site. Browse the four modules below, or use Workshop Links in the navbar above for the agenda and an overview of Posit AI.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 1: AI in Data science: A paradigm shift?\n\n\nGentle introduction to statistical distributions: what are they and why are they important\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 2: QGIS\n\n\nUsing QGIS for your GIS needs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 3: Vibe-coding with spatial data\n\n\n?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 4: eDNA\n\n\nWhat to know?\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "module2.html",
     "href": "module2.html",
-    "title": "Module 2",
+    "title": "Module 2: QGIS",
     "section": "",
-    "text": "Placeholder — Module 2 content will be added here."
+    "text": "** may or may not be content here **"
   },
   {
     "objectID": "module4.html",
     "href": "module4.html",
-    "title": "Module 4",
+    "title": "Module 4: eDNA",
     "section": "",
-    "text": "Placeholder — Module 4 content will be added here."
+    "text": "may or may not be content here"
   }
 ]
