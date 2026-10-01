@@ -26,7 +26,7 @@ slug: mod1
 
 # Housekeeping
 
-- [Workshop website](https://bfanson.github.io/2026_Workshops/)
+- [Workshop website](https://bfanson.github.io/2026_Workshops/)     https://bfanson.github.io/2026_Workshops/
 
 
 
@@ -40,6 +40,14 @@ slug: mod1
 
 
 
+So you get to avoid these...
+
+![](images/module1/eqns.png)
+
+<br>
+<br>
+
+<br>
 
 
 
@@ -127,7 +135,7 @@ graph LR
 
 # Example with soil crust 
 
-
+[Link to dataset](https://bfanson.github.io/2025_Models_workshop/sessions/day4-mixed/)
 
 
 ----------
@@ -143,7 +151,7 @@ graph LR
 
 ```{mermaid}
 %%| label: fig-uses
-%%| fig-cap: Thinking about AI and LLMs []
+%%| fig-cap: Thinking about Agent roles
 
 graph LR
 
@@ -151,21 +159,22 @@ graph LR
 
     AI --> WF["Workflow"]
     AI --> TH["Sounding board"]
-    AI --> TH["Soundingboard"]
-    
+
     WF --> Pkg["R Packages"]
     WF --> Db["Database"]
     WF --> QC["QC tester"]
+
+    TH --> PI["Project creation"]
+    TH --> SAP["Analysis idea"]
+    TH --> PR["Communicating"]
 
 ```
 
 
 
-
-
 ----------
 
-# Vibe-coding Module: what would be useful
+# Vibe-coding module: what would be useful???
 
 Here again, we are showing our confusion on how to proceed.
 
