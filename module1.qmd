@@ -35,16 +35,23 @@ slug: mod1
 # Confession upfront...
 
 
+ 
 
 ![](images/module1/workshops.png) 
 
 
 
-So you get to avoid these...
+Plus side, you get to avoid these...
 
 ![](images/module1/eqns.png)
 
 <br>
+
+
+![](images/module1/college.png) 
+
+
+
 <br>
 
 <br>
@@ -136,6 +143,18 @@ graph LR
 # Example with soil crust 
 
 [Link to dataset](https://bfanson.github.io/2025_Models_workshop/sessions/day4-mixed/)
+
+
+## Copilot approach
+
+[Copilot chat](Copilot basic.html)
+
+[Analysis report](second effort updated.html)
+
+
+
+## Agent approach
+
 
 
 ----------
