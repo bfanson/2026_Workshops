@@ -29,23 +29,37 @@ slug: mod1
 - [Workshop website](https://bfanson.github.io/2026_Workshops/)     https://bfanson.github.io/2026_Workshops/
 
 
+----------
+
+# Agenda
+
+1) Set the stage/background
+2) Use an example to solidify some of the ideas
+3) <span style="font-color=red;">Morning Tea 😁<span>
+4) Discussion of topics
+
 
 ----------
 
-# Confession upfront...
+# Confession upfront
 
+## Confused as what is needed in workshops now
 
- 
 
 ![](images/module1/workshops.png) 
 
+<br>
 
 
-Plus side, you get to avoid these...
+_Plus side, you get to avoid these..._
 
 ![](images/module1/eqns.png)
 
 <br>
+
+
+
+### Teaching as confused
 
 
 ![](images/module1/college.png) 
@@ -54,33 +68,25 @@ Plus side, you get to avoid these...
 
 <br>
 
+
+### Best coders in the world are not coding anymore.
+
+
+![openai](images/module1/openAI.png){width=50%}
+
 <br>
 
+Note that this was <span 
+style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span>
 
-
-![]() 
-
-
-
-
-image of academy chaos
-
-
-
-
-![openai](images/module1/openAI.png)
-Note that this was <span style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span>
-
-
-
-
-
+<br>
 
 ----------
 
 # Paradigm shift
 
-Add in figure (@fig-paradigm)
+## How are humans fitting in the data science/analyst role
+
 
 ```{mermaid}
 %%| label: fig-paradigm
@@ -88,12 +94,12 @@ Add in figure (@fig-paradigm)
 
 graph LR
 
-    H["👤 Human"]
+    H("👤 Human")
 
-    H <--> DB["Database Agent"]
-    H <--> STATS["📊 Statistics Agent"]
-    H <--> GIS["🗺 GIS Agent"]
-    H <--> WRITER["📝 Writer Agent"]
+    H <--> DB[["Database Agent"]]
+    H <--> STATS[["📊 Statistics Agent"]]
+    H <--> GIS[["🗺 GIS Agent"]]
+    H <--> WRITER[["📝 Writer Agent"]]
 
  
 ```
@@ -110,9 +116,9 @@ graph LR
 %%| label: fig-agent
 %%| fig-cap: Thinking about AI and LLMs []
 
-graph LR
+flowchart LR
 
-    AI["AI"]
+    AI[["AI"]]
 
     AI --> ML["Machine learning<br> (NNs, CNNs, Boosted)"]
     AI --> LLM["LLMs"]
@@ -122,20 +128,103 @@ graph LR
 ```
 
 
+
+```{mermaid}
+%%| label: fig-uses
+%%| fig-cap: Components of Agents
+
+graph LR
+
+ H("👤 Human") --> AI[["Agent/Harness"]]
+
+ AI --> LLM["LLM: the brain (or IT)"]
+ AI --> TS["Tools"  ]
+ AI --> SK["Skills" ]
+ AI --> CT["Context"]
+
+```
+
+## Harnesss
+
+Software that "manages" the LLM, the skills, tools, grabbing context.  But, also come in their own flavour and own set of tools, skills, etc.  Thus, the software can identify LLMs weaknesses and mitigate/augment 
+
+Example such as...
+
+| Tool | Is it a harness? | Is it an agent? | Better description |
+|:--|:--:|:--:|:--|
+| Posit Assistant / Posit AI | ✅ Yes | ✅ Yes | A data science agent built on a data-science-specific harness |
+| Claude Code | ✅ Yes | ✅ Yes | A coding agent with its own harness |
+| Codex | ✅ Yes | ✅ Yes | A coding agent powered by the Codex harness |
+| Gemini CLI / Gemini Code Assist | ✅ Yes | ✅ Yes | A coding and general-purpose agent built on Google's Gemini harness |
+
+
+
+## LLMs
+
+![](images/module1/llm_posit.png)
+
+
+## Tools
+
+Allows it to "touch" your computer...
+
+| Tool Category | Example Tool | Purpose | Example Agent Action |
+|:--|:--|:--|:--|
+| File System | Read File | Read file contents | Examine a Quarto document before editing
+| File System | Write File | Create new files | Generate a new R script |
+| File System | Edit File | Modify existing files | Update a function in a package |
+| File System | List Files | Explore directories | Discover project structure |
+| Search | Grep / Search | Find text patterns | Locate all references to a function |
+| Terminal | Bash Shell | Execute commands | Run `R CMD check` |
+| Terminal | Git | Version control | Create a commit after modifications |
+| Programming | R Runtime | Execute R code | Fit a GAM model |
+
+
+__Note - If an agent can run R code, then all the packages/API etc in R become available.  Ditto for python.__
+
+
+## Skills
+
+Higher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator
+
+| Skill | Example Task |
+|:--|:--|
+| Statistician | Fit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC. |
+| Spatial Analyst | Create movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks. |
+| Report Writer | Generate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders. |
+| Shiny App Creator | Build an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map. |
+
+
+
+
+## Iteration efficiency
+
+
+
+```{mermaid}
+%%| label: fig-agent
+%%| fig-cap: Iteration
+
+graph LR
+
+    H("👤 Human")
+    AI[["Coding<br> agent"]]
+    
+    H --> AI
+    AI --> H
+    AI --> W['write code']
+    W --> R['run code']
+    R --> E['find errors']
+    E --> AI
+
+```
+
+
 ## Costs
 
 <span style="background:yellow;">Not trivial<span>
 
-
-
-
-----------
-
-# Workflow compare and contrast
-
-
-
-
+Have to play around to get a feel for.  Models differ greatly with respect to cost.
 
 
 ----------
@@ -157,14 +246,13 @@ graph LR
 
 
 
+
 ----------
 
 # How are you using agents?
 
 1) workflow efficiency
 
-- image of my packages
-- documentation
 
 2) 
 
@@ -174,7 +262,7 @@ graph LR
 
 graph LR
 
-    AI["LLM"]
+    AI[["LLM"]]
 
     AI --> WF["Workflow"]
     AI --> TH["Sounding board"]
@@ -189,6 +277,22 @@ graph LR
 
 ```
 
+
+----------
+
+# Topics
+
+- How are we going to get trained on it? Not fall behind behind every else
+
+
+- Are we heading to a standardised workflow? 
+
+
+- Ensure that it is an active learning/developing process? preclude Intellectual laziness?
+
+- Are we developing ARI-wide agents?  Are we sharing standard skill sets for specific agents?
+
+- 
 
 
 ----------

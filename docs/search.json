@@ -53,7 +53,7 @@
     "href": "module1.html#costs",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Costs",
-    "text": "Costs\nNot trivial"
+    "text": "Costs\nNot trivial\nHave to play around to get a feel for. Models differ greatly with respect to cost."
   },
   {
     "objectID": "module1.html#copilot-approach",
@@ -68,5 +68,54 @@
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Agent approach",
     "text": "Agent approach"
+  },
+  {
+    "objectID": "module1.html#harnesss",
+    "href": "module1.html#harnesss",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Harnesss",
+    "text": "Harnesss\nSoftware that “manages” the LLM, the skills, tools, grabbing context. But, also come in their own flavour and own set of tools, skills, etc. Thus, the software can identify LLMs weaknesses and mitigate/augment\nExample such as…\n\n\n\n\n\n\n\n\n\nTool\nIs it a harness?\nIs it an agent?\nBetter description\n\n\n\n\nPosit Assistant / Posit AI\n✅ Yes\n✅ Yes\nA data science agent built on a data-science-specific harness\n\n\nClaude Code\n✅ Yes\n✅ Yes\nA coding agent with its own harness\n\n\nCodex\n✅ Yes\n✅ Yes\nA coding agent powered by the Codex harness\n\n\nGemini CLI / Gemini Code Assist\n✅ Yes\n✅ Yes\nA coding and general-purpose agent built on Google’s Gemini harness"
+  },
+  {
+    "objectID": "module1.html#tools",
+    "href": "module1.html#tools",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Tools",
+    "text": "Tools\nAllows it to “touch” your computer…\n\n\n\n\n\n\n\n\n\nTool Category\nExample Tool\nPurpose\nExample Agent Action\n\n\n\n\nFile System\nRead File\nRead file contents\nExamine a Quarto document before editing\n\n\nFile System\nWrite File\nCreate new files\nGenerate a new R script\n\n\nFile System\nEdit File\nModify existing files\nUpdate a function in a package\n\n\nFile System\nList Files\nExplore directories\nDiscover project structure\n\n\nSearch\nGrep / Search\nFind text patterns\nLocate all references to a function\n\n\nTerminal\nBash Shell\nExecute commands\nRun R CMD check\n\n\nTerminal\nGit\nVersion control\nCreate a commit after modifications\n\n\nProgramming\nR Runtime\nExecute R code\nFit a GAM model\n\n\n\nNote - If an agent can run R code, then all the packages/API etc in R become available. Ditto for python."
+  },
+  {
+    "objectID": "module1.html#skills",
+    "href": "module1.html#skills",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Skills",
+    "text": "Skills\nHigher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator\n\n\n\n\n\n\n\nSkill\nExample Task\n\n\n\n\nStatistician\nFit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC.\n\n\nSpatial Analyst\nCreate movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks.\n\n\nReport Writer\nGenerate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders.\n\n\nShiny App Creator\nBuild an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map."
+  },
+  {
+    "objectID": "module1.html#llms",
+    "href": "module1.html#llms",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "LLMs",
+    "text": "LLMs"
+  },
+  {
+    "objectID": "module1.html#iteration-efficiency",
+    "href": "module1.html#iteration-efficiency",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Iteration efficiency",
+    "text": "Iteration efficiency\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n    AI[[\"Coding&lt;br&gt; agent\"]]\n    \n    H --&gt; AI\n    AI --&gt; H\n    AI --&gt; W['write code']\n    W --&gt; R['run code']\n    R --&gt; E['find errors']\n    E --&gt; AI\n\n\n\n\n\nFigure 4: Iteration"
+  },
+  {
+    "objectID": "module1.html#confused-as-what-is-needed-in-workshops-now",
+    "href": "module1.html#confused-as-what-is-needed-in-workshops-now",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Confused as what is needed in workshops now",
+    "text": "Confused as what is needed in workshops now\n\n\nPlus side, you get to avoid these…\n\n\n\nTeaching as confused\n\n\n\n\nBest coders in the world are not coding anymore.\n\n\n\nopenai\n\n\n\nNote that this was January 29 2026"
+  },
+  {
+    "objectID": "module1.html#how-are-humans-fitting-in-the-data-scienceanalyst-role",
+    "href": "module1.html#how-are-humans-fitting-in-the-data-scienceanalyst-role",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "How are humans fitting in the data science/analyst role",
+    "text": "How are humans fitting in the data science/analyst role\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
   }
 ]
