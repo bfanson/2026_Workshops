@@ -59,27 +59,26 @@ _Plus side, you get to avoid these..._
 
 
 
-### Teaching as confused
+## Teaching as confused
 
 
-![](images/module1/college.png) 
+![](images/module1/college.png){width=50%}
 
 
-
-<br>
-
-
-### Best coders in the world are not coding anymore.
-
-
-![openai](images/module1/openAI.png){width=50%}
 
 <br>
+
+
+## Best coders in the world are not coding anymore.
 
 Note that this was <span 
 style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span>
 
+
+![](images/module1/openAI.png){width=50%}
+
 <br>
+
 
 ----------
 
@@ -152,10 +151,10 @@ Example such as...
 
 | Tool | Is it a harness? | Is it an agent? | Better description |
 |:--|:--:|:--:|:--|
-| Posit Assistant / Posit AI | ✅ Yes | ✅ Yes | A data science agent built on a data-science-specific harness |
-| Claude Code | ✅ Yes | ✅ Yes | A coding agent with its own harness |
-| Codex | ✅ Yes | ✅ Yes | A coding agent powered by the Codex harness |
-| Gemini CLI / Gemini Code Assist | ✅ Yes | ✅ Yes | A coding and general-purpose agent built on Google's Gemini harness |
+| [Posit Assistant / Posit AI](https://posit.co/products/ai) | ✅ Yes | ✅ Yes | A data science agent built on a data-science-specific harness |
+| [Claude Code](https://claude.com/product/claude-code) | ✅ Yes | ✅ Yes | A coding agent with its own harness |
+| [Codex](https://openai.com › codex) | ✅ Yes | ✅ Yes | A coding agent powered by the Codex harness |
+| [Gemini CLI / Gemini Code Assist](https://geminicli.com/) | ✅ Yes | ✅ Yes | A coding and general-purpose agent built on Google's Gemini harness |
 
 
 
@@ -180,7 +179,7 @@ Allows it to "touch" your computer...
 | Programming | R Runtime | Execute R code | Fit a GAM model |
 
 
-__Note - If an agent can run R code, then all the packages/API etc in R become available.  Ditto for python.__
+<aside> - If an agent can run R code, then all the packages/API etc in R become available.  Ditto for python.</aside>
 
 
 ## Skills
@@ -189,10 +188,12 @@ Higher level, more like specialised agents: biometrician, spatial analyst, repor
 
 | Skill | Example Task |
 |:--|:--|
-| Statistician | Fit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC. |
+| [Statistician](https://github.com/bfanson/2026_Workshops/blob/main/skill-staging/statistician/SKILL.md) | Fit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC. |
 | Spatial Analyst | Create movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks. |
 | Report Writer | Generate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders. |
 | Shiny App Creator | Build an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map. |
+
+
 
 
 
@@ -215,7 +216,7 @@ graph LR
     AI --> W['write code']
     W --> R['run code']
     R --> E['find errors']
-    E --> AI
+    E --> W
 
 ```
 
@@ -225,7 +226,6 @@ graph LR
 <span style="background:yellow;">Not trivial<span>
 
 Have to play around to get a feel for.  Models differ greatly with respect to cost.
-
 
 ----------
 
@@ -244,8 +244,20 @@ Have to play around to get a feel for.  Models differ greatly with respect to co
 
 ## Agent approach
 
+::: {.callout-note}
+## Advantages
 
+- Copy/paste tedious
+- Gives context from your R project
+- Iterates on itsself...testing the code it writes
+- Fits a natural workflow
+  - helps 
 
+:::
+
+[Posit AI chat](conversation-export.html)
+
+[Agent report](agent_report.html)
 
 ----------
 
@@ -280,19 +292,19 @@ graph LR
 
 ----------
 
-# Topics
+# Discussion topics
 
-- How are we going to get trained on it? Not fall behind behind every else
+- How are we going to get trained on it? Not fall behind behind everyone else
 
-
-- Are we heading to a standardised workflow? 
-
+- Are we heading to a standardised workflow? suite of skills MD files
 
 - Ensure that it is an active learning/developing process? preclude Intellectual laziness?
 
 - Are we developing ARI-wide agents?  Are we sharing standard skill sets for specific agents?
 
-- 
+- allowing us to do things we should have been doing the whole time...😔 [documentation, additional QC test]
+
+
 
 
 ----------
