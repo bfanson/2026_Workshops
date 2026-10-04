@@ -26,8 +26,6 @@ website:
         menu:
           - href: agenda.qmd
             text: Agenda
-          - href: posit-ai.qmd
-            text: Posit AI
   page-footer: "2026 Workshops"
 
 format:

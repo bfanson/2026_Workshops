@@ -62,7 +62,7 @@ We talked about fun stuff like...😁
 ## Teaching is confused
 
 
-![](images/module1/college.png){width=50%}
+[![](images/module1/college.png){width=50%}](https://www.nytimes.com/2026/09/15/us/universities-ai-warnings-enthusiasm.html)
 
 
 
@@ -82,11 +82,14 @@ We talked about fun stuff like...😁
 :::
 
 
+
+
+[![](images/module1/openAI.png){width=50%}](https://fortune.com/2026/01/29/100-percent-of-code-at-anthropic-and-openai-is-now-ai-written-boris-cherny-roon/)
+
+
 <aside> Note that this was back in <span 
 style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span> </aside>
 
-
-![](images/module1/openAI.png){width=50%}
 
 <br>
 

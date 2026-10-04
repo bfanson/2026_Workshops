@@ -102,7 +102,7 @@
     "href": "agenda.html",
     "title": "Agenda",
     "section": "",
-    "text": "Placeholder — the real workshop schedule (dates, times, sessions, facilitators) will be added here."
+    "text": "Note\nWorkshop plan for 2026 is a bit different and we are running a hodgepodge of topics. Part of the rationale is the changing landscape brought by AI.\n\n\nWorkshop Structure\nThis is a 4-day workshop (SEP 08-11 2025) with each day running from 9am-12pm. During each day’s session, we will cover a new topic in the workflow pipeline.\n\n2026/Oct/06 (Tuesday) - Module 1: AI in data science (Ben/Paul)\n2026/Oct/13 (Tuesday) - Module 2: QGIS (Adrian)\n2026/Oct/20 (Tuesday) - Module 3: Vibe-coding (Ben/Paul)\n2026/Oct/22 (Thursday) - Module 4: eDNA (Lauren)\n\n** Notes **\nWe will not be offended if you only attend part of a session."
   },
   {
     "objectID": "index.html",
@@ -131,5 +131,12 @@
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Teaching is confused",
     "text": "Teaching is confused"
+  },
+  {
+    "objectID": "module1.html#best-coders-in-the-world-are-not-coding-anymore",
+    "href": "module1.html#best-coders-in-the-world-are-not-coding-anymore",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Best coders in the world are not coding anymore",
+    "text": "Best coders in the world are not coding anymore\n\n\n\n\n\n\nNoteSome reasons\n\n\n\n\nTrained on billions of line of code\nClean coding…writes very disciplined code\nRidiculuously fast\nReads warnings and errors outputs😉\n\n\n\n\n\nNote that this was back in January 29 2026"
   }
 ]

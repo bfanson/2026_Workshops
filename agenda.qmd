@@ -3,4 +3,28 @@ title: "Agenda"
 description: "Workshop schedule"
 ---
 
-*Placeholder — the real workshop schedule (dates, times, sessions, facilitators) will be added here.*
+# Note
+
+Workshop plan for 2026 is a bit different and we are running a hodgepodge of topics.  Part of the rationale is the changing landscape brought by AI.  
+
+
+# Workshop Structure
+
+This is a 4-day workshop (SEP 08-11 2025) with each day running from 9am-12pm. During each day’s session, we will cover a new topic in the workflow pipeline.
+
+- 2026/Oct/06 (Tuesday) - Module 1: AI in data science (Ben/Paul)
+
+- 2026/Oct/13 (Tuesday) - Module 2: QGIS (Adrian)
+
+- 2026/Oct/20 (Tuesday) - Module 3: Vibe-coding (Ben/Paul)
+
+- 2026/Oct/22 (Thursday) - Module 4: eDNA (Lauren)
+
+
+*\* Notes \*\*
+
+We will not be offended if you only attend part of a session.  
+
+
+
+
