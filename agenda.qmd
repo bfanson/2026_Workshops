@@ -1,16 +1,20 @@
 ---
-title: "Agenda"
-description: "Workshop schedule"
+title: "Workshop schedule"
+description: ""
 ---
 
-# Note
+-----
 
-Workshop plan for 2026 is a bit different and we are running a hodgepodge of topics.  Part of the rationale is the changing landscape brought by AI.  
+# Note on 2026
+
+Workshop plan for 2026 is a bit different and we are running a hodgepodge of topics.  Part of the rationale is the changing landscape brought by AI and us trying to figure out what skills we need in this new landscape.
+
+-----
 
 
 # Workshop Structure
 
-This is a 4-day workshop (SEP 08-11 2025) with each day running from 9am-12pm. During each day’s session, we will cover a new topic in the workflow pipeline.
+There will be four independent(-ish) modules (9am- ~12pm).  Depending on the presenter, disseminating of topic material will differ (e.g. this website vs slide-deck)
 
 - 2026/Oct/06 (Tuesday) - Module 1: AI in data science (Ben/Paul)
 
@@ -21,10 +25,8 @@ This is a 4-day workshop (SEP 08-11 2025) with each day running from 9am-12pm. D
 - 2026/Oct/22 (Thursday) - Module 4: eDNA (Lauren)
 
 
-*\* Notes \*\*
-
-We will not be offended if you only attend part of a session.  
-
+_
+<aside>__Note:__  We will not be offended if you only attend part of a module.
 
 
 

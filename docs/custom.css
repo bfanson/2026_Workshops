@@ -38,6 +38,13 @@ footer.footer a {
   color: #FFFFFF;
 }
 
+/* page title: Montserrat bold, steel blue — distinct from body headings (Lato) */
+#title-block-header h1.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: steelblue;
+}
+
 /* figure/table captions: dark blue and bold */
 figcaption.quarto-float-caption {
   color: darkblue;
