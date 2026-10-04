@@ -51,7 +51,7 @@ slug: mod1
 <br>
 
 
-_Plus side, you get to avoid these..._
+We talked about fun stuff like...😁
 
 ![](images/module1/eqns.png)
 
@@ -59,7 +59,7 @@ _Plus side, you get to avoid these..._
 
 
 
-## Teaching as confused
+## Teaching is confused
 
 
 ![](images/module1/college.png){width=50%}
@@ -69,10 +69,21 @@ _Plus side, you get to avoid these..._
 <br>
 
 
-## Best coders in the world are not coding anymore.
+## Best coders in the world are not coding anymore
 
-Note that this was <span 
-style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span>
+::: {.callout-note}
+## Some reasons
+
+- Trained on billions of line of code
+- Clean coding...writes very disciplined code
+- Ridiculuously fast
+- Reads warnings and errors outputs😉
+
+:::
+
+
+<aside> Note that this was back in <span 
+style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span> </aside>
 
 
 ![](images/module1/openAI.png){width=50%}
@@ -103,7 +114,6 @@ graph LR
  
 ```
 
-<aside> Aside feature... adding as a holder for now </aside>
 
 
 
@@ -156,6 +166,9 @@ Example such as...
 | [Codex](https://openai.com › codex) | ✅ Yes | ✅ Yes | A coding agent powered by the Codex harness |
 | [Gemini CLI / Gemini Code Assist](https://geminicli.com/) | ✅ Yes | ✅ Yes | A coding and general-purpose agent built on Google's Gemini harness |
 
+<aside> Note on naming - Posit AI is the original name and was switched to Posit Assistant.  They are the same thing </aside>
+
+
 
 
 ## LLMs
@@ -194,6 +207,7 @@ Higher level, more like specialised agents: biometrician, spatial analyst, repor
 | Shiny App Creator | Build an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map. |
 
 
+<aside> Posit AI comes with its own built-in skills.  Mine are located at C:\Users\{username}\AppData\Local\RStudio\pai\bin\dist\skills.  You can just ask Posit AI to find them</aside>
 
 
 

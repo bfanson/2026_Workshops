@@ -18,7 +18,7 @@
     "href": "module1.html#confused-as-what-is-needed-in-workshops-now",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Confused as what is needed in workshops now",
-    "text": "Confused as what is needed in workshops now\n\n\nPlus side, you get to avoid these…"
+    "text": "Confused as what is needed in workshops now\n\n\nWe talked about fun stuff like…😁"
   },
   {
     "objectID": "module1.html#teaching-as-confused",
@@ -32,21 +32,21 @@
     "href": "module1.html#best-coders-in-the-world-are-not-coding-anymore.",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Best coders in the world are not coding anymore.",
-    "text": "Best coders in the world are not coding anymore.\nNote that this was January 29 2026"
+    "text": "Best coders in the world are not coding anymore.\n\nNote that this was January 29 2026"
   },
   {
     "objectID": "module1.html#how-are-humans-fitting-in-the-data-scienceanalyst-role",
     "href": "module1.html#how-are-humans-fitting-in-the-data-scienceanalyst-role",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "How are humans fitting in the data science/analyst role",
-    "text": "How are humans fitting in the data science/analyst role\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow\n\n\n\n\n\n\nAside feature… adding as a holder for now"
+    "text": "How are humans fitting in the data science/analyst role\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow"
   },
   {
     "objectID": "module1.html#harnesss",
     "href": "module1.html#harnesss",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Harnesss",
-    "text": "Harnesss\nSoftware that “manages” the LLM, the skills, tools, grabbing context. But, also come in their own flavour and own set of tools, skills, etc. Thus, the software can identify LLMs weaknesses and mitigate/augment\nExample such as…\n\n\n\nTool\nIs it a harness?\nIs it an agent?\nBetter description\n\n\n\n\nPosit Assistant / Posit AI\n✅ Yes\n✅ Yes\nA data science agent built on a data-science-specific harness\n\n\nClaude Code\n✅ Yes\n✅ Yes\nA coding agent with its own harness\n\n\nCodex\n✅ Yes\n✅ Yes\nA coding agent powered by the Codex harness\n\n\nGemini CLI / Gemini Code Assist\n✅ Yes\n✅ Yes\nA coding and general-purpose agent built on Google’s Gemini harness"
+    "text": "Harnesss\nSoftware that “manages” the LLM, the skills, tools, grabbing context. But, also come in their own flavour and own set of tools, skills, etc. Thus, the software can identify LLMs weaknesses and mitigate/augment\nExample such as…\n\n\n\nTool\nIs it a harness?\nIs it an agent?\nBetter description\n\n\n\n\nPosit Assistant / Posit AI\n✅ Yes\n✅ Yes\nA data science agent built on a data-science-specific harness\n\n\nClaude Code\n✅ Yes\n✅ Yes\nA coding agent with its own harness\n\n\nCodex\n✅ Yes\n✅ Yes\nA coding agent powered by the Codex harness\n\n\nGemini CLI / Gemini Code Assist\n✅ Yes\n✅ Yes\nA coding and general-purpose agent built on Google’s Gemini harness\n\n\n\n\nNote on naming - Posit AI is the original name and was switched to Posit Assistant. They are the same thing"
   },
   {
     "objectID": "module1.html#llms",
@@ -67,7 +67,7 @@
     "href": "module1.html#skills",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Skills",
-    "text": "Skills\nHigher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator\n\n\n\nSkill\nExample Task\n\n\n\n\nStatistician\nFit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC.\n\n\nSpatial Analyst\nCreate movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks.\n\n\nReport Writer\nGenerate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders.\n\n\nShiny App Creator\nBuild an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map."
+    "text": "Skills\nHigher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator\n\n\n\nSkill\nExample Task\n\n\n\n\nStatistician\nFit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC.\n\n\nSpatial Analyst\nCreate movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks.\n\n\nReport Writer\nGenerate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders.\n\n\nShiny App Creator\nBuild an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map.\n\n\n\n\nPosit AI comes with its own built-in skills. Mine are located at C:{username}. You can just ask Posit AI to find them"
   },
   {
     "objectID": "module1.html#iteration-efficiency",
@@ -124,5 +124,12 @@
     "title": "Module 4: eDNA",
     "section": "",
     "text": "may or may not be content here"
+  },
+  {
+    "objectID": "module1.html#teaching-is-confused",
+    "href": "module1.html#teaching-is-confused",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Teaching is confused",
+    "text": "Teaching is confused"
   }
 ]
