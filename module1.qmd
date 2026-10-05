@@ -60,6 +60,7 @@ This is more of guided-group conversation than "lecture"...feel free to interpre
 
 We talked about fun stuff like...😁
 
+<br>
 
 $$
 \begin{align}
@@ -68,20 +69,21 @@ $$
 Y &= Y \times Z \\
 X &\sim \text{LN}(\mu_i, \sigma^2) \\
 Z &\sim Bern(\pi) \\
-
+\\
 \text{Process}\\
 \mu_i &= \text{time}_i \times \text{exclusion}_i
-
-
 \end{align}
 $$
 
 and...
 
+<br>
+
 $$
 \begin{align}
 \text{Observation}\\
 y_i &\sim \text{ZINB}(\pi, \mu_i, \rho) \\
+\\
 \text{Process}\\
 log(\mu_i) &= \alpha + \beta x_i\\
 logit(\pi) &= \beta_0
@@ -96,8 +98,6 @@ $$
 
 
 [![](images/module1/college.png){width=50%}](https://www.nytimes.com/2026/09/15/us/universities-ai-warnings-enthusiasm.html)
-
-
 
 <br>
 
@@ -131,13 +131,56 @@ style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span> <
 
 # LLMs...a few comments
 
--  LLMs (by themselves) can be surprisingly bad
+LLMs can be surprisingly bad at things.  The classic example (a year ago) was counting r's in words
+
+![](images/module1/strawberry.png){width=50%}
+
+
+Let's try now...
+
+![](images/module1/strawberry_posit.png)
+
+It is all good now. LLMs improved in the last year 
+
+But, let's try a longer sentence that is a bit harder...
+
+__Rory the roaring raspberry rabbit raced round the rocky river, wrangling rambunctious robins in bright red raincoats.__
+
+
+```{r}
+# let's run in R ourselves...
+x <-"Rory the roaring raspberry rabbit raced round the rocky river, wrangling rambunctious robins in bright red raincoats"
+
+message( glue::glue("There are {crayon::red(stringr::str_count( tolower(x),'r'))} r's" ) )  
+
+
+```
+
+
+![](images/module1/count_r_posit.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 ::: {.callout-note}
-__Main Point:__ Be careful about judging LLMs solely on its "stupidish" moments.   Often if you give it the right tools and context, it will succeed.
-
+__Main Point:__ Be careful about judging LLMs solely on its "stupid-ish" moments.   Often if you give it the right tools and context, it can often succeed.
 :::
 
 
@@ -386,7 +429,7 @@ graph LR
 
 - Are we developing ARI-wide agents?  Are we sharing standard skill sets for specific agents?
 
-- allowing us to do things we should have been doing the whole time in ideal world😔... [documentation, additional QC test, exploring alternative models]
+- Allowing us to do things we should have been doing the whole time in ideal world😔... [documentation, additional QC test, exploring alternative models]
 
 
 
