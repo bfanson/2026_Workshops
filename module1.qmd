@@ -33,10 +33,17 @@ slug: mod1
 
 # Agenda
 
-1) Set the stage/background
+1) Set the stage/background so on similar footing
 2) Use an example to solidify some of the ideas
 3) <span style="font-color=red;">Morning Tea 😁<span>
 4) Discussion of topics
+
+
+::: {.callout-note}
+
+This is more of guided-group conversation than "lecture"...feel free to interpret at any point if you have a question, if you want to test an idea, if we said something wrong
+
+:::
 
 
 ----------
@@ -69,14 +76,14 @@ We talked about fun stuff like...😁
 <br>
 
 
-## Best coders in the world are not coding anymore
+## Some of best coders in the world are not coding anymore
 
 ::: {.callout-note}
 ## Some reasons
 
 - Trained on billions of line of code
 - Clean coding...writes very disciplined code
-- Ridiculuously fast
+- Ridiculously fast
 - Reads warnings and errors outputs😉
 
 :::
@@ -96,28 +103,21 @@ style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span> <
 
 ----------
 
-# Paradigm shift
+# LLms...a few comments
 
-## How are humans fitting in the data science/analyst role
+-  LLMs (by themselves) can be surprisingly bad
 
+<< add in image of cannot count or multiply or even know today's date >>
 
-```{mermaid}
-%%| label: fig-paradigm
-%%| fig-cap: Thinking about role in workflow
-
-graph LR
-
-    H("👤 Human")
-
-    H <--> DB[["Database Agent"]]
-    H <--> STATS[["📊 Statistics Agent"]]
-    H <--> GIS[["🗺 GIS Agent"]]
-    H <--> WRITER[["📝 Writer Agent"]]
-
- 
-```
+<< if I go this route, can I use posit ai or copilot for the examples>>
+<< we struggle ourselves with such large numbers, but we have tools that can help us.  LLMs do the same>>
 
 
+
+::: {.callout-note}
+__Main Point:__ Be careful about judging LLMs solely on its "stupidish" moments.   Often if you give it the right tools and context, it will succeed.
+
+:::
 
 
 ----------
@@ -135,7 +135,7 @@ flowchart LR
     AI --> ML["Machine learning<br> (NNs, CNNs, Boosted)"]
     AI --> LLM["LLMs"]
     LLM --> bot["Hyped-up search engine"]
-    LLM --> agent["Autonomous Agent"]
+    LLM --> agent["Autonomous(-ish) Agent"]
 
 ```
 
@@ -275,6 +275,33 @@ Have to play around to get a feel for.  Models differ greatly with respect to co
 [Posit AI chat](conversation-export.html)
 
 [Agent report](agent_report.html)
+
+----------
+
+
+
+# Paradigm shift
+
+## How are humans fitting in the data science/analyst role
+
+
+```{mermaid}
+%%| label: fig-paradigm
+%%| fig-cap: Thinking about role in workflow
+
+graph LR
+
+    H("👤 Human")
+
+    H <--> DB[["Database Agent"]]
+    H <--> STATS[["📊 Statistics Agent"]]
+    H <--> GIS[["🗺 GIS Agent"]]
+    H <--> WRITER[["📝 Writer Agent"]]
+    H <--> APP[["Shiny App Agent"]]
+
+ 
+```
+
 
 ----------
 

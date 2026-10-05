@@ -39,7 +39,7 @@
     "href": "module1.html#how-are-humans-fitting-in-the-data-scienceanalyst-role",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "How are humans fitting in the data science/analyst role",
-    "text": "How are humans fitting in the data science/analyst role\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about role in workflow"
+    "text": "How are humans fitting in the data science/analyst role\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n    H &lt;--&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 4: Thinking about role in workflow"
   },
   {
     "objectID": "module1.html#harnesss",
@@ -74,7 +74,7 @@
     "href": "module1.html#iteration-efficiency",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Iteration efficiency",
-    "text": "Iteration efficiency\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n    AI[[\"Coding&lt;br&gt; agent\"]]\n    \n    H --&gt; AI\n    AI --&gt; H\n    AI --&gt; W['write code']\n    W --&gt; R['run code']\n    R --&gt; E['find errors']\n    E --&gt; W\n\n\n\n\n\nFigure 4: Iteration"
+    "text": "Iteration efficiency\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n    AI[[\"Coding&lt;br&gt; agent\"]]\n    \n    H --&gt; AI\n    AI --&gt; H\n    AI --&gt; W['write code']\n    W --&gt; R['run code']\n    R --&gt; E['find errors']\n    E --&gt; W\n\n\n\n\n\nFigure 3: Iteration"
   },
   {
     "objectID": "module1.html#costs",
