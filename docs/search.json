@@ -130,14 +130,14 @@
     "href": "module1.html#some-of-best-coders-in-the-world-are-not-coding-anymore",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Some of best coders in the world are not coding anymore",
-    "text": "Some of best coders in the world are not coding anymore\n\n\n\n\n\n\nNoteSome reasons\n\n\n\n\nTrained on billions of line of code\nClean coding…writes very disciplined code\nRidiculously fast\nReads warnings and errors outputs😉\n\n\n\n\n\nNote that this was back in January 29 2026"
+    "text": "Some of best coders in the world are not coding anymore\n\n\nNote that this was back in January 29 2026\n\n\n\n\n\n\n\nNoteSome reasons\n\n\n\n\nTrained on billions of line of code\nClean coding…writes very disciplined code\nRidiculously fast\nReads warnings and errors outputs😉"
   },
   {
     "objectID": "module1.html#llmsaka-the-brain",
     "href": "module1.html#llmsaka-the-brain",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "LLMs…aka the “brain”",
-    "text": "LLMs…aka the “brain”\nNote - Reminder that this is trained instanced upto the end date of the training"
+    "text": "LLMs…aka the “brain”\nNote - Reminder that this is trained instanced up-to the end date of the training"
   },
   {
     "objectID": "module1.html#memorycontext",
@@ -145,5 +145,19 @@
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Memory/Context",
     "text": "Memory/Context\nSet the stage of the Agent.\n\n\n\n\n\n\n\nAGENTS.md Objective\nDescription\n\n\n\n\nProject Context\nDescribes the purpose of the project, project structure, data sources, key datasets, analytical units, domain knowledge, assumptions, preferred packages, reporting requirements, and links to supporting documentation.\n\n\nWorkflow Rules\nDefines the preferred way work is performed, including coding standards, analysis workflow, package-development practices, reporting conventions, file organisation, reproducibility requirements, testing expectations, and references to STYLE.md.\n\n\nConstraints\nSpecifies mandatory requirements and guardrails such as preserving raw data, maintaining backwards compatibility, using approved coordinate reference systems, handling sensitive data securely, avoiding destructive file operations, respecting database constraints, and documenting assumptions and limitations."
+  },
+  {
+    "objectID": "module1.html#nomenclature",
+    "href": "module1.html#nomenclature",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Nomenclature",
+    "text": "Nomenclature\n\n\n\n\n\n\nflowchart LR\n\n    AI[[\"AI\"]]\n\n    AI --&gt; ML[\"Machine learning&lt;br&gt; (NNs, CNNs, Boosted)\"]\n    AI --&gt; LLM[\"LLMs\"]\n    LLM --&gt; bot[\"Hyped-up search engine\"]\n    LLM --&gt; agent[\"Autonomous(-ish) Agent\"]\n\n\n\n\n\nFigure 1: Nomenclature"
+  },
+  {
+    "objectID": "module1.html#llms-a-few-comments",
+    "href": "module1.html#llms-a-few-comments",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "LLMs … a few comments",
+    "text": "LLMs … a few comments\nLLMs can be surprisingly bad at things. The classic example (a year ago) was counting r’s in words\n\nLet’s try now…\n\nIt is all good now. LLMs improved in the last year\nBut, let’s try a longer sentence that is a bit harder…\nRory the roaring raspberry rabbit raced round the rocky river, wrangling rambunctious robins in bright red raincoats.\n\n# let's run in R ourselves...\nx &lt;-\"Rory the roaring raspberry rabbit raced round the rocky river, wrangling rambunctious robins in bright red raincoats\"\n\nmessage( glue::glue(\"There are {crayon::red(stringr::str_count( tolower(x),'r'))} r's\" ) )  \n\nThere are 19 r's\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nMain Point: Be careful about judging LLMs solely on its “stupid-ish” moments. Often if you give it the right tools and context, it can often succeed. This leads to discussion on Agents."
   }
 ]
