@@ -18,7 +18,7 @@
     "href": "module1.html#confused-as-what-is-needed-in-workshops-now",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Confused as what is needed in workshops now",
-    "text": "Confused as what is needed in workshops now\n\n\nWe talked about fun stuff like…😁"
+    "text": "Confused as what is needed in workshops now\n\n\nWe talked about fun stuff like…😁\n$$ \\[\\begin{align}\n\\text{Observation}\\\\\n\\text{td}_i &\\sim \\text{HLN}(\\pi, \\mu_i, \\sigma^2) \\\\\nY &= Y \\times Z \\\\\nX &\\sim \\text{LN}(\\mu_i, \\sigma^2) \\\\\nZ &\\sim Bern(\\pi) \\\\\n\n\\text{Process}\\\\\n\\mu_i &= \\text{time}_i \\times \\text{exclusion}_i\n\n\n\\end{align}\\] $$\nand…\n\\[\n\\begin{align}\n\\text{Observation}\\\\\ny_i &\\sim \\text{ZINB}(\\pi, \\mu_i, \\rho) \\\\\n\\text{Process}\\\\\nlog(\\mu_i) &= \\alpha + \\beta x_i\\\\\nlogit(\\pi) &= \\beta_0\n\\end{align}\n\\]"
   },
   {
     "objectID": "module1.html#teaching-is-confused",
@@ -81,7 +81,7 @@
     "href": "module1.html#costs",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Costs",
-    "text": "Costs\nNot trivial\nHave to play around to get a feel for. Models differ greatly with respect to cost."
+    "text": "Costs\nNot trivial\nHave to play around to get a feel for. Models differ greatly with respect to cost.\n\n\n\nTask\nCost\n\n\n\n\nCreate a plot of x and y\n$0.05\n\n\nPlan out a statistical analysis plan\n$0.5-$1.00\n\n\nRun a full analysis for a simple dataset,\n\n\n\nincluding all R scripts and report document\n~$5.00"
   },
   {
     "objectID": "module1.html#copilot-approach",
@@ -95,7 +95,7 @@
     "href": "module1.html#agent-approach",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Agent approach",
-    "text": "Agent approach\n\n\n\n\n\n\nNoteAdvantages\n\n\n\n\nCopy/paste tedious\nGives context from your R project\nIterates on itsself…testing the code it writes\nFits a natural workflow\n\nhelps\n\n\n\n\nPosit AI chat\nAgent report"
+    "text": "Agent approach\n\n\n\n\n\n\nNoteAdvantages\n\n\n\n\nCopy/paste tedious\nGives context from your R project\nIterates on itsself…testing the code it writes\nFits a natural workflow\n\n\n\nPosit AI chat\nAgent report"
   },
   {
     "objectID": "agenda.html",
@@ -131,5 +131,19 @@
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Some of best coders in the world are not coding anymore",
     "text": "Some of best coders in the world are not coding anymore\n\n\n\n\n\n\nNoteSome reasons\n\n\n\n\nTrained on billions of line of code\nClean coding…writes very disciplined code\nRidiculously fast\nReads warnings and errors outputs😉\n\n\n\n\n\nNote that this was back in January 29 2026"
+  },
+  {
+    "objectID": "module1.html#llmsaka-the-brain",
+    "href": "module1.html#llmsaka-the-brain",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "LLMs…aka the “brain”",
+    "text": "LLMs…aka the “brain”\nNote - Reminder that this is trained instanced upto the end date of the training"
+  },
+  {
+    "objectID": "module1.html#memorycontext",
+    "href": "module1.html#memorycontext",
+    "title": "Module 1: AI in Data science: A paradigm shift?",
+    "section": "Memory/Context",
+    "text": "Memory/Context\nSet the stage of the Agent.\n\n\n\n\n\n\n\nAGENTS.md Objective\nDescription\n\n\n\n\nProject Context\nDescribes the purpose of the project, project structure, data sources, key datasets, analytical units, domain knowledge, assumptions, preferred packages, reporting requirements, and links to supporting documentation.\n\n\nWorkflow Rules\nDefines the preferred way work is performed, including coding standards, analysis workflow, package-development practices, reporting conventions, file organisation, reproducibility requirements, testing expectations, and references to STYLE.md.\n\n\nConstraints\nSpecifies mandatory requirements and guardrails such as preserving raw data, maintaining backwards compatibility, using approved coordinate reference systems, handling sensitive data securely, avoiding destructive file operations, respecting database constraints, and documenting assumptions and limitations."
   }
 ]

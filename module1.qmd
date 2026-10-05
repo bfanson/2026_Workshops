@@ -60,7 +60,33 @@ This is more of guided-group conversation than "lecture"...feel free to interpre
 
 We talked about fun stuff like...😁
 
-![](images/module1/eqns.png)
+
+$$
+\begin{align}
+\text{Observation}\\
+\text{td}_i &\sim \text{HLN}(\pi, \mu_i, \sigma^2) \\
+Y &= Y \times Z \\
+X &\sim \text{LN}(\mu_i, \sigma^2) \\
+Z &\sim Bern(\pi) \\
+
+\text{Process}\\
+\mu_i &= \text{time}_i \times \text{exclusion}_i
+
+
+\end{align}
+$$
+
+and...
+
+$$
+\begin{align}
+\text{Observation}\\
+y_i &\sim \text{ZINB}(\pi, \mu_i, \rho) \\
+\text{Process}\\
+log(\mu_i) &= \alpha + \beta x_i\\
+logit(\pi) &= \beta_0
+\end{align}
+$$
 
 <br>
 
@@ -103,14 +129,9 @@ style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span> <
 
 ----------
 
-# LLms...a few comments
+# LLMs...a few comments
 
 -  LLMs (by themselves) can be surprisingly bad
-
-<< add in image of cannot count or multiply or even know today's date >>
-
-<< if I go this route, can I use posit ai or copilot for the examples>>
-<< we struggle ourselves with such large numbers, but we have tools that can help us.  LLMs do the same>>
 
 
 
@@ -173,8 +194,9 @@ Example such as...
 
 
 
+## LLMs...aka the "brain"
 
-## LLMs
+__Note - Reminder that this is trained instanced upto the end date of the training__
 
 ![](images/module1/llm_posit.png)
 
@@ -212,12 +234,22 @@ Higher level, more like specialised agents: biometrician, spatial analyst, repor
 
 <aside> Posit AI comes with its own built-in skills.  Mine are located at C:\Users\{username}\AppData\Local\RStudio\pai\bin\dist\skills.  You can just ask Posit AI to find them</aside>
 
+## Memory/Context
+
+Set the stage of the Agent.
 
 
 
-## Iteration efficiency
+| AGENTS.md Objective | Description |
+|---|---|
+| Project Context | Describes the purpose of the project, project structure, data sources, key datasets, analytical units, domain knowledge, assumptions, preferred packages, reporting requirements, and links to supporting documentation. |
+| Workflow Rules | Defines the preferred way work is performed, including coding standards, analysis workflow, package-development practices, reporting conventions, file organisation, reproducibility requirements, testing expectations, and references to `STYLE.md`. |
+| Constraints | Specifies mandatory requirements and guardrails such as preserving raw data, maintaining backwards compatibility, using approved coordinate reference systems, handling sensitive data securely, avoiding destructive file operations, respecting database constraints, and documenting assumptions and limitations. |
 
 
+---------------
+
+# Iteration efficiency
 
 ```{mermaid}
 %%| label: fig-agent
@@ -238,11 +270,24 @@ graph LR
 ```
 
 
-## Costs
+# Costs
 
 <span style="background:yellow;">Not trivial<span>
 
-Have to play around to get a feel for.  Models differ greatly with respect to cost.
+Just need to play around to get a feel for how you work.  
+- Models differ greatly with respect to cost.  
+
+- How often you initiate a new chat can greatly affect it
+
+A few examples
+
+| Task | Cost |
+|---------------------------------------|-----:|
+| Create a plot of x and y              | ~$0.01  |
+| Plan out a statistical analysis plan  | $0.5-$1.00  |
+| Run a full analysis for a simple dataset, 
+including all R scripts and report document (for the example below)  | ~$5.00  |
+
 
 ----------
 
@@ -268,7 +313,6 @@ Have to play around to get a feel for.  Models differ greatly with respect to co
 - Gives context from your R project
 - Iterates on itsself...testing the code it writes
 - Fits a natural workflow
-  - helps 
 
 :::
 
@@ -307,28 +351,24 @@ graph LR
 
 # How are you using agents?
 
-1) workflow efficiency
-
-
-2) 
-
 ```{mermaid}
 %%| label: fig-uses
-%%| fig-cap: Thinking about Agent roles
+%%| fig-cap: how AI (agents) being used?
 
 graph LR
 
     AI[["LLM"]]
 
     AI --> WF["Workflow"]
-    AI --> TH["Sounding board"]
+    AI --> TH["Ideas"]
 
     WF --> Pkg["R Packages"]
     WF --> Db["Database"]
     WF --> QC["QC tester"]
+    WF --> QC["Documentation"]
 
-    TH --> PI["Project creation"]
-    TH --> SAP["Analysis idea"]
+    TH --> PI["Project development"]
+    TH --> SAP["Analysis planning"]
     TH --> PR["Communicating"]
 
 ```
@@ -338,16 +378,15 @@ graph LR
 
 # Discussion topics
 
-- How are we going to get trained on it? Not fall behind behind everyone else
+- How are we going to get trained on it? Not fall behind behind consultants/academy/etc 
 
-- Are we heading to a standardised workflow? suite of skills MD files
+- Are we heading to a standardised workflow? E.g. suite of skills MD files? 
 
-- Ensure that it is an active learning/developing process? preclude Intellectual laziness?
+- Ensure that it is an active learning/developing process? Preclude "intellectual laziness"?
 
 - Are we developing ARI-wide agents?  Are we sharing standard skill sets for specific agents?
 
-- allowing us to do things we should have been doing the whole time...😔 [documentation, additional QC test]
-
+- allowing us to do things we should have been doing the whole time in ideal world😔... [documentation, additional QC test, exploring alternative models]
 
 
 
@@ -355,7 +394,6 @@ graph LR
 
 # Vibe-coding module: what would be useful???
 
-Here again, we are showing our confusion on how to proceed.
 
 
 
