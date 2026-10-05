@@ -39,7 +39,7 @@
     "href": "module1.html#how-are-humans-fitting-in-the-data-scienceanalyst-role",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "How are humans fitting in the data science/analyst role",
-    "text": "How are humans fitting in the data science/analyst role\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n    H &lt;--&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 4: Thinking about role in workflow"
+    "text": "How are humans fitting in the data science/analyst role\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n    H &lt;--&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 5: Thinking about human role in workflow"
   },
   {
     "objectID": "module1.html#harnesss",
@@ -67,7 +67,7 @@
     "href": "module1.html#skills",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Skills",
-    "text": "Skills\nHigher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator\n\n\n\nSkill\nExample Task\n\n\n\n\nStatistician\nFit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC.\n\n\nSpatial Analyst\nCreate movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks.\n\n\nReport Writer\nGenerate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders.\n\n\nShiny App Creator\nBuild an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map.\n\n\n\n\nPosit AI comes with its own built-in skills. Mine are located at C:{username}. You can just ask Posit AI to find them"
+    "text": "Skills\nHigher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator. These are often Markdown (MD) files.\n\n\n\nSkill\nExample Task\n\n\n\n\nStatistician\nFit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC.\n\n\nSpatial Analyst\nCreate movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks.\n\n\nReport Writer\nGenerate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders.\n\n\nShiny App Creator\nBuild an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map.\n\n\n\n\nPosit AI comes with its own built-in skills such as quarto writer, shiny app builder, predictive modeling"
   },
   {
     "objectID": "module1.html#iteration-efficiency",
@@ -95,7 +95,7 @@
     "href": "module1.html#agent-approach",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Agent approach",
-    "text": "Agent approach\n\n\n\n\n\n\nNoteAdvantages\n\n\n\n\nCopy/paste tedious\nGives context from your R project\nIterates on itsself…testing the code it writes\nFits a natural workflow\n\n\n\nPosit AI chat\nAgent report"
+    "text": "Agent approach\n\n\n\n\n\n\nNoteAdvantages\n\n\n\n\nCopy/paste tedious\nGives context from your R project\nIterates on itself…testing the code it writes\nFits a natural workflow\n\n\n\nPosit AI chat\nAgent report"
   },
   {
     "objectID": "agenda.html",
@@ -144,14 +144,14 @@
     "href": "module1.html#memorycontext",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Memory/Context",
-    "text": "Memory/Context\nSet the stage of the Agent.\n\n\n\n\n\n\n\nAGENTS.md Objective\nDescription\n\n\n\n\nProject Context\nDescribes the purpose of the project, project structure, data sources, key datasets, analytical units, domain knowledge, assumptions, preferred packages, reporting requirements, and links to supporting documentation.\n\n\nWorkflow Rules\nDefines the preferred way work is performed, including coding standards, analysis workflow, package-development practices, reporting conventions, file organisation, reproducibility requirements, testing expectations, and references to STYLE.md.\n\n\nConstraints\nSpecifies mandatory requirements and guardrails such as preserving raw data, maintaining backwards compatibility, using approved coordinate reference systems, handling sensitive data securely, avoiding destructive file operations, respecting database constraints, and documenting assumptions and limitations."
+    "text": "Memory/Context\nSets the stage for the Agent. In Posit AI, you can do this with AGENTS.MD\n\n\n\n\n\n\n\nAGENTS.md Objective\nDescription\n\n\n\n\nProject Context\nDescribes the purpose of the project, project structure, data sources, key datasets, analytical units, domain knowledge, assumptions, preferred packages, reporting requirements, and links to supporting documentation.\n\n\nWorkflow Rules\nDefines the preferred way work is performed, including coding standards, analysis workflow, package-development practices, reporting conventions, file organisation, reproducibility requirements, testing expectations, and references to STYLE.md.\n\n\nConstraints\nSpecifies mandatory requirements and guardrails such as preserving raw data, maintaining backwards compatibility, using approved coordinate reference systems, handling sensitive data securely, avoiding destructive file operations, respecting database constraints, and documenting assumptions and limitations."
   },
   {
     "objectID": "module1.html#nomenclature",
     "href": "module1.html#nomenclature",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Nomenclature",
-    "text": "Nomenclature\n\n\n\n\n\n\nflowchart LR\n\n    AI[[\"AI\"]]\n\n    AI --&gt; ML[\"Machine learning&lt;br&gt; (NNs, CNNs, Boosted)\"]\n    AI --&gt; LLM[\"LLMs\"]\n    LLM --&gt; bot[\"Hyped-up search engine\"]\n    LLM --&gt; agent[\"Autonomous(-ish) Agent\"]\n\n\n\n\n\nFigure 1: Nomenclature"
+    "text": "Nomenclature\n\n\n\n\n\n\nflowchart LR\n\n    AI[[\"AI\"]]\n\n    AI --&gt; ML[\"Machine learning&lt;br&gt; (NNs, CNNs)\"]\n    AI --&gt; GAI[\"Generative AI (Images)\"]\n    AI --&gt; LLM[\"LLMs&lt;br&gt;(Large Large Models)\"]\n    LLM --&gt; bot[\"Chatbot (hyped-up search engine)\"]\n    LLM --&gt; agent[\"Autonomous(-ish) Agent\"]\n\n\n\n\n\nFigure 1: Simplified classification\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n\n    LLM[\"LLMs&lt;br&gt;(Large Large Models)\"]\n    LLM --&gt; Local[\"Local Models&lt;br&gt; (Gemma, gpt-oss)\"]\n    LLM --&gt; FM[\"Frontier Models&lt;br&gt; (Claude, chatGPT, GLM, Kimi)\"]\n    LLM --&gt; SP[\"Specialty Models&lt;br&gt; (Consensus, Elicit, Jenni)\"]\n\n\n\n\n\nFigure 2: General categories of LLMs"
   },
   {
     "objectID": "module1.html#llms-a-few-comments",

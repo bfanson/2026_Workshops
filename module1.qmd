@@ -135,18 +135,35 @@ style="color:steelblue;font-size:110%;font-weight:bold;">January 29 2026<span> <
 
 ```{mermaid}
 %%| label: fig-agent_basic
-%%| fig-cap: Nomenclature
+%%| fig-cap: Simplified classification
 
 flowchart LR
 
     AI[["AI"]]
 
-    AI --> ML["Machine learning<br> (NNs, CNNs, Boosted)"]
-    AI --> LLM["LLMs"]
-    LLM --> bot["Hyped-up search engine"]
+    AI --> ML["Machine learning<br> (NNs, CNNs)"]
+    AI --> GAI["Generative AI (Images)"]
+    AI --> LLM["LLMs<br>(Large Large Models)"]
+    LLM --> bot["Chatbot (hyped-up search engine)"]
     LLM --> agent["Autonomous(-ish) Agent"]
 
 ```
+
+
+
+```{mermaid}
+%%| label: fig-agent_cat
+%%| fig-cap: General categories of LLMs
+
+flowchart LR
+
+    LLM["LLMs<br>(Large Large Models)"]
+    LLM --> Local["Local Models<br> (Gemma, gpt-oss)"]
+    LLM --> FM["Frontier Models<br> (Claude, chatGPT, GLM, Kimi)"]
+    LLM --> SP["Specialty Models<br> (Consensus, Elicit, Jenni)"]
+
+```
+
 
 
 ## LLMs ... a few comments
@@ -271,7 +288,7 @@ Allows it to "touch" your computer...
 
 ## Skills
 
-Higher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator
+Higher level, more like specialised agents: biometrician, spatial analyst, report writer, shiny app creator.  These are often Markdown (MD) files.
 
 | Skill | Example Task |
 |:--|:--|
@@ -281,12 +298,11 @@ Higher level, more like specialised agents: biometrician, spatial analyst, repor
 | Shiny App Creator | Build an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map. |
 
 
-<aside> Posit AI comes with its own built-in skills.  Mine are located at C:\Users\{username}\AppData\Local\RStudio\pai\bin\dist\skills.  You can just ask Posit AI to find them</aside>
+<aside> Posit AI comes with its own built-in skills such as quarto writer, shiny app builder, predictive modeling</aside>
 
 ## Memory/Context
 
-Set the stage of the Agent.
-
+Sets the stage for the Agent.  In Posit AI, you can do this with AGENTS.MD
 
 
 | AGENTS.md Objective | Description |
@@ -323,19 +339,17 @@ graph LR
 
 <span style="background:yellow;">Not trivial<span>
 
-Just need to play around to get a feel for how you work.  
-- Models differ greatly with respect to cost.  
+### Models differ greatly with respect to cost.  
 
-- How often you initiate a new chat can greatly affect it
+### How often you initiate a new chat can greatly affect it
 
-A few examples
+
 
 | Task | Cost |
 |---------------------------------------|-----:|
 | Create a plot of x and y              | ~$0.01  |
 | Plan out a statistical analysis plan  | $0.50 - $1.00  |
-| Run a full analysis for a simple dataset, 
-including all R scripts and report document (for the example below)  | ~$5.00  |
+| Run a full analysis for a simple dataset, including all R scripts and report document (for the example below)  | ~$5.00  |
 
 
 ----------
@@ -360,7 +374,7 @@ including all R scripts and report document (for the example below)  | ~$5.00  |
 
 - Copy/paste tedious
 - Gives context from your R project
-- Iterates on itsself...testing the code it writes
+- Iterates on itself...testing the code it writes
 - Fits a natural workflow
 
 :::
@@ -380,7 +394,7 @@ including all R scripts and report document (for the example below)  | ~$5.00  |
 
 ```{mermaid}
 %%| label: fig-paradigm
-%%| fig-cap: Thinking about role in workflow
+%%| fig-cap: Thinking about human role in workflow
 
 graph LR
 
@@ -402,7 +416,7 @@ graph LR
 
 ```{mermaid}
 %%| label: fig-uses
-%%| fig-cap: how AI (agents) being used?
+%%| fig-cap: How AI (agents) being used?
 
 graph LR
 
