@@ -18,7 +18,7 @@
     "href": "module1.html#confused-as-what-is-needed-in-workshops-now",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Confused as what is needed in workshops now",
-    "text": "Confused as what is needed in workshops now\n\n\nWe talked about fun stuff like…😁\n$$ \\[\\begin{align}\n\\text{Observation}\\\\\n\\text{td}_i &\\sim \\text{HLN}(\\pi, \\mu_i, \\sigma^2) \\\\\nY &= Y \\times Z \\\\\nX &\\sim \\text{LN}(\\mu_i, \\sigma^2) \\\\\nZ &\\sim Bern(\\pi) \\\\\n\n\\text{Process}\\\\\n\\mu_i &= \\text{time}_i \\times \\text{exclusion}_i\n\n\n\\end{align}\\] $$\nand…\n\\[\n\\begin{align}\n\\text{Observation}\\\\\ny_i &\\sim \\text{ZINB}(\\pi, \\mu_i, \\rho) \\\\\n\\text{Process}\\\\\nlog(\\mu_i) &= \\alpha + \\beta x_i\\\\\nlogit(\\pi) &= \\beta_0\n\\end{align}\n\\]"
+    "text": "Confused as what is needed in workshops now\n\n\nWe talked about fun stuff like…😁\n\n\\[\n\\begin{align}\n\\text{Observation}\\\\\n\\text{td}_i &\\sim \\text{HLN}(\\pi, \\mu_i, \\sigma^2) \\\\\nY &= Y \\times Z \\\\\nX &\\sim \\text{LN}(\\mu_i, \\sigma^2) \\\\\nZ &\\sim Bern(\\pi) \\\\\n\\\\\n\\text{Process}\\\\\n\\mu_i &= \\text{time}_i \\times \\text{exclusion}_i\n\\end{align}\n\\]\nand…\n\n\\[\n\\begin{align}\n\\text{Observation}\\\\\ny_i &\\sim \\text{ZINB}(\\pi, \\mu_i, \\rho) \\\\\n\\\\\n\\text{Process}\\\\\nlog(\\mu_i) &= \\alpha + \\beta x_i\\\\\nlogit(\\pi) &= \\beta_0\n\\end{align}\n\\]"
   },
   {
     "objectID": "module1.html#teaching-is-confused",
