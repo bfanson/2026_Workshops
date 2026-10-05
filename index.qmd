@@ -14,4 +14,4 @@ listing:
   sort: false
 ---
 
-Welcome to the 2026 Workshops site. Browse the four modules below, or use **Workshop Links** in the navbar above for the agenda and an overview of Posit AI.
+Welcome to the 2026 Workshops site. Use **Workshop Links** in the navbar above for the agenda (though topics listed below).
