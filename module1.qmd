@@ -206,7 +206,7 @@ Higher level, more like specialised agents: biometrician, spatial analyst, repor
 |:--|:--|
 | [Statistician](https://github.com/bfanson/2026_Workshops/blob/main/skill-staging/statistician/SKILL.md) | Fit and compare GAM, GLMM, and HMM models for fish movement data, evaluate assumptions, and identify the best-supported model using AIC. |
 | Spatial Analyst | Create movement maps from acoustic telemetry data, calculate home ranges, and analyse river network connectivity using sf, terra, and sfnetworks. |
-| Report Writer | Generate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders. |
+| [Report Writer](https://github.com/bfanson/2026_Workshops/blob/main/skill-staging/quarto/SKILL.md) | Generate a Quarto report that summarizes study objectives, methods, results, figures, and key findings for stakeholders. |
 | Shiny App Creator | Build an interactive dashboard that allows users to explore telemetry detections, filter by species and date, and visualize movement patterns on a map. |
 
 
