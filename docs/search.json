@@ -151,7 +151,7 @@
     "href": "module1.html#nomenclature",
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "Nomenclature",
-    "text": "Nomenclature\n\n\n\n\n\n\nflowchart LR\n\n    AI[[\"AI\"]]\n\n    AI --&gt; ML[\"Machine learning&lt;br&gt; (NNs, CNNs)\"]\n    AI --&gt; GAI[\"Generative AI (Images)\"]\n    AI --&gt; LLM[\"LLMs&lt;br&gt;(Large Large Models)\"]\n    LLM --&gt; bot[\"Chatbot (hyped-up search engine)\"]\n    LLM --&gt; agent[\"Autonomous(-ish) Agent\"]\n\n\n\n\n\nFigure 1: Simplified classification\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n\n    LLM[\"LLMs&lt;br&gt;(Large Large Models)\"]\n    LLM --&gt; Local[\"Local Models&lt;br&gt; (Gemma, gpt-oss)\"]\n    LLM --&gt; FM[\"Frontier Models&lt;br&gt; (Claude, chatGPT, GLM, Kimi)\"]\n    LLM --&gt; SP[\"Specialty Models&lt;br&gt; (Consensus, Elicit, Jenni)\"]\n\n\n\n\n\nFigure 2: General categories of LLMs"
+    "text": "Nomenclature\n\n\n\n\n\n\nflowchart LR\n\n    AI[[\"AI\"]]\n\n    AI --&gt; ML[\"Machine learning&lt;br&gt; (NNs, CNNs)\"]\n    AI --&gt; GAI[\"Generative AI (Images)\"]\n    AI --&gt; LLM[\"LLMs&lt;br&gt;(Large Language Models)\"]\n    LLM --&gt; bot[\"Chatbot (hyped-up search engine)\"]\n    LLM --&gt; agent[\"Autonomous(-ish) Agent\"]\n\n\n\n\n\nFigure 1: Simplified classification\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n\n    LLM[\"LLMs&lt;br&gt;(Large Language Models)\"]\n    LLM --&gt; Local[\"Local Models&lt;br&gt; (Gemma, gpt-oss)\"]\n    LLM --&gt; FM[\"Frontier Models&lt;br&gt; (Claude, chatGPT, GLM, Kimi)\"]\n    LLM --&gt; SP[\"Specialty Models&lt;br&gt; (Consensus, Elicit, Jenni)\"]\n\n\n\n\n\nFigure 2: General categories of LLMs"
   },
   {
     "objectID": "module1.html#llms-a-few-comments",

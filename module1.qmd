@@ -143,7 +143,7 @@ flowchart LR
 
     AI --> ML["Machine learning<br> (NNs, CNNs)"]
     AI --> GAI["Generative AI (Images)"]
-    AI --> LLM["LLMs<br>(Large Large Models)"]
+    AI --> LLM["LLMs<br>(Large Language Models)"]
     LLM --> bot["Chatbot (hyped-up search engine)"]
     LLM --> agent["Autonomous(-ish) Agent"]
 
@@ -157,7 +157,7 @@ flowchart LR
 
 flowchart LR
 
-    LLM["LLMs<br>(Large Large Models)"]
+    LLM["LLMs<br>(Large Language Models)"]
     LLM --> Local["Local Models<br> (Gemma, gpt-oss)"]
     LLM --> FM["Frontier Models<br> (Claude, chatGPT, GLM, Kimi)"]
     LLM --> SP["Specialty Models<br> (Consensus, Elicit, Jenni)"]
