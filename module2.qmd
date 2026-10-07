@@ -31,6 +31,15 @@ draft: false
 
 -------
 
+# Presentation
+
+Material will be presented via a Powerpoint preso with live demonstrations.  
+
+__If you would like to try as well, please install QGIS installed (via the Company Portal)__
+
+
+-------
+
 # Data files used today
 
 Click to download from OneDrive...
