@@ -5,10 +5,9 @@ description: |
   Using QGIS for your GIS needs
 author:
   - name: Adrian
-    url: https://bfanson.github.io/2026_Workshops/
     affiliation: Arthur Rylah Institute
     affiliation_url: https://www.ari.vic.gov.au/
-date: 2026-10-XX
+date: 2026-10-12
 format:
   html:
     toc: true
@@ -18,5 +17,24 @@ format:
 draft: false
 ---
 
+-------
 
-** may or may not be content here **
+![](images/module2/cover.png)
+
+# Key topics
+
+- Getting familiar with QGIS
+- Compare and contrast between QGIS and ESRI
+- Creating high quality maps
+- Editing and geoprocessing in QGIS
+
+
+-------
+
+# Data files used today
+
+Click to download from OneDrive...
+
+[QGIS files](https://delwpvicgovau-my.sharepoint.com/:u:/g/personal/ben_fanson_deeca_vic_gov_au/IQBsWPcsTkVjQqxG5CluNt1wAbALwJXnq1FG2vWK9NFLzg8?e=s9HMki)
+
+[Shapefiles](https://delwpvicgovau-my.sharepoint.com/:u:/g/personal/ben_fanson_deeca_vic_gov_au/IQChBnUdQkLAR71UJZ5bgGTdAeaLF2BAdRLH1JYKudR-zwc?e=Gk3W8f)

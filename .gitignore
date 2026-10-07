@@ -1,3 +1,5 @@
+.posit/
+
 .quarto/
 
 /.quarto/
@@ -6,3 +8,5 @@
 
 supplemental/
 .posit/assistant
+
+images/
