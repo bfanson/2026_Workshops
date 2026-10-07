@@ -381,7 +381,6 @@ graph LR
 
 [Posit AI chat](conversation-export.html)
 
-[Agent report](agent_report.html)
 
 ----------
 

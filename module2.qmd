@@ -35,7 +35,7 @@ draft: false
 
 Material will be presented via a Powerpoint preso with live demonstrations.  
 
-__If you would like to try as well, please install QGIS installed (via the Company Portal)__
+__If you would like to try as well, please install QGIS (via the Company Portal)__
 
 
 -------
