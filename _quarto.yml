@@ -6,7 +6,8 @@ project:
   resources:
     - .nojekyll
     - "images/*.png"
-
+    - "html_extra/*.html"
+    
 website:
   title: "2026 Workshops"
   navbar:

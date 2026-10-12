@@ -361,9 +361,9 @@ graph LR
 
 ## Copilot approach
 
-[Copilot chat](Copilot basic.html)
+[Copilot chat](html_extra/Copilot basic.html){target="_blank" rel="noopener"}
 
-[Analysis report](second effort updated.html)
+[Analysis report](html_extra/second effort updated.html){target="_blank" rel="noopener"}
 
 
 
@@ -379,7 +379,7 @@ graph LR
 
 :::
 
-[Posit AI chat](conversation-export.html)
+[Posit AI chat](html_extra/conversation-export.html){target="_blank" rel="noopener"}
 
 
 ----------
