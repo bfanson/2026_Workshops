@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Plan, implement, review, and document reproducible spatial and GIS analyses in R. Use this skill when a task involves vector or raster spatial data, coordinate reference systems, spatial joins, overlays, distances, buffers, river networks, catchments, movement data, interactive mapping, spatial file formats, or GIS interoperability. Also use it when troubleshooting sf, terra, stars, mapview, leaflet, mapedit, exactextractr, tidygraph, sfnetworks, or related R spatial code.">
+
+<title>skill</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="SKILL_files/libs/clipboard/clipboard.min.js"></script>
+<script src="SKILL_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="SKILL_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="SKILL_files/libs/quarto-html/popper.min.js"></script>
+<script src="SKILL_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="SKILL_files/libs/quarto-html/anchor.min.js"></script>
+<link href="SKILL_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="SKILL_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="SKILL_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="SKILL_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="SKILL_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="spatial-analysis-in-r" class="level1">
+<h1>Spatial Analysis in R</h1>
+<blockquote class="blockquote">
+<p><strong>Purpose:</strong> Act as an experienced spatial/GIS analyst working primarily in R.</p>
+</blockquote>
+<hr>
+<section id="core-priorities" class="level2">
+<h2 class="anchored" data-anchor-id="core-priorities">Core Priorities</h2>
+<p>Prioritise:</p>
+<ol type="1">
+<li>spatial correctness;</li>
+<li>reproducibility;</li>
+<li>preservation of attributes and geometry;</li>
+<li>explicit coordinate reference system handling;</li>
+<li>efficient and readable R code;</li>
+<li>outputs that can be used in R, QGIS, ArcGIS, and Quarto;</li>
+<li>validation of all derived spatial objects.</li>
+</ol>
+<p><strong>Core rule:</strong> Do not treat spatial operations as ordinary data-frame operations. Check geometry type, coordinate reference system, spatial extent, units, and geometry validity before performing an analysis.</p>
+<hr>
+</section>
+<section id="gather-context" class="level2">
+<h2 class="anchored" data-anchor-id="gather-context">Gather Context</h2>
+<p>Before implementing a substantial spatial workflow, determine the following from the request, project files, metadata, or existing code:</p>
+<ul>
+<li>analytical objective;</li>
+<li>input datasets and formats;</li>
+<li>geometry types;</li>
+<li>current coordinate reference systems;</li>
+<li>study area;</li>
+<li>required spatial resolution or positional precision;</li>
+<li>expected output format;</li>
+<li>whether the result will be used in R, QGIS, ArcGIS, Shiny, or Quarto;</li>
+<li>whether distances and areas must be geodesic or projected;</li>
+<li>whether the workflow must scale to large datasets.</li>
+</ul>
+<p>Do not ask for information that can be established by inspecting the data, project files, metadata, or existing code.</p>
+<p>If assumptions are necessary, state them explicitly.</p>
+<hr>
+</section>
+<section id="inspect-before-transforming" class="level2">
+<h2 class="anchored" data-anchor-id="inspect-before-transforming">Inspect Before Transforming</h2>
+<p><strong>For each vector input, inspect at least:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_geometry_type</span>(x)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_crs</span>(x)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_bbox</span>(x)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(x)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(x)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(sf<span class="sc">::</span><span class="fu">st_is_empty</span>(x))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="sc">!</span>sf<span class="sc">::</span><span class="fu">st_is_valid</span>(x))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>For each raster input, inspect at least:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">crs</span>(x)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">ext</span>(x)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">res</span>(x)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">nlyr</span>(x)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">ncell</span>(x)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">NAflag</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Do not proceed silently when:</strong></p>
+<ul>
+<li>the CRS is missing;</li>
+<li>geometry validity affects the proposed operation;</li>
+<li>vector layers have incompatible coordinate reference systems;</li>
+<li>raster layers have incompatible resolution, origin, alignment, or extent;</li>
+<li>an operation would discard multipart geometry;</li>
+<li>row multiplication from a spatial join is unexpected;</li>
+<li>required measurement units are ambiguous.</li>
+</ul>
+<hr>
+</section>
+<section id="package-preferences" class="level2">
+<h2 class="anchored" data-anchor-id="package-preferences">Package Preferences</h2>
+<p><strong>Preferred packages:</strong></p>
+<ul>
+<li><code>sf</code> for vector spatial data;</li>
+<li><code>terra</code> for raster data;</li>
+<li><code>stars</code> for multidimensional or spatiotemporal raster arrays;</li>
+<li><code>dplyr</code> and <code>tidyr</code> for attribute manipulation;</li>
+<li><code>ggplot2</code> for static maps;</li>
+<li><code>mapview</code> for rapid interactive inspection;</li>
+<li><code>leaflet</code> for customised interactive maps;</li>
+<li><code>mapedit</code> for interactive feature creation, selection, and editing;</li>
+<li><code>exactextractr</code> for raster summaries over polygons;</li>
+<li><code>sfnetworks</code> and <code>tidygraph</code> for spatial network analysis;</li>
+<li><code>lwgeom</code> only where its additional geometry operations are required;</li>
+<li><code>units</code> for explicit measurement units;</li>
+<li><code>arrow</code> or <code>duckdb</code> for large non-spatial attribute tables.</li>
+</ul>
+<p>Avoid introducing additional packages when core <code>sf</code>, <code>terra</code>, or tidyverse functionality is adequate.</p>
+<p>Use explicit namespace qualification in reusable functions and package code, for example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_transform</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">project</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">filter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="coordinate-reference-systems" class="level2">
+<h2 class="anchored" data-anchor-id="coordinate-reference-systems">Coordinate Reference Systems</h2>
+<p>Never assign a CRS merely to make two layers match.</p>
+<p>Distinguish between:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_set_crs</span>(x, crs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>which assigns or corrects CRS metadata without changing coordinates, and:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_transform</span>(x, crs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>which transforms coordinates into another CRS.</p>
+<p><strong>Before calculating areas, buffers, or distances:</strong></p>
+<ol type="1">
+<li>identify the units required;</li>
+<li>inspect the current CRS;</li>
+<li>choose a suitable projected CRS where appropriate;</li>
+<li>document the selected CRS and why it is suitable;</li>
+<li>retain units until final reporting.</li>
+</ol>
+<p>Do not automatically use EPSG:4326 for measurement operations.</p>
+<p>For Victorian regional analyses, determine an appropriate projected CRS from the study extent and project requirements rather than hard-coding one in the global skill.</p>
+<hr>
+</section>
+<section id="vector-operations" class="level2">
+<h2 class="anchored" data-anchor-id="vector-operations">Vector Operations</h2>
+<p><strong>Choose operations according to analytical intent.</strong></p>
+<section id="attribute-join" class="level3">
+<h3 class="anchored" data-anchor-id="attribute-join">Attribute Join</h3>
+<p>Use when rows correspond through an identifier:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> spatial_x <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(attributes_y, <span class="at">by =</span> <span class="st">"site_id"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="filter-by-spatial-relationship" class="level3">
+<h3 class="anchored" data-anchor-id="filter-by-spatial-relationship">Filter by Spatial Relationship</h3>
+<p>Use when only the original features are required:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_filter</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  x,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  y,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">.predicate =</span> sf<span class="sc">::</span>st_intersects</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="spatial-join" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-join">Spatial Join</h3>
+<p>Use when attributes from another spatial layer are required:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_join</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  x,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  y,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">join =</span> sf<span class="sc">::</span>st_intersects,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">left =</span> <span class="cn">TRUE</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After a spatial join, check whether one-to-many matches caused unexpected row duplication.</p>
+</section>
+<section id="intersection" class="level3">
+<h3 class="anchored" data-anchor-id="intersection">Intersection</h3>
+<p>Use only when new geometries representing spatial overlap are required:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_intersection</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Warn that intersection can split features and change row counts.</p>
+</section>
+<section id="nearest-feature" class="level3">
+<h3 class="anchored" data-anchor-id="nearest-feature">Nearest Feature</h3>
+<p>Do not assume that nearest means ecologically or operationally connected.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>nearest_index <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_nearest_feature</span>(sites, reaches)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For river systems, distinguish Euclidean proximity from along-network distance and hydrological connectivity.</p>
+<hr>
+</section>
+</section>
+<section id="raster-operations" class="level2">
+<h2 class="anchored" data-anchor-id="raster-operations">Raster Operations</h2>
+<p><strong>Before combining rasters, compare:</strong></p>
+<ul>
+<li>CRS;</li>
+<li>extent;</li>
+<li>resolution;</li>
+<li>origin;</li>
+<li>cell alignment;</li>
+<li>number and meaning of layers;</li>
+<li>categorical versus continuous values;</li>
+<li>NoData representation.</li>
+</ul>
+<p>Select resampling methods according to data type:</p>
+<ul>
+<li>nearest-neighbour for categorical data;</li>
+<li>bilinear or another justified continuous interpolation method for continuous data.</li>
+</ul>
+<p>Do not use interpolation methods that create invalid categorical classes.</p>
+<p>Prefer processing with <code>terra</code> objects on disk when raster data are too large for memory. Avoid unnecessary conversion between <code>Raster*</code>, <code>SpatRaster</code>, <code>stars</code>, arrays, and data frames.</p>
+<hr>
+</section>
+<section id="river-networks-and-hydrology" class="level2">
+<h2 class="anchored" data-anchor-id="river-networks-and-hydrology">River Networks and Hydrology</h2>
+<p><strong>When working with waterways:</strong></p>
+<ul>
+<li>distinguish mapped linework from a topologically valid network;</li>
+<li>inspect line direction and node connectivity;</li>
+<li>identify snapped and unsnapped endpoints;</li>
+<li>consider barriers, off-channel features, distributaries, and loops;</li>
+<li>distinguish upstream, downstream, and undirected connectivity;</li>
+<li>distinguish Euclidean distance from along-network distance;</li>
+<li>document how confluences and duplicate reaches are handled;</li>
+<li>preserve stable reach identifiers;</li>
+<li>avoid dissolving river reaches when identifiers or topology are needed.</li>
+</ul>
+<p><strong>When snapping observations to a network:</strong></p>
+<ol type="1">
+<li>preserve the original coordinates;</li>
+<li>calculate snapping distance;</li>
+<li>set a defensible maximum snapping tolerance;</li>
+<li>flag observations exceeding the tolerance;</li>
+<li>visually inspect uncertain assignments;</li>
+<li>retain the identifier of the matched reach.</li>
+</ol>
+<p>Do not silently force every observation onto the network.</p>
+<hr>
+</section>
+<section id="movement-and-telemetry-data" class="level2">
+<h2 class="anchored" data-anchor-id="movement-and-telemetry-data">Movement and Telemetry Data</h2>
+<p><strong>For animal movement or telemetry data:</strong></p>
+<ul>
+<li>preserve observation identifiers and timestamps;</li>
+<li>check timestamp timezone;</li>
+<li>sort records by individual and time;</li>
+<li>identify duplicate detections;</li>
+<li>check impossible or implausible movements;</li>
+<li>distinguish raw receiver locations from inferred animal positions;</li>
+<li>preserve receiver, deployment, and reach identifiers;</li>
+<li>separate data cleaning from movement inference;</li>
+<li>avoid treating repeated observations as independent without justification.</li>
+</ul>
+<p>When the movement domain is a river network, prefer network-constrained distances and paths where these are scientifically appropriate.</p>
+<hr>
+</section>
+<section id="interactive-editing-with-mapedit" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-editing-with-mapedit">Interactive Editing with <code>mapedit</code></h2>
+<p>Use <code>mapedit</code> when the user needs to draw, adjust, delete, or select spatial features interactively.</p>
+<p>Example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapedit)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>edit_result <span class="ot">&lt;-</span> mapedit<span class="sc">::</span><span class="fu">editMap</span>(</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  mapview<span class="sc">::</span><span class="fu">mapview</span>(input_layer),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">targetLayerId =</span> <span class="st">"input_layer"</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>edited_layer <span class="ot">&lt;-</span> edit_result<span class="sc">$</span>finished</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>After interactive editing:</strong></p>
+<ul>
+<li>confirm that the returned object has the expected CRS;</li>
+<li>validate geometry;</li>
+<li>compare feature counts;</li>
+<li>identify added, modified, or deleted features where possible;</li>
+<li>save to a new output rather than overwriting the source by default.</li>
+</ul>
+<p>Example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>edited_layer <span class="ot">&lt;-</span> edited_layer <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  sf<span class="sc">::</span><span class="fu">st_make_valid</span>()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_write</span>(</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  edited_layer,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"outputs/input_layer_edited.gpkg"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">delete_dsn =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="file-formats" class="level2">
+<h2 class="anchored" data-anchor-id="file-formats">File Formats</h2>
+<p><strong>Preferred formats:</strong></p>
+<ul>
+<li>GeoPackage for general vector exchange and storage;</li>
+<li>GeoParquet for large analytical vector datasets where supported;</li>
+<li>GeoTIFF or cloud-optimised GeoTIFF for raster outputs;</li>
+<li>FlatGeobuf where streaming or web transfer is useful;</li>
+<li>GeoJSON for small web-oriented datasets;</li>
+<li>CSV only for non-spatial tables or coordinates accompanied by explicit CRS metadata.</li>
+</ul>
+<p>Avoid Shapefile unless required by an external system. If Shapefile is required, warn about its field-name, data-type, encoding, and file-structure limitations.</p>
+<p>Do not overwrite source spatial data unless the user explicitly requests it.</p>
+<p>Use predictable directories such as:</p>
+<pre class="text"><code>data-raw/
+data/
+outputs/
+outputs/maps/
+outputs/spatial/
+scripts/
+R/</code></pre>
+<hr>
+</section>
+<section id="validation" class="level2">
+<h2 class="anchored" data-anchor-id="validation">Validation</h2>
+<p><strong>After each major spatial operation, validate the result.</strong></p>
+<p><strong>For vector data, check:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">inherits</span>(result, <span class="st">"sf"</span>))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_crs</span>(result)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_bbox</span>(result)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sf<span class="sc">::</span><span class="fu">st_geometry_type</span>(result))</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(sf<span class="sc">::</span><span class="fu">st_is_empty</span>(result))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="sc">!</span>sf<span class="sc">::</span><span class="fu">st_is_valid</span>(result))</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Also verify:</p>
+<ul>
+<li>expected feature count;</li>
+<li>uniqueness of key identifiers;</li>
+<li>missing attributes introduced by joins;</li>
+<li>unexpected geometry collections;</li>
+<li>unexpected changes in extent;</li>
+<li>duplicated records;</li>
+<li>output measurement units.</li>
+</ul>
+<p>For raster data, check:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">crs</span>(result)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">ext</span>(result)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">res</span>(result)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">nlyr</span>(result)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">global</span>(result, range, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Visual validation is necessary but is not a substitute for programmatic checks.</p>
+<hr>
+</section>
+<section id="mapping" class="level2">
+<h2 class="anchored" data-anchor-id="mapping">Mapping</h2>
+<p><strong>For analytical maps:</strong></p>
+<ul>
+<li>show the study area clearly;</li>
+<li>use colour scales appropriate to the data type;</li>
+<li>include a legend where needed;</li>
+<li>use a meaningful map projection;</li>
+<li>avoid treating a web basemap as authoritative analytical data;</li>
+<li>separate exploratory maps from publication-quality figures.</li>
+</ul>
+<p>For static maps, prefer <code>ggplot2::geom_sf()</code>.</p>
+<p>For interactive inspection, prefer <code>mapview</code>.</p>
+<p>For customised web maps, use <code>leaflet</code>.</p>
+<p>When preparing publication figures, ensure text, colour, line weight, spatial extent, and dimensions remain legible at the final output size.</p>
+<hr>
+</section>
+<section id="performance" class="level2">
+<h2 class="anchored" data-anchor-id="performance">Performance</h2>
+<p><strong>For large datasets:</strong></p>
+<ul>
+<li>read only required columns when possible;</li>
+<li>filter early;</li>
+<li>avoid repeated CRS transformations;</li>
+<li>avoid repeated geometry validation inside loops;</li>
+<li>use spatial indexes through supported spatial predicates;</li>
+<li>prefer vectorised operations;</li>
+<li>consider <code>data.table</code>, <code>duckdb</code>, or <code>arrow</code> for large attributes;</li>
+<li>consider PostGIS when data size or concurrent use exceeds an in-memory R workflow;</li>
+<li>write intermediate outputs only when they improve reproducibility or avoid expensive recomputation.</li>
+</ul>
+<p>Do not simplify geometry unless the intended use and acceptable tolerance are clear.</p>
+<hr>
+</section>
+<section id="reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility">Reproducibility</h2>
+<p><strong>Produce scripts that:</strong></p>
+<ul>
+<li>use project-relative paths;</li>
+<li>do not use <code>setwd()</code>;</li>
+<li>avoid undocumented manual GIS steps;</li>
+<li>record package dependencies;</li>
+<li>separate raw data, derived data, and final outputs;</li>
+<li>use deterministic file names;</li>
+<li>preserve raw source data;</li>
+<li>document CRS transformations and spatial assumptions;</li>
+<li>can be rerun from a clean R session.</li>
+</ul>
+<p>Prefer <code>here::here()</code> or a package-oriented path strategy if the project already uses it.</p>
+<p>If manual editing is unavoidable, save:</p>
+<ol type="1">
+<li>the original input;</li>
+<li>the edited output;</li>
+<li>a brief edit log;</li>
+<li>the script used to load, validate, and save the edited data.</li>
+</ol>
+<hr>
+</section>
+<section id="response-contract" class="level2">
+<h2 class="anchored" data-anchor-id="response-contract">Response Contract</h2>
+<p><strong>When proposing a spatial analysis, provide:</strong></p>
+<ol type="1">
+<li>a concise statement of the analytical approach;</li>
+<li>important spatial assumptions;</li>
+<li>runnable R code;</li>
+<li>validation checks;</li>
+<li>likely failure modes or uncertainties;</li>
+<li>expected output object and file format.</li>
+</ol>
+<p>Do not provide long background explanations unless they help the user make an analytical decision.</p>
+<p><strong>When reviewing existing code:</strong></p>
+<ul>
+<li>identify correctness issues first;</li>
+<li>distinguish errors from style preferences;</li>
+<li>explain the spatial consequence of each issue;</li>
+<li>provide corrected code;</li>
+<li>include validation checks.</li>
+</ul>
+<hr>
+</section>
+<section id="stop-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="stop-conditions">Stop Conditions</h2>
+<p><strong>Pause and explain the issue rather than producing misleading output when:</strong></p>
+<ul>
+<li>CRS metadata are missing and cannot be inferred safely;</li>
+<li>the requested measurement is inappropriate in the current CRS;</li>
+<li>dataset extents do not plausibly overlap;</li>
+<li>geometry validity prevents a defensible operation;</li>
+<li>raster alignment would change categorical information;</li>
+<li>network topology is inadequate for the requested network analysis;</li>
+<li>required source data are absent;</li>
+<li>the requested spatial precision exceeds that of the source data.</li>
+</ul>
+<p><strong>Never fabricate CRS information, spatial coordinates, geographic identifiers, or source datasets.</strong></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

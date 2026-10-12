@@ -31,11 +31,15 @@ draft: false
 
 -------
 
-# Presentation
+# Presentation style
 
 Material will be presented via a Powerpoint preso with live demonstrations.  
 
 __If you would like to try as well, please install QGIS (via the Company Portal)__
+
+
+[A copy of presentation as pdf](https://delwpvicgovau-my.sharepoint.com/:b:/g/personal/ben_fanson_deeca_vic_gov_au/IQAHKyfwVeB4Roh2B3LqamxbAfP6kY37Zxq42y4AaeYYvfs?e=5si9Ln)
+
 
 
 -------
