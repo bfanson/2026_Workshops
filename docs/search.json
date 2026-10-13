@@ -102,7 +102,7 @@
     "href": "index.html",
     "title": "2026 Workshops",
     "section": "",
-    "text": "Welcome to the 2026 Workshops site. Use Workshop Links in the navbar above for the agenda (though topics listed below).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 1: AI in Data science: A paradigm shift?\n\n\nDiscussion on integrating AI into our workflow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 2: QGIS\n\n\nUsing QGIS for your GIS needs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 3: Vibe-coding with spatial data\n\n\nOvercoming coding hurdle of using R/Rstudio by leveraging AI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 4: eDNA\n\n\nWhat to know?\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to the 2026 Workshops site. Use Workshop Links in the navbar above for the agenda (though topics listed below).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 1: AI in Data science: A paradigm shift?\n\n\nDiscussion on integrating AI into our workflow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 2: QGIS\n\n\nUsing QGIS for your GIS needs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 3: Vibe-coding (with spatial data)\n\n\nDemonstraing vibe-coding workflow using spatial data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModule 4: eDNA\n\n\nWhat to know?\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "module2.html",
@@ -152,5 +152,96 @@
     "title": "Module 1: AI in Data science: A paradigm shift?",
     "section": "LLMs … a few comments",
     "text": "LLMs … a few comments\nLLMs can be surprisingly bad at things. The classic example (a year ago) was counting r’s in words\n\nLet’s try now…\n\nIt is all good now. LLMs improved in the last year\nBut, let’s try a longer sentence that is a bit harder…\nRory the roaring raspberry rabbit raced round the rocky river, wrangling rambunctious robins in bright red raincoats.\n\n# let's run in R ourselves...\nx &lt;-\"Rory the roaring raspberry rabbit raced round the rocky river, wrangling rambunctious robins in bright red raincoats\"\n\nmessage( glue::glue(\"There are {crayon::red(stringr::str_count( tolower(x),'r'))} r's\" ) )  \n\nThere are 19 r's\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nMain Point: Be careful about judging LLMs solely on its “stupid-ish” moments. Often if you give it the right tools and context, it can often succeed. This leads to discussion on Agents."
+  },
+  {
+    "objectID": "module3.html#reproducibility",
+    "href": "module3.html#reproducibility",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Reproducibility",
+    "text": "Reproducibility\n\nresult &lt;- sites |&gt;\n  sf::st_buffer(dist = 500) |&gt;\n  sf::st_intersection(wetlands) |&gt;\n  dplyr::summarise(area = sum(sf::st_area(geometry)))"
+  },
+  {
+    "objectID": "module3.html#loopsre-use",
+    "href": "module3.html#loopsre-use",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Loops/re-use",
+    "text": "Loops/re-use\n\nprocess_catchment &lt;- function(catchment, rivers, sites) {\n  rivers |&gt;\n    sf::st_intersection(catchment) |&gt;\n    sf::st_join(sites)\n}\nresults &lt;- purrr::map(\n  catchments,\n  process_catchment,\n  rivers = rivers,\n  sites = sites\n)"
+  },
+  {
+    "objectID": "module3.html#example-rstudior-workflow",
+    "href": "module3.html#example-rstudior-workflow",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Example Rstudio/R workflow",
+    "text": "Example Rstudio/R workflow\nSee fuller description in previous workshop\n\nRstudio + R\nProject folder as shown below"
+  },
+  {
+    "objectID": "module3.html#steps-using-posit-ai",
+    "href": "module3.html#steps-using-posit-ai",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Steps using Posit AI",
+    "text": "Steps using Posit AI\nLet’s walk through a workflow…\n\nStep 1: set-up the project folder with the data\nI have already created a folder download project setup for Agent\nHave a look around the folder, there are few things in there that I added from the Copilot approach above. The basic structure of the project folder is shown in Figure 2 below.\n\n  cowplot::ggdraw() +\n    cowplot::draw_image('images/module3/project_folder.png')\n\n\n\n\n\n\n\nFigure 2: Project folder for Agent\n\n\n\n\n\n\n\nStep 2: Use plan mode\n\nBefore diving into the spatial code, you need to have an idea/plan of what you want the Agent to do.\n\nPROMPT\n\n\nWe will work through this live. An example of what might come out is shown below:\n\n\nMD files are Markdown and very commonly used in programming world as they are a balance between between .txt file with no formatting and Word doc (excessive formatting😊).\n\n\n\nStep 3: Execute the plan\nOkay, we got a plan and told AI what we want.\n\n\n\nStep 4: Review the results\nLet’s walk through some of the outputs.\n\n\nAs this is stochastic and depends on the model, you will get different results. Out of curiosity, I ran multiple iterations using the exact same plan.\nlink to GLM model\nlink to Claude Haiku model\nlink to Kimi model\n\n\n\nStep 5: Iterate (as needed)\n\nNow, we let the Agent run through the whole process and we assessed the final product at the end. As for most things, it will be an iterative process that will require additional modifications. Sometimes, this works seemlessly, other times it can be like pulling teeth."
+  },
+  {
+    "objectID": "module3.html#explain-what-is-vibe-coding",
+    "href": "module3.html#explain-what-is-vibe-coding",
+    "title": "Module 3: Vibe-coding with spatial data",
+    "section": "1) Explain what is “vibe-coding”",
+    "text": "1) Explain what is “vibe-coding”"
+  },
+  {
+    "objectID": "module3.html#discuss-how-to-implement-a-vibe-coding-workflow-within",
+    "href": "module3.html#discuss-how-to-implement-a-vibe-coding-workflow-within",
+    "title": "Module 3: Vibe-coding with spatial data",
+    "section": "2) Discuss how to implement a vibe-coding workflow within ",
+    "text": "2) Discuss how to implement a vibe-coding workflow within"
+  },
+  {
+    "objectID": "module3.html#demonstrate-vibe-coding-approach-using-spatial-data",
+    "href": "module3.html#demonstrate-vibe-coding-approach-using-spatial-data",
+    "title": "Module 3: Vibe-coding with spatial data",
+    "section": "3) Demonstrate vibe-coding approach using spatial data",
+    "text": "3) Demonstrate vibe-coding approach using spatial data"
+  },
+  {
+    "objectID": "module3.html#using-ai-to-help-write-code-for-you-module1",
+    "href": "module3.html#using-ai-to-help-write-code-for-you-module1",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Using AI to help write code for you (module1)",
+    "text": "Using AI to help write code for you (module1)\n\nCheck out Module 1 if you missed"
+  },
+  {
+    "objectID": "module3.html#qgis-is-greatwhy-use-r-then",
+    "href": "module3.html#qgis-is-greatwhy-use-r-then",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "QGIS is great…why use R then?",
+    "text": "QGIS is great…why use R then?\n\nCheck out Module 2 if you missed\n\n\n\n\n\n\n\n\nReason\nWhy it matters\n\n\n\n\nReproducibility\nR code records each transformation, parameter and analytical decision, making the spatial workflow easier to reproduce and audit.\n\n\nAutomation\nA scripted workflow can be rerun when input data change, without manually repeating each GIS operation.\n\n\nScalability\nThe same analysis can be applied consistently across many species, sites, catchments or input files.\n\n\nStatistical integration\nSpatial processing can flow directly into modelling, prediction, diagnostics and uncertainty analysis within the same environment.\n\n\nReporting integration\nMaps, figures, tables and results can be generated directly in a Quarto report.\n\n\nReuse\nRepeated spatial operations can be converted into functions or incorporated into an R package.\n\n\nAI-assisted accessibility\nVibe-coding reduces the syntax barrier by translating a description of the spatial task into candidate R code.\n\n\nExtensibility\nOnce the initial workflow works, it can be expanded with loops, simulations, databases, APIs and specialist spatial packages."
+  },
+  {
+    "objectID": "module3.html#change-in-mindset",
+    "href": "module3.html#change-in-mindset",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Change in mindset",
+    "text": "Change in mindset\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human as &lt;br&gt; Manager\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n    H &lt;--&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about human role in workflow"
+  },
+  {
+    "objectID": "module3.html#ai-is-very-good-at-coding",
+    "href": "module3.html#ai-is-very-good-at-coding",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "AI is very good at coding",
+    "text": "AI is very good at coding"
+  },
+  {
+    "objectID": "module3.html#what-is-vibe-coding",
+    "href": "module3.html#what-is-vibe-coding",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "What is vibe-coding?",
+    "text": "What is vibe-coding?"
+  },
+  {
+    "objectID": "module3.html#examples-of-people-using",
+    "href": "module3.html#examples-of-people-using",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Examples of people using…",
+    "text": "Examples of people using…\nAgents often handle the heavy-loading\n\nAI slop everywhere…"
   }
 ]
