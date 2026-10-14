@@ -411,5 +411,12 @@
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Caveats with vibe-coding",
     "text": "Caveats with vibe-coding\nVibe-coding can be incredibly productive, but it comes with risks.\nIf you don’t understand what the code is doing, you may:\n\naccept incorrect results without noticing\nfail to identify bugs or edge cases\nuse inappropriate statistical or analytical methods\ncreate workflows that are difficult to reproduce or maintain\nbecome overconfident in outputs that “look right”\n\n {width=60%}"
+  },
+  {
+    "objectID": "module3.html#given-fact-a-and-fact-b-why-not-have-llms-write-code-for-you-so-you-can-test-ride-those-ideas-fact-c",
+    "href": "module3.html#given-fact-a-and-fact-b-why-not-have-llms-write-code-for-you-so-you-can-test-ride-those-ideas-fact-c",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Given Fact A and Fact B, why not have LLMs write code for you so you can test ride those ideas (Fact C)?",
+    "text": "Given Fact A and Fact B, why not have LLMs write code for you so you can test ride those ideas (Fact C)?"
   }
 ]

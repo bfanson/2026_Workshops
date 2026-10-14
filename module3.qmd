@@ -96,7 +96,7 @@ You come up with an idea that you want "to take for a test ride."
 ![](images/module3/image_bike_uphill.jpg){width=60%}
 
 
-## Given __Fact A__ and __ Fact B__, why not have LLMs write code for you so you can test ride those ideas (__Fact C__)?
+## Given __Fact A__ and __Fact B__, why not have LLMs write code for you so you can test ride those ideas (__Fact C__)?
 
 
 ![](images/module3/image_ebike_uphill.jpg){width=60%}
