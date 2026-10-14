@@ -389,7 +389,7 @@
     "href": "module3.html#fact---b-llms-can-write-really-good-code-module1",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Fact - B: LLMs can write really good code (module1)",
-    "text": "Fact - B: LLMs can write really good code (module1)\n(We discussed in module 1 so not dwelling on here but LLMs are really good at coding…)\nAdvantages\n\n📚 Trained on billions of lines of code, documentation, tutorials, and technical discussions\n🔍 Have “seen” solutions to many common programming problems before\n⚡ Can generate working code in seconds\n🐛 Often better at spotting syntax errors than average programmers\n🌐 Can use thousands of packages and functions that no human could memorise\ncoding is very logical/systematic…(perfect for machines)"
+    "text": "Fact - B: LLMs can write really good code (module1)\n(We discussed in module 1 so not dwelling on here but LLMs are really good at coding…)\nAdvantages\n\nTrained on billions of lines of code, documentation, tutorials, and technical discussions\nHave “seen” solutions to many common programming problems before\nCan generate working code in seconds\nOften better at spotting syntax errors than average programmers\nCan use thousands of packages and functions that no human could memorise\ncoding is very logical/systematic…(perfect for machines)"
   },
   {
     "objectID": "module3.html#fact---c-you-have-a-great-idea",

@@ -59,7 +59,7 @@ Today is a pick your own adventure😊
 
 # Let's chat about a vibe-coding (🪱)
 
-![](images/module3/castle_vibe.gif){width=70%}
+![](images/module3/castle_vibe.gif){width=50%}
 
 
 ## _Fact - A:_ Coding is a gateway to lots of tools
@@ -77,11 +77,11 @@ It gives you access to:
 
 __Advantages__
 
-- 📚 Trained on billions of lines of code, documentation, tutorials, and technical discussions
-- 🔍 Have "seen" solutions to many common programming problems before
-- ⚡ Can generate working code in seconds
-- 🐛 Often better at spotting syntax errors than average programmers
-- 🌐 Can use thousands of packages and functions that no human could memorise
+- Trained on billions of lines of code, documentation, tutorials, and technical discussions
+- Have "seen" solutions to many common programming problems before
+- Can generate working code in seconds
+- Often better at spotting syntax errors than average programmers
+- Can use thousands of packages and functions that no human could memorise
 - coding is very logical/systematic...(perfect for machines)
 
 
@@ -91,7 +91,7 @@ __Advantages__
 
 You come up with an idea that you want "to take for a test ride."
 
-![](images/module3/image_bike.jpg){width=60%}
+
 
 ![](images/module3/image_bike_uphill.jpg){width=60%}
 
@@ -99,7 +99,7 @@ You come up with an idea that you want "to take for a test ride."
 ## Given __Fact A__ and __ Fact B__, why not have LLMs write code for you so you can test ride those ideas (__Fact C__)?
 
 
-![](images/module3/image_ebike_uphill.jpg)
+![](images/module3/image_ebike_uphill.jpg){width=60%}
 
 
 
@@ -185,7 +185,7 @@ Now, let's approach again using an `Agent` workflow.
 __Disclaimer:__ As noted during Module 1, we are not advocating for any approach, rather we are viewing this as a learning opportunity to better understand `Agents` and their capabilities. 
 
 We understand if you have feeling about `Agents` more like...  
-![](images/module3/castle_stuffed.gif){width=70%}
+![](images/module3/castle_stuffed.gif){width=40%}
 
 
 ## Steps using Posit AI
