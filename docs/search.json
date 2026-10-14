@@ -172,14 +172,14 @@
     "href": "module3.html#example-rstudior-workflow",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Example Rstudio/R workflow",
-    "text": "Example Rstudio/R workflow\nSee fuller description in previous workshop\n\nRstudio + R\nProject folder as shown below"
+    "text": "Example Rstudio/R workflow\n\nWe flushed out more this workflow in our 2024 workshop\n\n\nRstudio + R\nProject folder as shown below"
   },
   {
     "objectID": "module3.html#steps-using-posit-ai",
     "href": "module3.html#steps-using-posit-ai",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Steps using Posit AI",
-    "text": "Steps using Posit AI\nLet’s walk through a workflow…\n\nStep 1: set-up the project folder with the data\nI have already created a folder download project setup for Agent\nHave a look around the folder, there are few things in there that I added from the Copilot approach above. The basic structure of the project folder is shown in Figure 2 below.\n\n  cowplot::ggdraw() +\n    cowplot::draw_image('images/module3/project_folder.png')\n\n\n\n\n\n\n\nFigure 2: Project folder for Agent\n\n\n\n\n\n\n\nStep 2: Use plan mode\n\nBefore diving into the spatial code, you need to have an idea/plan of what you want the Agent to do.\n\nPROMPT\n\n\nWe will work through this live. An example of what might come out is shown below:\n\n\nMD files are Markdown and very commonly used in programming world as they are a balance between between .txt file with no formatting and Word doc (excessive formatting😊).\n\n\n\nStep 3: Execute the plan\nOkay, we got a plan and told AI what we want.\n\n\n\nStep 4: Review the results\nLet’s walk through some of the outputs.\n\n\nAs this is stochastic and depends on the model, you will get different results. Out of curiosity, I ran multiple iterations using the exact same plan.\nlink to GLM model\nlink to Claude Haiku model\nlink to Kimi model\n\n\n\nStep 5: Iterate (as needed)\n\nNow, we let the Agent run through the whole process and we assessed the final product at the end. As for most things, it will be an iterative process that will require additional modifications. Sometimes, this works seemlessly, other times it can be like pulling teeth."
+    "text": "Steps using Posit AI\nLet’s walk through a workflow…\n\nStep 1: set-up the project folder with the data\nI have already created a folder download project setup for Agent\nLet’s have a look around the folder as there are few things in there that I added from the Copilot approach above.\nThe basic structure of the project folder is …\n\n\nLet’s have a look at the agent file…\n\nAnd the spatial_analyst skill…\n\n\n\nStep 2: Use plan mode\nBefore diving into getting the spatial code, you need to have an idea/plan of what you want the Agent to do. The ‘plan mode’ can be useful for this.\n\nPROMPT\nI need to create a png map using an R workflow. I have a graph (figures/qgis_goal.png) that I want you to replicate. I first want to create a plan that we argue on to create similar map output (‘figures/rmap.png’) and all points will be data/spatial/vmfrp_wallpolla_veg.gpkg. A basemap and Victorian layer will be needed to be found. See .posit/AGENTS.MD ‘.posit/spatial_analyst/’ skill to guide workflow approach. During the planning stage, do not guess what I want but rather ask me explicitly.\n\n\nWe will work through this live. An example of what might come out is shown below:\n\n\nMD files are Markdown and very commonly used in programming world as they are a balance between between .txt file with no formatting and Word doc (excessive formatting😊). See Intro to Markdown\n\n\n\nStep 3: Execute the plan\nOkay, we got a plan and told AI what we want.\n\n\n\nStep 4: Review the results\nLet’s walk through some of the outputs.\n\n\n\n\n\nStep 5: Iterate (as needed)\nIt is very likely the output is not quite there (or worse)…\n\nAs for most things, it will be an iterative process that will require additional modifications. Sometimes, this works seemlessly, other times it can be like pulling teeth and you might realize that you could do faster by-hand."
   },
   {
     "objectID": "module3.html#explain-what-is-vibe-coding",
@@ -214,14 +214,14 @@
     "href": "module3.html#qgis-is-greatwhy-use-r-then",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "QGIS is great…why use R then?",
-    "text": "QGIS is great…why use R then?\n\nCheck out Module 2 if you missed\n\n\n\n\n\n\n\n\nReason\nWhy it matters\n\n\n\n\nReproducibility\nR code records each transformation, parameter and analytical decision, making the spatial workflow easier to reproduce and audit.\n\n\nAutomation\nA scripted workflow can be rerun when input data change, without manually repeating each GIS operation.\n\n\nScalability\nThe same analysis can be applied consistently across many species, sites, catchments or input files.\n\n\nStatistical integration\nSpatial processing can flow directly into modelling, prediction, diagnostics and uncertainty analysis within the same environment.\n\n\nReporting integration\nMaps, figures, tables and results can be generated directly in a Quarto report.\n\n\nReuse\nRepeated spatial operations can be converted into functions or incorporated into an R package.\n\n\nAI-assisted accessibility\nVibe-coding reduces the syntax barrier by translating a description of the spatial task into candidate R code.\n\n\nExtensibility\nOnce the initial workflow works, it can be expanded with loops, simulations, databases, APIs and specialist spatial packages."
+    "text": "QGIS is great…why use R then?\n\nCheck out Module 2 if you missed"
   },
   {
     "objectID": "module3.html#change-in-mindset",
     "href": "module3.html#change-in-mindset",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Change in mindset",
-    "text": "Change in mindset\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human as &lt;br&gt; Manager\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n    H &lt;--&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about human role in workflow"
+    "text": "Change in mindset\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human as &lt;br&gt; Manager\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n    H &lt;--&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 2: Thinking about human role in workflow"
   },
   {
     "objectID": "module3.html#ai-is-very-good-at-coding",
@@ -235,13 +235,104 @@
     "href": "module3.html#what-is-vibe-coding",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "What is vibe-coding?",
-    "text": "What is vibe-coding?"
+    "text": "What is vibe-coding?\nAs with lots of terminology in AI boom, defining “vibe-coding” is a bit nebulous and people(/bots) use the term differently. For our purposes here, let’s keep it simple as… interacting with a LLM model in a standardised workflow such that the LLM writes the code, giving you the desired output in reproducible way.\nFIND AN IMAGE TO FILL-IN HERE\n\nFor me personally, I have found this has required a bit of paradigm-shift in how I view my role…\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human as &lt;br&gt; Manager\")\n\n    H &lt;--&gt; DB[[\"Database Agent\"]]\n    H &lt;--&gt; STATS[[\"📊 Statistics Agent\"]]\n    H &lt;--&gt; GIS[[\"🗺 GIS Agent\"]]\n    H &lt;--&gt; WRITER[[\"📝 Writer Agent\"]]\n    H &lt;--&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 2: Thinking about human role in workflow"
   },
   {
     "objectID": "module3.html#examples-of-people-using",
     "href": "module3.html#examples-of-people-using",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Examples of people using…",
-    "text": "Examples of people using…\nAgents often handle the heavy-loading\n\nAI slop everywhere…"
+    "text": "Examples of people using…\nAgents often handle the heavy-loading\n\nAI slop everywhere\n\ngoogle play\nsoftware in general, AI-generated software to use AI to create software"
+  },
+  {
+    "objectID": "module3.html#using-llms-to-help-write-code-for-you-module1",
+    "href": "module3.html#using-llms-to-help-write-code-for-you-module1",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Using LLMs to help write code for you (module1)",
+    "text": "Using LLMs to help write code for you (module1)\nWe discussed in module 1 so not dwelling on here…\nAdvantages\n\ntrained on billions of lines of code\ncoding is very logical/systematic…(perfect for machines)\n\n\nCheck out Module 1 if you missed"
+  },
+  {
+    "objectID": "module3.html#coding-is-a-gateway-to-lots-of-tools",
+    "href": "module3.html#coding-is-a-gateway-to-lots-of-tools",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Coding is a gateway to lots of tools",
+    "text": "Coding is a gateway to lots of tools\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human as &lt;br&gt; Manager\") --&gt; LLM[['LLM']]\n\n    LLM --&gt; DB[[\"Database Agent\"]]\n    LLM --&gt; STATS[[\"📊 Statistics Agent\"]]\n    LLM --&gt; GIS[[\"🗺 GIS Agent\"]]\n    LLM --&gt; WRITER[[\"📝 Writer Agent\"]]\n    LLM --&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about human role in workflow"
+  },
+  {
+    "objectID": "module3.html#caveats",
+    "href": "module3.html#caveats",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Caveats",
+    "text": "Caveats\n“The difference between two-wheel drive and four-wheel drive is how far you walk back”\nbig difference between understanding and being able to implement"
+  },
+  {
+    "objectID": "module3.html#coding-is-a-gateway-to-lots-of-tools-a",
+    "href": "module3.html#coding-is-a-gateway-to-lots-of-tools-a",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Coding is a gateway to lots of tools (A)",
+    "text": "Coding is a gateway to lots of tools (A)\n\nall the R packages\nsoftware you use to do stuff (e.g. QGIS)\nbiometrics workshops (e.g. lots of R coding)"
+  },
+  {
+    "objectID": "module3.html#using-llms-to-help-write-code-for-you-module1-b",
+    "href": "module3.html#using-llms-to-help-write-code-for-you-module1-b",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Using LLMs to help write code for you (module1) (B)",
+    "text": "Using LLMs to help write code for you (module1) (B)\nWe discussed in module 1 so not dwelling on here but LLMs are really good at coding…\nAdvantages\n\ntrained on billions of lines of code\n\nhuge code-bases online (e.g. github) and software development that allows\n\ncoding is very logical/systematic…(perfect for machines)"
+  },
+  {
+    "objectID": "module3.html#you-have-agreat-idea-c",
+    "href": "module3.html#you-have-agreat-idea-c",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "You have agreat idea (C)",
+    "text": "You have agreat idea (C)"
+  },
+  {
+    "objectID": "module3.html#given-a-and-b-why-not-have-llms-write-code-for-you-so-you-can-get-to-c",
+    "href": "module3.html#given-a-and-b-why-not-have-llms-write-code-for-you-so-you-can-get-to-c",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Given A and B, why not have LLMs write code for you so you can get to C?",
+    "text": "Given A and B, why not have LLMs write code for you so you can get to C?\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human as &lt;br&gt; Manager\") --&gt; LLM[['LLM']]\n\n    LLM --&gt; DB[[\"Database Agent\"]]\n    LLM --&gt; STATS[[\"📊 Statistics Agent\"]]\n    LLM --&gt; GIS[[\"🗺 GIS Agent\"]]\n    LLM --&gt; WRITER[[\"📝 Writer Agent\"]]\n    LLM --&gt; APP[[\"Shiny App Agent\"]]\n\n \n\n\n\n\nFigure 1: Thinking about human role in workflow"
+  },
+  {
+    "objectID": "module3.html#other-workflows-exist",
+    "href": "module3.html#other-workflows-exist",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Other workflows exist?",
+    "text": "Other workflows exist?\nYes and yes and yes…honestly, we do not keep track of but between other programming languages and LLMs studios (e.g. Claude Code, Codex) and bespoke software, there are lots.\nOf course, what we say here on 20 October 2026 may be antiquated in a year (…as might be lots of other things😕)."
+  },
+  {
+    "objectID": "module3.html#you-have-a-great-idea-c",
+    "href": "module3.html#you-have-a-great-idea-c",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "You have a great idea (C)",
+    "text": "You have a great idea (C)\n\n\nGiven A and B, why not have LLMs write code for you so you can get to C?\n\n\n\n\n\n\ngraph LR\n\n    H(\"👤 Human\") --&gt; HC[['You code']] \n    HC --&gt; O['Desired output']\n\n\n    H1(\"👤 Human\") --&gt; LLM1[['LLM codes']]   \n    \n    LLM1 --&gt; O['Desired output']\n \n\n\n\n\nFigure 1: Thinking about human role in workflow"
+  },
+  {
+    "objectID": "module3.html#strengths",
+    "href": "module3.html#strengths",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Strengths",
+    "text": "Strengths\n\n\n\n\n\n\n\n\nStrength\nDescription\n\n\n\n\nReproducibility\nR code records each transformation, parameter and analytical decision, making the spatial workflow easier to reproduce and audit.\n\n\nAutomation\nA scripted workflow can be rerun when input data change, without manually repeating each GIS operation.\n\n\nScalability\nThe same analysis can be applied consistently across many species, sites, catchments or input files.\n\n\nReporting integration\nMaps, figures, tables and results can be generated directly in a Quarto report.\n\n\nReuse\nRepeated spatial operations can be converted into functions or incorporated into an R package.\n\n\nExtensibility\nOnce the initial workflow works, it can be expanded with loops, simulations, databases, APIs and specialist spatial packages."
+  },
+  {
+    "objectID": "module3.html#step-1-set-up-the-project-folder-with-the-data",
+    "href": "module3.html#step-1-set-up-the-project-folder-with-the-data",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Step 1: set-up the project folder with the data",
+    "text": "Step 1: set-up the project folder with the data\nI have already created a folder download project setup for Agent\nLet’s have a look around the folder as there are few things in there that I added from the Copilot approach above.\nThe basic structure of the project folder is shown in Figure 3 below.\n\n\n\n\n\n\n\n\nFigure 3: Project folder for Agent approach\n\n\n\n\n\n\nLet’s have a look at the agent file…\n\n\n\n\n\n\n\n\nFigure 4: Agent file\n\n\n\n\n\nAnd the spatial_analyst skill…\n\n\n\n\n\n\n\n\nFigure 5: Spatial analyst skill file\n\n\n\n\n\n\nStep 2: Use plan mode\nBefore diving into getting the spatial code, you need to have an idea/plan of what you want the Agent to do. The ‘plan mode’ can be useful for this.\n\nPROMPT\nI need to create a png map using an R workflow. I have a graph (figures/qgis_goal.png) that I want you to replicate. I first want to create a plan that we argue on to create similar map output (‘figures/rmap.png’) and all points will be data/spatial/vmfrp_wallpolla_veg.gpkg. A basemap and Victorian layer will be needed to be found. See .posit/AGENTS.MD ‘.posit/spatial_analyst/’ skill to guide workflow approach. During the planning stage, do not guess what I want but rather ask me explicitly.\n\n\nWe will work through this live. An example of what might come out is shown below:\n\n\nMD files are Markdown and very commonly used in programming world as they are a balance between between .txt file with no formatting and Word doc (excessive formatting😊). See Intro to Markdown\n\n\n\nStep 3: Execute the plan\nOkay, we got a plan and told AI what we want.\n\n\n\nStep 4: Review the results\nLet’s walk through some of the outputs.\n\n\nAs this is stochastic and depends on the model, you will get different results. Out of curiosity, I ran multiple iterations using the exact same plan.\nlink to GLM model\nlink to Claude Haiku model\nlink to Kimi model\n\n\n\nStep 5: Iterate (as needed)\nIt is very likely the output is not quite there (or worse)… \nAs for most things, it will be an iterative process that will require additional modifications. Sometimes, this works seemlessly, other times it can be like pulling teeth and you might realize that you could do faster by-hand."
+  },
+  {
+    "objectID": "module3.html#comparing-llms-results",
+    "href": "module3.html#comparing-llms-results",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Comparing LLMs results",
+    "text": "Comparing LLMs results\n\nAs this is stochastic and depends on the model, you will get different results. Out of curiosity, I ran multiple iterations using the exact same plan.\nlink to GLM model \nlink to Claude Haiku model \nlink to Kimi model \n\n\nSummary table of insights…\n\n\n\n\n\n\n\n\nModel\n~Cost\nThoughts\n\n\n\n\nClaude Sonnet (1.0x)\n$x.xx\nMore expensive model but could actually view the png file so it could evaluate. It took just few iterations to get a reasonable result\n\n\nClaude Haiku (0.4x)\n$x.xx\nLeast expensive model I tried.\n\n\nGLM 5.3 (0.6x)\n$1.00\nNot able to “view” the png so limiting. It took a few more iterations to get there\n\n\nKimi (0.9x)\n$x.xx"
+  },
+  {
+    "objectID": "mod3_glm.html",
+    "href": "mod3_glm.html",
+    "title": "Results from GLM 5.3 Agent run",
+    "section": "",
+    "text": "Notes on running GLM\n\nGLM does not have the capability to see the png output. Therefore, it asked a series of questions about what it looked like. This would align with the standard workflow of having a basic idea of what the plot looks like. It does preclude using a map that you like as template to replicate.\n\n\n\n\nMap outputs from GLM 5.3 ( 0.6x cost )\n\n\nJust holding below for now…\n\n\n\n\n\n\nflowchart TD\n    A[Define the research or analysis goal] --&gt; B[Describe the task to the AI assistant]\n\n    B --&gt; C[AI proposes an approach]\n    C --&gt; D[AI generates or modifies R code]\n    D --&gt; E[Run the code in RStudio]\n\n    E --&gt; F{Does the code run?}\n\n    F -- No --&gt; G[Give the error and relevant context to the AI]\n    G --&gt; C\n\n    F -- Yes --&gt; H{Is the method scientifically valid?}\n\n    H -- No --&gt; I[Review assumptions, data and analytical method]\n    I --&gt; B\n\n    H -- Yes --&gt; J[Inspect plots, tables and model diagnostics]\n\n    J --&gt; K{Does the output answer the research question?}\n\n    K -- No --&gt; L[Refine the prompt or analytical approach]\n    L --&gt; B\n\n    K -- Yes --&gt; M[Refactor and simplify the code]\n    M --&gt; N[Add tests, comments and documentation]\n    N --&gt; O[Save code, outputs and session information]\n    O --&gt; P[Produce reproducible research output]\n\n    classDef human fill:#d9eaf7,stroke:#2f5597,color:#000;\n    classDef ai fill:#fce4d6,stroke:#c65911,color:#000;\n    classDef decision fill:#fff2cc,stroke:#bf9000,color:#000;\n    classDef output fill:#e2f0d9,stroke:#548235,color:#000;\n\n    class A,B,E,G,I,J,L human;\n    class C,D,M,N ai;\n    class F,H,K decision;\n    class O,P output;\n\n\n\n\n\nFigure 1: Simplified classification"
   }
 ]
