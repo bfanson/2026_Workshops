@@ -66,9 +66,9 @@ Today is a pick your own adventure😊
 
 It gives you access to:
 
-- 📦 Thousands of specialised R packages
-- 🗺️ Geospatial tools such as QGIS and PostGIS
-- 📊 Statistical and biometrics methods that are often only available through code
+- Thousands of specialised R packages
+- Geospatial tools such as QGIS and PostGIS
+- Statistical and biometrics methods that are often only available through code
 - Access to database and data engineering tools
 
 ## _Fact - B:_ LLMs can write really good code (module1) 
@@ -265,7 +265,7 @@ __Initial draft...__
 
 It is very likely the output is not quite there (or worse)...
 
-![](images/module3/castle_dreaming.gif){width=70%}
+![](images/module3/castle_dreaming.gif){width=50%}
 
 
 

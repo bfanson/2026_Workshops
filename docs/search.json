@@ -382,7 +382,7 @@
     "href": "module3.html#fact---a-coding-is-a-gateway-to-lots-of-tools",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Fact - A: Coding is a gateway to lots of tools",
-    "text": "Fact - A: Coding is a gateway to lots of tools\nIt gives you access to:\n\n📦 Thousands of specialised R packages\n🗺️ Geospatial tools such as QGIS and PostGIS\n📊 Statistical and biometrics methods that are often only available through code\nAccess to database and data engineering tools"
+    "text": "Fact - A: Coding is a gateway to lots of tools\nIt gives you access to:\n\nThousands of specialised R packages\nGeospatial tools such as QGIS and PostGIS\nStatistical and biometrics methods that are often only available through code\nAccess to database and data engineering tools"
   },
   {
     "objectID": "module3.html#fact---b-llms-can-write-really-good-code-module1",
