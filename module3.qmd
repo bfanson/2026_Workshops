@@ -46,12 +46,12 @@ draft: false
 
 Today is a pick your own adventure😊   
 
--  Option1: sit-back and absorb...🪱 tapeworm strategy
+-  __Option1:__ sit-back and absorb...🪱 tapeworm strategy
 
--  Option2: run in parallel...🐒 monkey strategy?
+-  __Option2:__ run in parallel...🐒 monkey strategy (monkey see, monkey do)
 
     - this strategy is better if you are familiar in Rstudio
-    - If you do the later, we will be curious to see your outputs (e.g. how it goes for you)
+    - If you do Option2, we will be curious to see your outputs (e.g. how it goes for you)
 
 
 
@@ -62,98 +62,82 @@ Today is a pick your own adventure😊
 ![](images/module3/castle_vibe.gif){width=70%}
 
 
-## Coding is a gateway to lots of tools (__A__)
+## _Fact - A:_ Coding is a gateway to lots of tools
 
-- all the R packages
+It gives you access to:
 
-- software you use to do stuff (e.g. QGIS)
+- 📦 Thousands of specialised R packages
+- 🗺️ Geospatial tools such as QGIS and PostGIS
+- 📊 Statistical and biometrics methods that are often only available through code
+- Access to database and data engineering tools
 
-- biometrics workshops (e.g. lots of R coding)
+## _Fact - B:_ LLMs can write really good code (module1) 
 
-
-## Using LLMs to help write code for you (module1) (__B__)
-
-We discussed in module 1 so not dwelling on here but LLMs are really good at coding...
+(_We discussed in module 1 so not dwelling on here but LLMs are really good at coding..._)
 
 __Advantages__
 
-- trained on billions of lines of code
-  - huge code-bases online (e.g. github) and software development that allows 
-
+- 📚 Trained on billions of lines of code, documentation, tutorials, and technical discussions
+- 🔍 Have "seen" solutions to many common programming problems before
+- ⚡ Can generate working code in seconds
+- 🐛 Often better at spotting syntax errors than average programmers
+- 🌐 Can use thousands of packages and functions that no human could memorise
 - coding is very logical/systematic...(perfect for machines)
 
 
-## You have  a great idea (__C__)
+## _Fact - C:_ You have a great idea
 
 ![](images/module3/castle_ideas.gif){width=70%}
 
+You come up with an idea that you want "to take for a test ride."
 
-### Given __A__ and __B__, why not have LLMs write code for you so you can get to __C__?
+![](images/module3/image_bike.jpg){width=60%}
 
-
-
-```{mermaid}
-%%| label: fig-workflow
-%%| fig-cap: Thinking about human role in workflow
-
-graph LR
-
-    H("👤 Human") --> HC[['You code']] 
-    HC --> O['Desired output']
+![](images/module3/image_bike_uphill.jpg){width=60%}
 
 
-    H1("👤 Human") --> LLM1[['LLM codes']]   
-    
-    LLM1 --> O['Desired output']
- 
-```
+## Given __Fact A__ and __ Fact B__, why not have LLMs write code for you so you can test ride those ideas (__Fact C__)?
+
+
+![](images/module3/image_ebike_uphill.jpg)
+
 
 
 ## What is vibe-coding?
 
-As with lots of terminology in AI boom, defining "vibe-coding" is a bit nebulous and people(/bots) use the term differently. For our purposes here, let's keep it simple as... __interacting with a LLM model in a standardised workflow such that the LLM writes the code, giving you the desired output in reproducible way.__
 
-FIND AN IMAGE TO FILL-IN HERE
+As with lots of terminology in the AI boom, defining vibe-coding is a bit nebulous. Different people (and bots!) use the term differently. For our purposes, let's keep it simple:
 
-![](images/module3/vibe_coding.png) 
-
-
-For me personally, I have found this has required a bit of paradigm-shift in how I view my role...
-
-```{mermaid}
-%%| label: fig-paradigm
-%%| fig-cap: Thinking about human role in workflow
-
-graph LR
-
-    H("👤 Human as <br> Manager")
-
-    H <--> DB[["Database Agent"]]
-    H <--> STATS[["📊 Statistics Agent"]]
-    H <--> GIS[["🗺 GIS Agent"]]
-    H <--> WRITER[["📝 Writer Agent"]]
-    H <--> APP[["Shiny App Agent"]]
-
- 
-```
+__Vibe-coding is a workflow where you describe what you want in natural language, an LLM writes the code, and you iteratively refine the result until you achieve the desired outcome in a reproducible way.__
 
 
-## Examples of people using...
+![](images/module3/image_vibe_coding.jpg) {width=60%}
 
-`Agents` often handle the heavy-loading
 
-- AI slop everywhere
-  - google play
-  - software in general, AI-generated software to use AI to create software  
+## Caveats with vibe-coding
 
+Vibe-coding can be incredibly productive, but it comes with risks.
+
+If you don't understand what the code is doing, you may:
+
+- accept incorrect results without noticing
+- fail to identify bugs or edge cases
+- use inappropriate statistical or analytical methods
+- create workflows that are difficult to reproduce or maintain
+- become overconfident in outputs that "look right"
+
+![](images/module3/image_ebike_cliff.jpg) {width=60%}
+
+
+# A workflow with vibe-coding
+
+To demonstrate vibe-coding, we will adopt vibe-coding into a Rstudio/R workflow.
 
 ## Example Rstudio/R workflow
 
 <aside>We flushed out more this workflow in our [2024 workshop](https://bfanson.github.io/2024_DADA_workshop/sessions/day1-getting-data-into-shape/)</aside>
 
 - Rstudio + R
-
-
 
 
 - Project folder as shown below
@@ -167,7 +151,6 @@ Of course, what we say here on <span style="color: blue;">20 October 2026</span>
 
 
 
-
 -------
 
 # Data files used today (if being a 🐒)
@@ -175,6 +158,11 @@ Of course, what we say here on <span style="color: blue;">20 October 2026</span>
 As mentioned above, the workflow used here relies on Rstudio/R approach. There, if you want to be 🐒, you must have Rstudio/R installed for this and be familiar with it.  
 
 Click on [Download project folder](https://delwpvicgovau-my.sharepoint.com/:u:/g/personal/ben_fanson_deeca_vic_gov_au/IQDIhnDK4oetTZHoGvAH6TVyAXM9xMlKTjiw68Xl_34u1kY?e=3Dqxa3){target="_blank" rel="noopener"} to get the Copilot project folder for the next section of the module.
+
+
+A reminder on module2 QGIS map Adrian made...
+
+![](qgis_goal.png)
 
 
 -------
@@ -212,19 +200,19 @@ Let's have a look around the folder as there are few things in there that I adde
 
 The basic structure of the project folder is ...
 
-![]('images/module3/project_folder.png'){width=100%}
+![](images/module3/dir_start.png){width=50%}
 
 
 <br>
 
 Let's have a look at the agent file...
 
-![]('images/module3/md_agents.png'){width=100%}
+![](images/module3/md_agents.png){width=100%}
 
 
 And the spatial_analyst skill...
 
-![]('images/module3/md_spatial.png'){width=100%}
+![](images/module3/md_spatial.png){width=100%}
 
 
 ### Step 2: Use plan mode
@@ -236,40 +224,40 @@ Before diving into getting the spatial code, you need to have an idea/plan of wh
 
 __PROMPT__
 
-I need to create a png map using an R workflow.  I have a graph (figures/qgis_goal.png) that I want you to replicate.  I first want to create a plan that we argue on to create similar map output ('figures/rmap.png') and all points will be `data/spatial/vmfrp_wallpolla_veg.gpkg`.  A basemap and Victorian layer will be needed to be found.  See `.posit/AGENTS.MD` '.posit/spatial_analyst/' skill to guide workflow approach.  During the planning stage, do not guess what I want but rather ask me explicitly.
+_/plan (sets to plan mode)_
+
+I need to create a png map using an R workflow.  I have a graph (figures/qgis_goal.png) that I want you to replicate.  I first want to create a plan that we argue on to create similar map output ('figures/rmap.png') and all points will be `data/spatial/vmfrp_wallpolla_veg.gpkg`.  A basemap and Victorian layer will be needed to be found.  See `.posit/AGENTS.MD` '.posit/spatial_analyst/' skill to guide workflow approach.  During the planning stage, do not guess what I want but rather ask me explicitly.  Save the plan as PLAN.MD in base directory.
 
 </div>
 
 
-![](images/module3/step_plan.png){width=40%}
+![](images/module3/step_plan.png){width=50%}
 
 
 We will work through this live.  An example of what might come out is shown below:
 
-![](images/module3/step_plan_out.png){width=40%}
+![](images/module3/md_plan.png){width=90%}
 
 
 <aside>MD files are Markdown and very commonly used in programming world as they are a balance between between .txt file with no formatting and Word doc (excessive formatting😊). See [Intro to Markdown](https://www.markdownguide.org/getting-started/) </aside>
 
 
+
 ### Step 3: Execute the plan
 
-Okay, we got a plan and told AI what we want. 
+Okay, we got a plan and told AI what we want.  Let's implement the plan and see how it does.  I will mostly go YOLO ( <b>Y</b>ou <b>O</b>nly <b>L</b>ook <b>O</b>nce).  I want to see what it can do.
 
-![](images/module3/step_execute.png){width=40%}
+I will run Claude Sonnet 5.0 for the example here.
+
 
 
 ### Step 4: Review the results
 
 Let's walk through some of the outputs.  
 
-![](images/module3/sonnet/rmap_version1.png){width=40%}
+__Initial draft...__
 
-![](images/module3/sonnet/rmap_version2.png){width=40%}
-
-
-![](images/module3/sonnet/rmap_final.png){width=40%}
-
+![](images/module3/sonnet/map_initial.png){width=100%}
 
 
 
@@ -279,7 +267,31 @@ It is very likely the output is not quite there (or worse)...
 
 ![](images/module3/castle_dreaming.gif){width=70%}
 
-As for most things, it will be an iterative process that will require additional modifications.  Sometimes, this works seemlessly, other times it can be like pulling teeth and you might realize that you could do faster by-hand. 
+
+
+Given that we have the `qgis_main.png` as the goal, let's have AI assess itself and see if it can do better.
+
+<div style="background-color:#dbeafe; padding:1em; border:1px solid #93c5fd; border-radius:6px;">
+
+__PROMPT__
+
+_/plan (sets to plan mode)_
+
+Using the qgis_goal.png, compare and contrast to mapVegSites.png and provide a list of changes needed to mapVegSites.png to make it match better.
+</div>
+
+
+![](images/module3/sonnet/map_final.png){width=100%}
+
+__ORIGINAL QGIS__
+
+![](images/module3/qgis_goal.png){width=40%}
+
+
+## Back to folder structure
+
+![](images/module3/dir_final.png){width=40%}
+
 
 
 ## Comparing LLMs results
@@ -305,9 +317,9 @@ As this is stochastic and depends on the model, you will get different results. 
 
 | Model | \~Cost | Thoughts |
 |:--|:--|:--|
-| Claude Sonnet (1.0x)  | $x.xx | More expensive model but could actually view the png file so it could evaluate.  It took just few iterations to get a reasonable result  |
+| Claude Sonnet (1.0x)  | $3.16 | More expensive model but it viewed the png file with no issues and just needed to ask a few questions.  It was able to evaluate how well it had done and fix several components |
+| GLM 5.3 (0.6x) | $1.00 | Not able to "view" the png so that limiting.  After answering a suite of queries the basics were there but it needed much more guidance|
 | Claude Haiku (0.4x)  | $x.xx | Least expensive model I tried. |
-| GLM 5.3 (0.6x) | $1.00 | Not able to "view" the png so limiting. It took a few more iterations to get there|
 | Kimi (0.9x)    | $x.xx |   |
 
 
@@ -316,40 +328,53 @@ As this is stochastic and depends on the model, you will get different results. 
 
 # Coming back to vibe-coding idea
 
-Did you get to this point...(yes, shoehorning as many as I can😊)
+Did you get to this point...(yes, shoehorning as many Castle reference as I can😊)
 
 ![](images/module3/castle_serenity.gif){width=70%}
 
-Now, we demonstrated vibe-coding within a Rstudio workflow with spatial data.  Obviously, vibe-coding is not restricted to spatial data and you can implement the same approach to other type of data.  At the `Agent` level, we showed <span style="color: blue;">spatial_analyst.MD</span> and <span style="color: blue;">Agents.MD</span> files.  Though created for the `Agent`, I actually found it was an useful activity to assess my workflow/approach😉
 
-An emerging question that we are wondering about (and we mentioned in module 1...sorry to dwell) is what does this mean for how we tackle these steps in the future and our workflows. How homogenized do our workflows become?  Will there is a main spatial_analyst.MD skill that we all follow?  Do we have a project folder that has a similar structure so both humans and a local LLM that has been trained on our workflow can easily understand it, revise, and QC it?
-
-
-## Strengths
-
-![]()
+## Some final thoughts
 
 
-| Strength | Description |
-|:--|:--|
-| Reproducibility | R code records each transformation, parameter and analytical decision, making the spatial workflow easier to reproduce and audit. |
-| Automation | A scripted workflow can be rerun when input data change, without manually repeating each GIS operation. |
-| Scalability | The same analysis can be applied consistently across many species, sites, catchments or input files. |
-| Reporting integration | Maps, figures, tables and results can be generated directly in a Quarto report. |
-| Reuse | Repeated spatial operations can be converted into functions or incorporated into an R package. |
-| Extensibility | Once the initial workflow works, it can be expanded with loops, simulations, databases, APIs and specialist spatial packages. |
+### Reviewing the code
+
+- Despite the temptation, we are going to need to be disciplined about reading the code and ensure that we understand exactly what it is doing.  
+
+- As noted, I have a STYLE.MD guide that writes the code in my style.  That helps me review/evaluate the code quicker.
+
+### Learning new coding tips
+
+- Reading the code that the Agent wrote introduced me to new functions/approaches to making new maps
 
 
-## Caveats
+### Goes beyond spatial data
 
-"The difference between two-wheel drive and four-wheel drive is how far you walk back"
-
-big difference between __understanding__ and __being able to implement__
+- Obviously, __vibe-coding is not restricted to spatial data__ and you can implement the same approach to other type of data.  
 
 
+### Homogensing workflow
+
+An emerging question that we are wondering about (and we mentioned in module 1...sorry to dwell) is what does this mean for how we tackle these steps in the future and our workflows. 
+
+  - How homogenized do our workflows become?  Standardised ARI STYLE.MD, WOKFLOW.MD, and set of SKILLS.MD files/folders.  
+  
+  - Do we have a project folder that has a similar structure so both humans and a local LLM that has been trained on our workflow can easily understand it, revise, and QC it?
+  
+  - Sure seems apt given all the discussion on templates/standardisation
+
+### Reproducibility
+
+  - An obvious strength is that we have a history of what was done...(the R script is right there, all the data files (untouched!!!!) )
+
+  
+### How does it work as it gets more complex?
+
+  - We showed a very simple workflow project.  How manage as the project gets bigger?
 
 
+### "The Castle" references feel rather appropriate in this moment...
 
+![](images/module3/castle_movie.jpg){width=20%}
 
 
 

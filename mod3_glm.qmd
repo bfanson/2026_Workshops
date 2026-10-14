@@ -74,3 +74,26 @@ flowchart TD
 ```
 
 
+
+## Strengths
+
+![]()
+
+
+| Strength | Description |
+|:--|:--|
+| Reproducibility | R code records each transformation, parameter and analytical decision, making the spatial workflow easier to reproduce and audit. |
+| Automation | A scripted workflow can be rerun when input data change, without manually repeating each GIS operation. |
+| Scalability | The same analysis can be applied consistently across many species, sites, catchments or input files. |
+| Reporting integration | Maps, figures, tables and results can be generated directly in a Quarto report. |
+| Reuse | Repeated spatial operations can be converted into functions or incorporated into an R package. |
+| Extensibility | Once the initial workflow works, it can be expanded with loops, simulations, databases, APIs and specialist spatial packages. |
+
+
+## Caveats
+
+"The difference between two-wheel drive and four-wheel drive is how far you walk back"
+
+big difference between __understanding__ and __being able to implement__
+
+
