@@ -3,6 +3,16 @@ title: "Results from GLM 5.3 Agent run"
 draft: false
 ---
 
+
+
+<style>
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+</style>
+[UNDER DEVELOPMENT]{style="color: red; font-size: 20px;font-style: italic;animation: blinker 1s linear infinite;"}
+
+
 # Notes on running GLM
 
 - GLM does not have the capability to see the png output.  Therefore, it asked a series of questions about what it looked like.  This would align with the standard workflow of having a basic idea of what the plot looks like.  It does preclude using a map that you like as template to replicate.
