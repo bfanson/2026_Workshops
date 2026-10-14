@@ -50,7 +50,7 @@ Today is a pick your own adventure😊
 
 -  __Option2:__ run in parallel...🐒 monkey strategy (monkey see, monkey do)
 
-    - this strategy is better if you are familiar in Rstudio
+    - Option 2 is better if you are familiar in Rstudio/R project workflow already
     - If you do Option2, we will be curious to see your outputs (e.g. how it goes for you)
 
 
@@ -60,20 +60,20 @@ Today is a pick your own adventure😊
 # Let's chat about a vibe-coding (🪱)
 
 ![](images/module3/castle_vibe.gif){width=50%}
-
+## Rationale
 
 ## _Fact - A:_ Coding is a gateway to lots of tools
 
-It gives you access to:
+It gives you access to...
 
 - Thousands of specialised R packages
 - Geospatial tools such as QGIS and PostGIS
 - Statistical and biometrics methods that are often only available through code
 - Access to database and data engineering tools
 
-## _Fact - B:_ LLMs can write really good code (module1) 
+## _Fact - B:_ LLMs can write really good code (Module1) 
 
-(_We discussed in module 1 so not dwelling on here but LLMs are really good at coding..._)
+(_We discussed in module 1 so will not dwell on..._)
 
 __Advantages__
 
@@ -85,11 +85,15 @@ __Advantages__
 - coding is very logical/systematic...(perfect for machines)
 
 
-## _Fact - C:_ You have a great idea
+## _Fact - C:_ You have lots of potentially great ideas
 
 ![](images/module3/castle_ideas.gif){width=50%}
 
-You come up with an idea that you want "to take for a test ride."
+Coming up lots of ideas is often easy
+
+![](images/module3/image_bike.jpg){width=50%}
+
+But "testing riding them" (aka seeing if the idea is actually any good) can be a hurdle to every exploring them.
 
 
 
@@ -98,6 +102,7 @@ You come up with an idea that you want "to take for a test ride."
 
 ## Given __Fact A__ and __Fact B__, why not have LLMs write code for you so you can test ride those ideas (__Fact C__)?
 
+Using LLM to write lowers the cost of "testing riding them"
 
 ![](images/module3/image_ebike_uphill.jpg){width=50%}
 
@@ -116,53 +121,75 @@ __Vibe-coding is a workflow where you describe what you want in natural language
 
 ## Caveats with vibe-coding
 
-Vibe-coding can be incredibly productive, but it comes with risks.
+Vibe-coding can be incredibly productive, but it comes with risks...
 
-If you don't understand what the code is doing, you may:
-
-- accept incorrect results without noticing
-- fail to identify bugs or edge cases
+- failing into the trap of intellectual laziness
+- accept incorrect results in which is the logic does not make sense
 - use inappropriate statistical or analytical methods
-- create workflows that are difficult to reproduce or maintain
-- become overconfident in outputs that "look right"
 
 ![](images/module3/image_ebike_cliff.jpg){width=50%}
 
 
-# A workflow with vibe-coding
+# Implementing a vibe-coding workflow
 
-To demonstrate vibe-coding, we will adopt vibe-coding into a Rstudio/R workflow.
+## Rationale
+
+Some attributes of a good workflow for vibe-coding...
+
+- reproducible
+- makes it efficient to review the code and outputs
+- aligns with the coding skills and workflow that are already in-house (@ARI)
+- leverages proven workflows
+
 
 ## Example Rstudio/R workflow
 
-<aside>We flushed out more this workflow in our [2024 workshop](https://bfanson.github.io/2024_DADA_workshop/sessions/day1-getting-data-into-shape/)</aside>
+Here, we will implement vibe-coding within Rstudio environment (which we have presented previously in our workshops😁)
 
-- Rstudio + R
+<aside>Feel free to check our [2024 workshop](https://bfanson.github.io/2024_DADA_workshop/sessions/day1-getting-data-into-shape/) for more details on</aside>
 
 
-- Project folder as shown below
+Reminder of key aspects of this workflow...
+
+- Projects (called Rprojects with ext .Rproj ) are the basis
+
+- Structure of directory like the following...
+
+![](images/module3/dir_rproject.png){width=50%}
+
+Key bits...
+
+- `data/`  folder is treated as locked [do not edit]
+
+- `R/` folder holds your scripts [aka documentation of your steps/logic]
 
 
 ## Other workflows exist?
 
-Yes and yes and yes...honestly, we do not keep track of but between other programming languages and LLMs studios (e.g. Claude Code, Codex) and bespoke software, there are lots.
+Yes, lots...
 
-Of course, what we say here on <span style="color: blue;">20 October 2026</span> may be antiquated in a year (...as might be lots of other things😕).
+honestly, we do not keep track of but between other programming languages (e.g. Python, C++) and LLMs studios (e.g. Claude Code, Codex) and bespoke software, there are lots.
 
-
+Of course, what we say here on <span style="color: blue;">20 October 2026</span> may be antiquated in a year (...as well as lots of other way we do things😕).
 
 -------
 
-# Data files used today (if being a 🐒)
+# Set-up for Today
 
-As mentioned above, the workflow used here relies on Rstudio/R approach. There, if you want to be 🐒, you must have Rstudio/R installed for this and be familiar with it.  
+## Data files used today (🐒)
+
+As mentioned above, the workflow used here relies on Rstudio/R approach. 
+
+Therefore, if you want to be 🐒, you must have Rstudio/R installed for this and be familiar with it.  
 
 Click on [Download project folder](https://delwpvicgovau-my.sharepoint.com/:u:/g/personal/ben_fanson_deeca_vic_gov_au/IQDIhnDK4oetTZHoGvAH6TVyAXM9xMlKTjiw68Xl_34u1kY?e=3Dqxa3){target="_blank" rel="noopener"} to get the Copilot project folder for the next section of the module.
 
 
+## Vibe-coding goal for today
+
 A reminder on module2 QGIS map Adrian made...
 
-![](images/module3/qgis_goal.png){width=50%}
+![](images/module3/qgis_goal.png){width=80%}
 
 
 -------
@@ -188,7 +215,7 @@ We understand if you have feeling about `Agents` more like...
 ![](images/module3/castle_stuffed.gif){width=40%}
 
 
-## Steps using Posit AI
+## Steps using Posit AI (aka Posit Assistant)
 
 Let's walk through a workflow...
 
@@ -206,12 +233,12 @@ The basic structure of the project folder is ...
 
 <br>
 
-Let's have a look at the agent file...
+Let's have a look at the agent file...(snapshot of the top)
 
 ![](images/module3/md_agents.png){width=100%}
 
 
-And the spatial_analyst skill...
+And the spatial_analyst skill...(snapshot of the top)
 
 ![](images/module3/md_spatial.png){width=100%}
 
@@ -331,53 +358,72 @@ As this is stochastic and depends on the model, you will get different results. 
 
 # Coming back to vibe-coding idea
 
-Did you get to this point...(yes, shoehorning as many Castle reference as I can😊)
-
-![](images/module3/castle_serenity.gif){width=70%}
-
-
 ## Some final thoughts
+
+_Disclaimer: This is us free-thinking in real time during a paradign shift. Feel free to disagree or contribute your own thoughts._
+
+### Resist intellectual laziness
+
+This is not a flippant statement.
+
+As AI tools become more capable, there is a risk that we outsource not only the coding, but also the thinking.
+
+Contributing factors:
+
+- We are increasingly time-stressed.
+- Projects often have unrealistic deadlines.
+- Vibe-coding can create psychological distance from the underlying problem.
+- Modern digital platforms reward speed, visibility, and confidence more than deep understanding.
+- AI can produce plausible outputs that reduce the incentive to question assumptions or verify results.
+
+__Key message:__ The danger is not that AI writes code. The danger is that we stop engaging critically with the problem we are trying to solve.
 
 
 ### Reviewing the code
 
-- Despite the temptation, we are going to need to be disciplined about reading the code and ensure that we understand exactly what it is doing.  
+- Despite the temptation, we are going to need to be disciplined about reading the code and ensure 
+that we understand exactly what it is doing.
+
+- Not all code requires the same level of assessment (importing data vs ggplot vs statistical analysis)
+
+- Learning how to QC/QA your code and outputs will increase in importance
 
 - As noted, I have a STYLE.MD guide that writes the code in my style.  That helps me review/evaluate the code quicker.
 
-### Learning new coding tips
+
+### Learning from vibe-coding
+
+- New approaches to tackling a problem (plan mode)
 
 - Reading the code that the Agent wrote introduced me to new functions/approaches to making new maps
 
 
-### Goes beyond spatial data
+### Beyond spatial data
 
-- Obviously, __vibe-coding is not restricted to spatial data__ and you can implement the same approach to other type of data.  
+- Obviously, __vibe-coding is not restricted to spatial data__ and you can implement the same approach to other type of data.
 
 
-### Homogensing workflow
+### Homogensing workflow (the future)
 
-An emerging question that we are wondering about (and we mentioned in module 1...sorry to dwell) is what does this mean for how we tackle these steps in the future and our workflows. 
+An emerging question that we are wondering about (and we mentioned in module 1...sorry to dwell) is what does this mean for how we tackle these steps in the future and our workflows.  
 
-  - How homogenized do our workflows become?  Standardised ARI STYLE.MD, WOKFLOW.MD, and set of SKILLS.MD files/folders.  
-  
+How homogenized do our workflows become?  
+
+  - Standardised ARI STYLE.MD, WOKFLOW.MD, and set of SKILLS.MD files/folders.  
   - Do we have a project folder that has a similar structure so both humans and a local LLM that has been trained on our workflow can easily understand it, revise, and QC it?
-  
-  - Sure seems apt given all the discussion on templates/standardisation
-
-### Reproducibility
-
-  - An obvious strength is that we have a history of what was done...(the R script is right there, all the data files (untouched!!!!) )
-
-  
-### How does it work as it gets more complex?
-
-  - We showed a very simple workflow project.  How manage as the project gets bigger?
 
 
-### "The Castle" references feel rather appropriate in this moment...
+All of this seems apt given all the discussion on templates/standardisation
 
-![](images/module3/castle_movie.jpg){width=20%}
+
+### "The Castle" references feel rather appropriate at this point in time...
+
+![](images/module3/castle_movie.jpg){width=70%}
+
+
+
+![](images/module3/castle_serenity.gif){width=70%}
+
 
 
 

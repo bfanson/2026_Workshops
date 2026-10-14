@@ -172,7 +172,7 @@
     "href": "module3.html#example-rstudior-workflow",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Example Rstudio/R workflow",
-    "text": "Example Rstudio/R workflow\n\nWe flushed out more this workflow in our 2024 workshop\n\n\nRstudio + R\nProject folder as shown below"
+    "text": "Example Rstudio/R workflow\nHere, we will implement vibe-coding within Rstudio environment, which we have presented repeatedly over the years.\n\nWe flushed out more this workflow in our 2024 workshop\n\nReminder of key aspects of this workflow…\n\nProjects (called Rprojects with ext .Rproj ) are the basis\nStructure of directory like the following…\n\n - data/ folder is viewed as locked\n\nR/ (aka R programs/) folder holds all the steps you undertook"
   },
   {
     "objectID": "module3.html#steps-using-posit-ai",
@@ -298,7 +298,7 @@
     "href": "module3.html#other-workflows-exist",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Other workflows exist?",
-    "text": "Other workflows exist?\nYes and yes and yes…honestly, we do not keep track of but between other programming languages and LLMs studios (e.g. Claude Code, Codex) and bespoke software, there are lots.\nOf course, what we say here on 20 October 2026 may be antiquated in a year (…as might be lots of other things😕)."
+    "text": "Other workflows exist?\nYes, lots… honestly, we do not keep track of but between other programming languages (e.g. Python, C++) and LLMs studios (e.g. Claude Code, Codex) and bespoke software, there are lots.\nOf course, what we say here on 20 October 2026 may be antiquated in a year (…as well as lots of other way we do things😕)."
   },
   {
     "objectID": "module3.html#you-have-a-great-idea-c",
@@ -375,7 +375,7 @@
     "href": "module3.html#some-final-thoughts",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Some final thoughts",
-    "text": "Some final thoughts\n\nReviewing the code\n\nDespite the temptation, we are going to need to be disciplined about reading the code and ensure that we understand exactly what it is doing.\nAs noted, I have a STYLE.MD guide that writes the code in my style. That helps me review/evaluate the code quicker.\n\n\n\nLearning new coding tips\n\nReading the code that the Agent wrote introduced me to new functions/approaches to making new maps\n\n\n\nGoes beyond spatial data\n\nObviously, vibe-coding is not restricted to spatial data and you can implement the same approach to other type of data.\n\n\n\nHomogensing workflow\nAn emerging question that we are wondering about (and we mentioned in module 1…sorry to dwell) is what does this mean for how we tackle these steps in the future and our workflows.\n\nHow homogenized do our workflows become? Standardised ARI STYLE.MD, WOKFLOW.MD, and set of SKILLS.MD files/folders.\nDo we have a project folder that has a similar structure so both humans and a local LLM that has been trained on our workflow can easily understand it, revise, and QC it?\nSure seems apt given all the discussion on templates/standardisation\n\n\n\nReproducibility\n\nAn obvious strength is that we have a history of what was done…(the R script is right there, all the data files (untouched!!!!) )\n\n\n\nHow does it work as it gets more complex?\n\nWe showed a very simple workflow project. How manage as the project gets bigger?\n\n\n\n“The Castle” references feel rather appropriate in this moment…"
+    "text": "Some final thoughts\nDisclaimer: This is us free-thinking in real time during a paradign shift. Feel free to disagree or contribute your own thoughts.\n\nResist intellectual laziness\nThis is not a flippant statement\nContributing factors…\n\nWe are time-stressed\nProjects have unrealistic deadlines\nVibe-coding can lead to disconnection from the project\n\n\n\nReviewing the code\n\nDespite the temptation, we are going to need to be disciplined about reading the code and ensure that we understand exactly what it is doing.\nAs noted, I have a STYLE.MD guide that writes the code in my style. That helps me review/evaluate the code quicker.\n\n\n\nLearning new coding tips\n\nReading the code that the Agent wrote introduced me to new functions/approaches to making new maps\n\n\n\nBeyond spatial data\n\nObviously, vibe-coding is not restricted to spatial data and you can implement the same approach to other type of data.\n\n\n\nHomogensing workflow (the future)\nAn emerging question that we are wondering about (and we mentioned in module 1…sorry to dwell) is what does this mean for how we tackle these steps in the future and our workflows.\nHow homogenized do our workflows become?\n\nStandardised ARI STYLE.MD, WOKFLOW.MD, and set of SKILLS.MD files/folders.\n\nDo we have a project folder that has a similar structure so both humans and a local LLM that has been trained on our workflow can easily understand it, revise, and QC it?\n\nAll of this seems apt given all the discussion on templates/standardisation\n\n\n“The Castle” references feel rather appropriate in this moment…"
   },
   {
     "objectID": "module3.html#fact---a-coding-is-a-gateway-to-lots-of-tools",
@@ -388,15 +388,15 @@
     "objectID": "module3.html#fact---b-llms-can-write-really-good-code-module1",
     "href": "module3.html#fact---b-llms-can-write-really-good-code-module1",
     "title": "Module 3: Vibe-coding (with spatial data)",
-    "section": "Fact - B: LLMs can write really good code (module1)",
-    "text": "Fact - B: LLMs can write really good code (module1)\n(We discussed in module 1 so not dwelling on here but LLMs are really good at coding…)\nAdvantages\n\nTrained on billions of lines of code, documentation, tutorials, and technical discussions\nHave “seen” solutions to many common programming problems before\nCan generate working code in seconds\nOften better at spotting syntax errors than average programmers\nCan use thousands of packages and functions that no human could memorise\ncoding is very logical/systematic…(perfect for machines)"
+    "section": "Fact - B: LLMs can write really good code (Module1)",
+    "text": "Fact - B: LLMs can write really good code (Module1)\n(We discussed in module 1 so not dwelling on here but LLMs are really good at coding…)\nAdvantages\n\nTrained on billions of lines of code, documentation, tutorials, and technical discussions\nHave “seen” solutions to many common programming problems before\nCan generate working code in seconds\nOften better at spotting syntax errors than average programmers\nCan use thousands of packages and functions that no human could memorise\ncoding is very logical/systematic…(perfect for machines)"
   },
   {
     "objectID": "module3.html#fact---c-you-have-a-great-idea",
     "href": "module3.html#fact---c-you-have-a-great-idea",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Fact - C: You have a great idea",
-    "text": "Fact - C: You have a great idea\n\nYou come up with an idea that you want “to take for a test ride.”"
+    "text": "Fact - C: You have a great idea\n\nComing up lots of ideas is often easy\n\nBut “testing riding them” (aka seeing if the idea is actually any good) can be a hurdle to every exploring them."
   },
   {
     "objectID": "module3.html#given-fact-a-and-__-fact-b__-why-not-have-llms-write-code-for-you-so-you-can-test-ride-those-ideas-fact-c",
@@ -410,13 +410,48 @@
     "href": "module3.html#caveats-with-vibe-coding",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Caveats with vibe-coding",
-    "text": "Caveats with vibe-coding\nVibe-coding can be incredibly productive, but it comes with risks.\nIf you don’t understand what the code is doing, you may:\n\naccept incorrect results without noticing\nfail to identify bugs or edge cases\nuse inappropriate statistical or analytical methods\ncreate workflows that are difficult to reproduce or maintain\nbecome overconfident in outputs that “look right”"
+    "text": "Caveats with vibe-coding\nVibe-coding can be incredibly productive, but it comes with risks.\nIf you don’t understand what the code is doing, you may:\n\nfail in the trap of intellectual laziness\naccept incorrect results in which is the logic does not make sense\nuse inappropriate statistical or analytical methods"
   },
   {
     "objectID": "module3.html#given-fact-a-and-fact-b-why-not-have-llms-write-code-for-you-so-you-can-test-ride-those-ideas-fact-c",
     "href": "module3.html#given-fact-a-and-fact-b-why-not-have-llms-write-code-for-you-so-you-can-test-ride-those-ideas-fact-c",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Given Fact A and Fact B, why not have LLMs write code for you so you can test ride those ideas (Fact C)?",
-    "text": "Given Fact A and Fact B, why not have LLMs write code for you so you can test ride those ideas (Fact C)?"
+    "text": "Given Fact A and Fact B, why not have LLMs write code for you so you can test ride those ideas (Fact C)?\nUsing LLM to write lowers the cost of “testing riding them”"
+  },
+  {
+    "objectID": "module3.html#rationale",
+    "href": "module3.html#rationale",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Rationale",
+    "text": "Rationale\nSome attributes of a good workflow for vibe-coding…\n\nreproducible\nmakes it efficient to review the code and outputs\naligns with the skills in-house\nleverages proven workflows"
+  },
+  {
+    "objectID": "module3.html#data-files-used-today",
+    "href": "module3.html#data-files-used-today",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Data files used today (🐒)",
+    "text": "Data files used today (🐒)\nAs mentioned above, the workflow used here relies on Rstudio/R approach.\nTherefore, if you want to be 🐒, you must have Rstudio/R installed for this and be familiar with it.\nClick on Download project folder to get the Copilot project folder for the next section of the module."
+  },
+  {
+    "objectID": "module3.html#vibe-coding-goal-for-today",
+    "href": "module3.html#vibe-coding-goal-for-today",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Vibe-coding goal for today",
+    "text": "Vibe-coding goal for today\nA reminder on module2 QGIS map Adrian made…"
+  },
+  {
+    "objectID": "module3.html#steps-using-posit-ai-aka-posit-assistant",
+    "href": "module3.html#steps-using-posit-ai-aka-posit-assistant",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Steps using Posit AI (aka Posit Assistant)",
+    "text": "Steps using Posit AI (aka Posit Assistant)\nLet’s walk through a workflow…\n\nStep 1: set-up the project folder with the data\nI have already created a folder download project setup for Agent\nLet’s have a look around the folder as there are few things in there that I added from the Copilot approach above.\nThe basic structure of the project folder is …\n\n\nLet’s have a look at the agent file…\n\nAnd the spatial_analyst skill…\n\n\n\nStep 2: Use plan mode\nBefore diving into getting the spatial code, you need to have an idea/plan of what you want the Agent to do. The ‘plan mode’ can be useful for this.\n\nPROMPT\n/plan (sets to plan mode)\nI need to create a png map using an R workflow. I have a graph (figures/qgis_goal.png) that I want you to replicate. I first want to create a plan that we argue on to create similar map output (‘figures/rmap.png’) and all points will be data/spatial/vmfrp_wallpolla_veg.gpkg. A basemap and Victorian layer will be needed to be found. See .posit/AGENTS.MD ‘.posit/spatial_analyst/’ skill to guide workflow approach. During the planning stage, do not guess what I want but rather ask me explicitly. Save the plan as PLAN.MD in base directory.\n\nRun plan mode…\n\nWe will work through this live. An example of what might come out is shown below:\n\n\nMD files are Markdown and very commonly used in programming world as they are a balance between between .txt file with no formatting and Word doc (excessive formatting😊). See Intro to Markdown\n\n\n\nStep 3: Execute the plan\nOkay, we got a plan and told AI what we want. Let’s implement the plan and see how it does. I will mostly go YOLO ( You Only Look Once). I want to see what it can do.\nI will run Claude Sonnet 5.0 for the example here.\n\n\nStep 4: Review the results\nLet’s walk through some of the outputs.\nInitial draft…\n\n\n\nStep 5: Iterate (as needed)\nIt is very likely the output is not quite there (or worse)…\n\nGiven that we have the qgis_main.png as the goal, let’s have AI assess itself and see if it can do better.\n\nPROMPT\n/plan (sets to plan mode)\nUsing the qgis_goal.png, compare and contrast to mapVegSites.png and provide a list of changes needed to mapVegSites.png to make it match better.\n\n\nORIGINAL QGIS"
+  },
+  {
+    "objectID": "module3.html#fact---c-you-have-lots-of-potentially-great-ideas",
+    "href": "module3.html#fact---c-you-have-lots-of-potentially-great-ideas",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Fact - C: You have lots of potentially great ideas",
+    "text": "Fact - C: You have lots of potentially great ideas\n\nComing up lots of ideas is often easy\n\nBut “testing riding them” (aka seeing if the idea is actually any good) can be a hurdle to every exploring them."
   }
 ]
