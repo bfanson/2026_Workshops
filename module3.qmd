@@ -40,8 +40,9 @@ Today is a pick your own adventure😊
 -  Option1: sit-back and absorb...🪱 tapeworm strategy
 
 -  Option2: run in parallel...🐒 monkey strategy?
-  - this strategy is better if you are familiar in Rstudio
-  - If you do the later, we will be curious to see your outputs (e.g. how it goes for you)
+
+    - this strategy is better if you are familiar in Rstudio
+    - If you do the later, we will be curious to see your outputs (e.g. how it goes for you)
 
 
 
