@@ -91,9 +91,9 @@ __Advantages__
 
 Coming up lots of ideas is often easy
 
-![](images/module3/image_bike.jpg){width=50%}
+![](images/module3/image_bike.jpg){width=40%}
 
-But "testing riding them" (aka seeing if the idea is actually any good) can be a hurdle to every exploring them.
+But "testing riding them" (aka seeing if the idea is actually any good) can be a hurdle to ever exploring them.
 
 
 
