@@ -418,9 +418,10 @@ All of this seems apt given all the discussion on templates/standardisation
 
 ### "The Castle" references feel rather appropriate at this point in time...
 
-![](images/module3/castle_movie.jpg){width=70%}
+![](images/module3/castle_movie.jpg){width=40%}
 
 
+<br>
 
 ![](images/module3/castle_serenity.gif){width=70%}
 
