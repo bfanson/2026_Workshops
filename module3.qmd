@@ -19,11 +19,12 @@ draft: false
 ---
 
 <style>
-@keyframes blink {
+@keyframes blinker {
   50% { opacity: 0; }
 }
-WARNING UNDER DEVELOPMENT
 </style>
+[UNDER DEVELOPMENT]{style="color: red; font-size: 20px;font-style: italic;animation: blinker 1s linear infinite;"}
+
 
 
 -------
