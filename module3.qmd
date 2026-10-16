@@ -307,7 +307,7 @@ __PROMPT__
 
 _/plan (sets to plan mode)_
 
-Using the qgis_goal.png, compare and contrast to mapVegSites.png and provide a list of changes needed to mapVegSites.png to make it match better.
+Using the qgis_goal.png, compare and contrast to rmap.png and provide a list of changes needed to rmap.png to make it match better.  When implementing, save new png as rmap_final.png
 </div>
 
 
@@ -330,14 +330,16 @@ __ORIGINAL QGIS__
 
 As this is stochastic and depends on the model, you will get different results.  Out of curiosity, I ran multiple iterations using the exact same plan.  
 
-[link to GLM model ](mod3_glm.html)
+__GLM 5.3 MODEL__
+
 ![](images/module3/glm/rmap_final.png)
 
-[link to Claude Haiku  model](mod3_haiku.html)
+
+__Claude Haiku__
 ![](images/module3/haiku/rmap_final.png)
 
 
-[link to Kimi model](mod3_kimi.html)
+__KIMI K3__
 ![](images/module3/kimi/rmap_final.png)
 
 </div>
@@ -345,12 +347,12 @@ As this is stochastic and depends on the model, you will get different results. 
 
 ### Summary table of insights...
 
-| Model | \~Cost | Thoughts |
-|:--|:--|:--|
-| Claude Sonnet (1.0x)  | $3.16 | More expensive model but it viewed the png file with no issues and just needed to ask a few questions.  It was able to evaluate how well it had done and fix several components |
-| GLM 5.3 (0.6x) | $1.00 | Not able to "view" the png so that limiting.  After answering a suite of queries the basics were there but it needed much more guidance|
-| Claude Haiku (0.4x)  | $x.xx | Least expensive model I tried. |
-| Kimi (0.9x)    | $x.xx |   |
+|Rank| Model | \~Cost | Thoughts |
+|:--|:--|:--|:--|
+|1| Claude Sonnet (1.0x)  | $3.16 | More expensive model but it viewed the png file with no issues and just needed to ask a few questions.  It was able to evaluate how well it had done and fix several components |
+|2| Kimi (0.9x)    | $4.58 | First draft was very close. It seemed to evaluate along the way, so the final revision prompt not as needed.   |
+|3| GLM 5.3 (0.6x) | $1.00 | Not able to "view" the png so that limiting.  After answering a suite of queries the basics were there but it needed much more guidance|
+|4| Claude Haiku (0.4x)  | $0.75 | Least expensive model I tried. Clunkier in how its ask question.  Did not suggest/recommend approaches. Created 6 script files|
 
 
 
