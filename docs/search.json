@@ -326,7 +326,7 @@
     "href": "module3.html#comparing-llms-results",
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Comparing LLMs results",
-    "text": "Comparing LLMs results\n\nAs this is stochastic and depends on the model, you will get different results. Out of curiosity, I ran multiple iterations using the exact same plan.\nlink to GLM model \nlink to Claude Haiku model \nlink to Kimi model \n\n\nSummary table of insights…\n\n\n\n\n\n\n\n\nModel\n~Cost\nThoughts\n\n\n\n\nClaude Sonnet (1.0x)\n$3.16\nMore expensive model but it viewed the png file with no issues and just needed to ask a few questions. It was able to evaluate how well it had done and fix several components\n\n\nGLM 5.3 (0.6x)\n$1.00\nNot able to “view” the png so that limiting. After answering a suite of queries the basics were there but it needed much more guidance\n\n\nClaude Haiku (0.4x)\n$x.xx\nLeast expensive model I tried. Clunkier in how its ask question. Did not suggest/recommend approaches. Created 6 script files\n\n\nKimi (0.9x)\n$4.58\nFirst draft was very close. It seemed to evaluate along the way, so the final revision prompt not as needed."
+    "text": "Comparing LLMs results\n\nAs this is stochastic and depends on the model, you will get different results. Out of curiosity, I ran multiple iterations using the exact same plan.\nGLM 5.3 MODEL\n\nClaude Haiku \nKIMI K3 \n\n\nSummary table of insights…\n\n\n\n\n\n\n\n\n\nRank\nModel\n~Cost\nThoughts\n\n\n\n\n1\nClaude Sonnet (1.0x)\n$3.16\nMore expensive model but it viewed the png file with no issues and just needed to ask a few questions. It was able to evaluate how well it had done and fix several components\n\n\n2\nKimi (0.9x)\n$4.58\nFirst draft was very close. It seemed to evaluate along the way, so the final revision prompt not as needed.\n\n\n3\nGLM 5.3 (0.6x)\n$1.00\nNot able to “view” the png so that limiting. After answering a suite of queries the basics were there but it needed much more guidance\n\n\n4\nClaude Haiku (0.4x)\n$0.75\nLeast expensive model I tried. Clunkier in how its ask question. Did not suggest/recommend approaches. Created 6 script files"
   },
   {
     "objectID": "mod3_glm.html",
@@ -453,5 +453,12 @@
     "title": "Module 3: Vibe-coding (with spatial data)",
     "section": "Fact - C: You have lots of potentially great ideas",
     "text": "Fact - C: You have lots of potentially great ideas\n\nComing up lots of ideas is often easy\n\nBut “testing riding them” (aka seeing if the idea is actually any good) can be a hurdle to ever exploring them."
+  },
+  {
+    "objectID": "module3.html#footnotes",
+    "href": "module3.html#footnotes",
+    "title": "Module 3: Vibe-coding (with spatial data)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSome people have access to Copilot Professional, which may perform better than Copilot Basic in these tasks.↩︎\nContext rot is when the LLM starts to lose track of the conversation as it goes on for a while. It is also called context drift, and can bepart of the “Lost in the Middle” problem.↩︎"
   }
 ]

@@ -19,15 +19,6 @@ draft: false
 ---
 
 
-<style>
-@keyframes blinker {
-  50% { opacity: 0; }
-}
-</style>
-[UNDER DEVELOPMENT]{style="color: red; font-size: 20px;font-style: italic;animation: blinker 1s linear infinite;"}
-
-
-
 -------
 
 # Module objectives
@@ -182,7 +173,7 @@ As mentioned above, the workflow used here relies on Rstudio/R approach.
 
 Therefore, if you want to be 🐒, you must have Rstudio/R installed for this and be familiar with it.  
 
-Click on [Download project folder](https://delwpvicgovau-my.sharepoint.com/:u:/g/personal/ben_fanson_deeca_vic_gov_au/IQDIhnDK4oetTZHoGvAH6TVyAXM9xMlKTjiw68Xl_34u1kY?e=3Dqxa3){target="_blank" rel="noopener"} to get the Copilot project folder for the next section of the module.
+Click on [Download project folder](https://delwpvicgovau-my.sharepoint.com/:u:/g/personal/ben_fanson_deeca_vic_gov_au/IQDIhnDK4oetTZHoGvAH6TVyAW_-nEiyoGFpIACwkURv4b0){target="_blank" rel="noopener"} to get the Copilot project folder for the next section of the module.
 
 
 ## Vibe-coding goal for today
@@ -196,8 +187,23 @@ A reminder on module2 QGIS map Adrian made...
 
 # Copilot Approach (🐒,  🪱)
 
-FILL-IN PAUL's content
+Currently all ARI staff have access to Microsoft Copilot (Basic)[^1], so that is our starting point when it comes to vibe coding.
 
+[^1]: Some people have access to Copilot Professional, which may perform better than Copilot Basic in these tasks.
+
+Vibe-coding with a Chatbot LLM (like Copilot) is effectively like having a conversation with someone who has read lots of stuff, so may appear knowledgable, but does not understand the topic you are going to discuss with them. Add to that they are often trying to be helpful and positive and that means that they are not always trustworthy, as they can hallucinate when giving an answer it thinks you want. So, they can be useful as sounding board and help with tasks, but you need to be aware that currently, they may unintentionally(?) mislead you.
+
+A good starting point for any project is to plan what you are wanting to do before you start doing. This can help you define your problem and reduce the number of unproductive paths you take on the way to your solution. Let us start by using Copilot to help us devise and clarify a plan of attack for our project. Note, that as well as text, we can add [certain types of files](https://support.microsoft.com/en-us/microsoft-365-copilot/file-formats-supported-by-microsoft-365-copilot) into the prompt window that Copilot can review and help us with our task. So, as well as the text below, we will add the final map from the QGIS workshop as a reference and the summary data of the locations (Copilot didn't like the GIS data in the .gpkg format).
+
+> I need to create a png map using an R workflow. I have a graph attached (qgis_goal.png) that I want you to replicate. I first want to create a plan that we argue on to create similar map output (to be stored in 'figures/rmap.png') and all points will be found in the attached vmfrp_wallpolla_veg.csv (that is stored in `data/spatial/vmfrp_wallpolla_veg.gpkg` for the code). A basemap and Victorian layer will be needed to be found. I need to use the VIC font and the batlow colour scheme from the scico package. During the planning stage, do not guess what I want but rather ask me explicitly.
+
+Then, it should start the process of walking you through a plan of attack for making the map. That should including asking you to make some choices about options and clarifying some uncertainties. Once you and Copilot are happy that you have a plan, then you can ask it to help you impliment that plan. That will include generating the code that you will require to produce the maps in a suitable format. Once you have that code, you can copy and paste it into R and then ask Copilot to help fix any issues. This will then become an iterative process of you asking for help (as needed) to update the code so that it produces the desired outcome. Be aware that during this back-and-forth there may be some context rot[^2].
+
+[^2]: Context rot is when the LLM starts to lose track of the conversation as it goes on for a while. It is also called context drift, and can bepart of the "Lost in the Middle" problem.
+
+I will note here, that in my experiment with Copilot to generate the map I assumed I had no real experience with coding in R, and relied on it to code everything. It did seem to struggle with fonts and the location of the insets. I suspect that Copilot is not optimised for coding, and that a different LLM could perform differently if that was your chatbot. However, I did expereince it hallucinating functions, changing the names of objects and referencing a website with URL that included "/..." as it was not sure which map I was after, rather than asking.
+
+[Link to Copilot Output](html_extra/Copilot basic GIS.html)
 
 -------
 
