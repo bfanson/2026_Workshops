@@ -51,6 +51,7 @@ Today is a pick your own adventure😊
 # Let's chat about a vibe-coding (🪱)
 
 ![](images/module3/castle_vibe.gif){width=50%}
+
 ## Rationale
 
 ## _Fact - A:_ Coding is a gateway to lots of tools
@@ -205,6 +206,12 @@ I will note here, that in my experiment with Copilot to generate the map I assum
 
 [Link to Copilot Output](html_extra/Copilot basic GIS.html)
 
+
+__Final result from Copilot...__
+
+![](images/module3/copilot/rmap_copilot.png)
+
+
 -------
 
 # Agent Approach (🪱)
@@ -233,8 +240,22 @@ Let's have a look around the folder as there are few things in there that I adde
 
 The basic structure of the project folder is ...
 
-
-![](images/module3/dir_start.png){width=50%}
+```text
+├── 2026_Module3.Rproj
+├── AGENTS.MD
+├── Prompt.MD
+├── data
+│   ├── raw
+│   └── spatial
+│       └── vmfrp_wallpolla_veg.gpkg
+├── figures
+│   └── qgis_goal.png
+├── .posit
+│   ├── SKILLS
+│   │   └── spatial_analyst
+│   │       └── SKILL.md
+│   └── STYLE.md
+```
 
 
 <br>
@@ -336,9 +357,15 @@ __ORIGINAL QGIS__
 
 As this is stochastic and depends on the model, you will get different results.  Out of curiosity, I ran multiple iterations using the exact same plan.  
 
-__GLM 5.3 MODEL__
+__GLM 5.3 First__
 
-![](images/module3/glm/rmap_final.png)
+![](images/module3/glm/rmap_first.png)
+
+
+__GLM 5.3 Second__
+
+![](images/module3/glm/rmap_second.png)
+
 
 
 __Claude Haiku__
@@ -355,10 +382,32 @@ __KIMI K3__
 
 |Rank| Model | \~Cost | Thoughts |
 |:--|:--|:--|:--|
-|1| Claude Sonnet (1.0x)  | $3.16 | More expensive model but it viewed the png file with no issues and just needed to ask a few questions.  It was able to evaluate how well it had done and fix several components |
-|2| Kimi (0.9x)    | $4.58 | First draft was very close. It seemed to evaluate along the way, so the final revision prompt not as needed.   |
-|3| GLM 5.3 (0.6x) | $1.00 | Not able to "view" the png so that limiting.  After answering a suite of queries the basics were there but it needed much more guidance|
-|4| Claude Haiku (0.4x)  | $0.75 | Least expensive model I tried. Clunkier in how its ask question.  Did not suggest/recommend approaches. Created 6 script files|
+|1| Claude Sonnet (1.0x)  | $3.30 | More expensive model but it viewed the png file with no issues and just needed to ask a few questions.  It was able to evaluate how well it had done and fix several components |
+|1-2nd attempt| GLM 5.3 (0.6x) | $1.20 | On second attempt (a few days later), it was able to create a subagent as a viewer.  It re-iterated by itself to really get final map (no prompting from me).  Did it learn from previous attempt?? |
+|3| Kimi (0.9x)    | $4.66 | First draft was very close. It seemed to evaluate along the way, so the final revision prompt not as needed.   |
+|4-1st attempt| GLM 5.3 (0.6x) | $1.00 | First try, not able to "view" the png so had to try to walk it through via queries.  Output was pretty poor. |
+|4| Claude Haiku (0.4x)  | $0.72 | Least expensive model I tried. Clunkier in how its ask question.  Did not suggest/recommend approaches. Created 6 script files|
+
+
+<br>
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 7
+#| fig-height: 3
+ library(tidyverse)
+ d <- readxl::read_excel('supplemental/model_costs.xlsx') %>% select(-5) %>% 
+        group_by(Model) %>% summarise( across(where(is.numeric),sum))
+  cowplot::plot_grid(
+    ggplot(d, aes(Model,`Cost (USD)` ) ) + geom_col() + coord_flip() + labs(title='Cost (USD)'),              ggplot(d, aes(Model,`AI time (min)` ) ) + geom_col() + coord_flip() + labs(title='Time (min)')         )     
+
+```
+
+
 
 
 
@@ -394,7 +443,7 @@ that we understand exactly what it is doing.
 
 - Not all code requires the same level of assessment (importing data vs ggplot vs statistical analysis)
 
-- Learning how to QC/QA your code and outputs will increase in importance
+- Learning how to <span style="color: blue;">QC/QA your code and outputs will increase in importance</span>
 
 - As noted, I have a STYLE.MD guide that writes the code in my style.  That helps me review/evaluate the code quicker.
 
