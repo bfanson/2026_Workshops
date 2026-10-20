@@ -18,9 +18,24 @@ format:
 draft: false
 ---
 
-<style>
-@keyframes blinker {
-  50% { opacity: 0; }
-}
-</style>
-[UNDER DEVELOPMENT]{style="color: red; font-size: 20px;font-style: italic;animation: blinker 1s linear infinite;"}
+-------
+
+# Key topics
+
+- When is eDNA likely to be useful (or not)
+- Understanding where uncertainty arises
+- Resources, development and validation requirements
+
+
+-------
+
+# Presentation style
+
+Material will be presented via a Powerpoint.  
+
+[Link to Presentation as pptx](https://delwpvicgovau-my.sharepoint.com/:p:/g/personal/ben_fanson_deeca_vic_gov_au/IQCGj8b4WqTYRr46wQYDDfKlAfN1_J2SttGIAsQp8lBxdDQ?e=LFe6gq){target="_blank" rel="noopener"}
+
+[Link to Presentation as pdf](https://delwpvicgovau-my.sharepoint.com/:b:/r/personal/ben_fanson_deeca_vic_gov_au/Documents/Documents/Projects/workshop/2026_workshop/module4/eDNA_Biometrics_October2026.pdf?d=w198d87f13ce34255b308a5f99b0a9162&csf=1&web=1&e=9NPSJs){target="_blank" rel="noopener"}
+
+
+-------
