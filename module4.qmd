@@ -8,7 +8,7 @@ author:
     url: https://bfanson.github.io/2026_Workshops/
     affiliation: Arthur Rylah Institute
     affiliation_url: https://www.ari.vic.gov.au/
-date: 2026-10-XX
+date: 2026-10-22
 format:
   html:
     toc: true
